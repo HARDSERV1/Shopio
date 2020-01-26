@@ -185,10 +185,10 @@ html, body {
 
 @font-face {
   font-family: "MaliasRegular";
-  src: url("/static/fonts/MaliasRegular.woff2") format("woff2"); }
+  src: url("/shop/statictatic/fonts/MaliasRegular.woff2") format("woff2"); }
 @font-face {
   font-family: "MaliasThin";
-  src: url("/static/fonts/MaliasThin.woff2") format("woff2"); }
+  src: url("/shop/statictatic/fonts/MaliasThin.woff2") format("woff2"); }
 body {
   font-family: "MaliasRegular"; }
 
