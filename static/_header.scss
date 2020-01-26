@@ -39,9 +39,9 @@
   }
   .search__form{
     display: flex;
-    
     flex-direction: row;
     align-items:center;
+    
     margin-left: 88px;
     select{
       float: left;
@@ -51,48 +51,52 @@
     }
     .search__text{
       float: left;
-      padding: 19px 319px 19px 10px;
+      padding: 19px 250px 19px 10px;
       color: #7e7e7e;
       border: 2px solid #bebebe;
       border-left:1px;
     }
     .search__button{
+      float: left;
       text-align: center;
-      position: relative;
+      
       color: #ffff;
       display: flex;
       justify-content: center;
       align-items:center;
-      padding: 10.5px 20px;
+      padding: 10.5px 13px;
       background-color: #26acce;
+      
       i{
         position: absolute;
       }
     }
-    a{
-      margin-left: 10px;
+  }
+  .shopping__cart {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    a {
       background-color: #26acce;
       padding: 18.5px 20px;
       color: #fff;
     }
-    .shopping__cart{
+    .cart__text {
+      font-size: 16px;
       display: flex;
-      flex-direction: row;
-      .cart__text{
-        font-size: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 5px;
-        color: #7e7e7e;
-        p:nth-child(1){
-          text-transform: uppercase;
-        }
-        b{
-          color: red;
-        }
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 5px;
+      color: #7e7e7e;
+      p:nth-child(1) {
+        text-transform: uppercase;
+      }
+      b {
+        color: red;
       }
     }
   }
+  
 }
 }
