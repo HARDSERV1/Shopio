@@ -149,15 +149,15 @@
 
 .header .header__main .search__form .search__text {
   float: left;
-  padding: 19px 319px 19px 10px;
+  padding: 19px 250px 19px 10px;
   color: #7e7e7e;
   border: 2px solid #bebebe;
   border-left: 1px;
 }
 
 .header .header__main .search__form .search__button {
+  float: left;
   text-align: center;
-  position: relative;
   color: #ffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,7 +168,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10.5px 20px;
+  padding: 10.5px 13px;
   background-color: #26acce;
 }
 
@@ -176,14 +176,9 @@
   position: absolute;
 }
 
-.header .header__main .search__form a {
+.header .header__main .shopping__cart {
+  float: left;
   margin-left: 10px;
-  background-color: #26acce;
-  padding: 18.5px 20px;
-  color: #fff;
-}
-
-.header .header__main .search__form .shopping__cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,9 +186,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.header .header__main .search__form .shopping__cart .cart__text {
+.header .header__main .shopping__cart a {
+  background-color: #26acce;
+  padding: 18.5px 20px;
+  color: #fff;
+}
+
+.header .header__main .shopping__cart .cart__text {
   font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,11 +213,11 @@
   color: #7e7e7e;
 }
 
-.header .header__main .search__form .shopping__cart .cart__text p:nth-child(1) {
+.header .header__main .shopping__cart .cart__text p:nth-child(1) {
   text-transform: uppercase;
 }
 
-.header .header__main .search__form .shopping__cart .cart__text b {
+.header .header__main .shopping__cart .cart__text b {
   color: red;
 }
 
@@ -243,6 +247,12 @@ body {
   font-family: "MaliasRegular";
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,7 +266,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

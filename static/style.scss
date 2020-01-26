@@ -20,6 +20,11 @@ html,body{
 body{
   font-family: "MaliasRegular";
 }
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .wrapper{
   display: flex;
   min-height: 100%;
@@ -27,6 +32,6 @@ body{
   flex-direction: column;
 }
 .container{
-  max-width: 1440px;
+  max-width: 1140px;
   margin: 0 auto;
 }

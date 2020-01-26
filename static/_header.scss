@@ -41,7 +41,6 @@
     display: flex;
     flex-direction: row;
     align-items:center;
-    
     margin-left: 88px;
     select{
       float: left;
@@ -59,7 +58,6 @@
     .search__button{
       float: left;
       text-align: center;
-      
       color: #ffff;
       display: flex;
       justify-content: center;
@@ -73,6 +71,7 @@
     }
   }
   .shopping__cart {
+    float: left;
     margin-left: 10px;
     display: flex;
     flex-direction: row;
