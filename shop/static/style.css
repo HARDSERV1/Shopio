@@ -1,3 +1,46 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 .preline {
   height: 5.2vh;
   width: 100%;
@@ -173,6 +216,156 @@
         .header .header__main .shopping__cart .cart__text b {
           color: red; }
 
+.categories_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #26acce;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  color: white;
+  padding: 20px;
+  cursor: pointer; }
+  .categories_btn p {
+    text-transform: uppercase;
+    font-family: 'Arial'; }
+  .categories_btn i.fa-sort-down {
+    margin-left: auto; }
+  .categories_btn i.fa-bars {
+    margin-right: 10px; }
+
+.list {
+  border: 1px solid #eeeeee;
+  font-family: 'Arial';
+  font-size: 0.9rem; }
+  .list li {
+    color: grey;
+    font-weight: bold;
+    padding: 17px;
+    cursor: pointer;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
+    .list li:not(:last-child) {
+      border-bottom: 1px solid #eeeeee; }
+    .list li:hover {
+      color: #26acce; }
+  .list .more-categories {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+.wrap {
+  position: relative;
+  height: 430px; }
+  .wrap ul, .wrap ul li {
+    height: 100%; }
+  .wrap .first {
+    background-image: url("img/sliders/slider-1/bg1.jpg");
+    background-repeat: no-repeat; }
+  .wrap .second {
+    background-image: url("img/sliders/slider-1/bg2.jpg");
+    background-repeat: no-repeat; }
+  .wrap .third {
+    background-image: url("img/sliders/slider-1/bg3.jpg");
+    background-repeat: no-repeat; }
+  .wrap .slide {
+    display: none; }
+  .wrap .visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .wrap .buy {
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(38, 172, 206, 0.8);
+    cursor: pointer; }
+
+.dots {
+  position: absolute;
+  cursor: pointer;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .dots .dot {
+    margin-right: 5px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(134, 136, 138, 0.4);
+    border-radius: 50%; }
+  .dots .active {
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-transition: 1s;
+    transition: 1s; }
+
+.post-1 {
+  font-family: 'Arial';
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 195px; }
+  .post-1 h2 {
+    color: white;
+    margin-bottom: 20px; }
+  .post-1 p {
+    font-size: 1.3rem;
+    color: #838383;
+    margin-bottom: 15px; }
+  .post-1 span {
+    display: block;
+    color: #e87381;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 25px; }
+
+.post-2 {
+  font-family: 'Arial';
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85); }
+  .post-2 h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px; }
+  .post-2 p {
+    margin-bottom: 30px; }
+
+.post-3 {
+  font-family: 'Arial';
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 60px; }
+  .post-3 p:first-child, .post-3 h2 {
+    color: #26acce;
+    font-size: 1.9rem; }
+  .post-3 p:first-child {
+    margin-bottom: 20px; }
+  .post-3 h2 {
+    margin-bottom: 25px;
+    font-weight: bold; }
+  .post-3 .text {
+    font-size: 0.8rem;
+    line-height: 2;
+    max-width: 440px;
+    margin-bottom: 40px; }
+
 *, *::after, *::before {
   padding: 0;
   margin: 0;
@@ -181,14 +374,15 @@
           box-sizing: border-box; }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  font-size: 100%; }
 
 @font-face {
   font-family: "MaliasRegular";
-  src: url("/shop/statictatic/fonts/MaliasRegular.woff2") format("woff2"); }
+  src: url("/static/fonts/MaliasRegular.woff2") format("woff2"); }
 @font-face {
   font-family: "MaliasThin";
-  src: url("/shop/statictatic/fonts/MaliasThin.woff2") format("woff2"); }
+  src: url("/static/fonts/MaliasThin.woff2") format("woff2"); }
 body {
   font-family: "MaliasRegular"; }
 
@@ -198,16 +392,26 @@ body {
   clear: both; }
 
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   min-height: 100%;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  overflow: hidden; }
 
 .container {
   max-width: 1140px;
   margin: 0 auto; }
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  main .l-side {
+    -ms-flex-preferred-size: 262px;
+        flex-basis: 262px; }
+  main .r-side {
+    -ms-flex-preferred-size: 850px;
+        flex-basis: 850px; }

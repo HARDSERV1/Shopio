@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <link rel="stylesheet" href="{% static 'style.css'%}">
+  <link rel="stylesheet" href="../shop/static/style.css">
   <title>Malias</title>
   
 </head>
@@ -18,7 +17,7 @@
           <div class="preline__inner">
           <div class="preline__section">
             <div class="block">
-            <img src="{% static 'img/flags/gb.png' %}" alt="">
+            <img src="../shop/static/img/flags/gb.png" alt="">
             <p>English</p>
             <i class="fa fa-sort-down"></i>
             </div>
@@ -99,7 +98,65 @@
           </div>
         </div>
       </header>
+      <main>
+        <div class="l-side">
+          <div class="categories">
+            <div class="categories_btn">
+              <i class="fa fa-bars"></i>
+              <p>Categories</p>
+              <i class="fa fa-sort-down"></i>
+            </div>
+            <div class="list">
+              <ul>
+                <li>Cameras & Photography </li>
+                <li>Tv & Audio</li>
+                <li>SmartPhones & Tablets</li>
+                <li>Laptop & Computer</li>
+                <li>Sony</li>
+                <li>Mobile</li>
+                <li>Sports</li>
+                <li>Books</li>
+                <li class="more-categories">More Categories<i class="fa fa-plus" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="r-side">
+          <div class="wrap">
+            <ul>
+              <li class="slide first visible">
+                <div class="post-1">
+                  <h2>LUMIA 888 DESIGN</h2>
+                  <p>Elegant design for business</p>
+                  <span>$966.82</span>
+                  <button class="buy">Shopping now</button>
+                </div>
+              </li>
+              <li class="slide second">
+                <div class="post-2">
+                  <h2>WATERPROOF SMARTPHONE</h2>
+                  <p>RODUCTS ARE EYE-CATCHING DESIGN. YOU CAN TAKE PHOTOS EVEN WHEN Y</p>
+                  <button class="buy">Shopping now</button>
+                </div>
+              </li>
+              <li class="slide third">
+                <div class="post-3">
+                  <p>BUY AIR LACOTE.</p>
+                  <h2>SUPER TABLET, SUPER GIFT</h2>
+                  <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                  <button class="buy">Shopping now</button>
+                </div>
+              </li>
+            </ul>
+            <div class="dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-    
+    <script src="../shop/static/js/slider.js"></script>
 </body>
 </html>

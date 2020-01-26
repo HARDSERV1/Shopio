@@ -1,0 +1,41 @@
+.categories_btn{
+	display: flex;
+	background-color: #26acce;
+	align-items: center;
+	flex-flow:row nowrap;
+	color:white;
+	padding:20px;
+	cursor: pointer;
+	p{
+		text-transform: uppercase;
+		font-family: 'Arial';
+	}
+	i.fa-sort-down{
+		margin-left: auto;
+	}
+	i.fa-bars{
+		margin-right: 10px;
+	}
+}
+.list{
+	border:1px solid #eeeeee;
+	font-family: 'Arial';
+	font-size:0.9rem;
+	li{
+		color:grey;
+		font-weight: bold;
+		padding:17px;
+		cursor:pointer;
+		transition: color 0.2s;
+		&:not(:last-child){
+			border-bottom: 1px solid #eeeeee;
+		}
+		&:hover{
+			color:#26acce;
+		}
+	}
+	.more-categories{
+		display: flex;
+		justify-content: space-between;
+	}
+}
