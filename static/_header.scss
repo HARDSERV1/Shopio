@@ -1,0 +1,98 @@
+
+.header{
+  margin-top: 38px;
+.advantages{
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  color: #7e7e7e;
+  .advantages__block{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    i{
+      font-size: 20px;
+    }
+    .advantages__text{
+      margin-left: 18px;
+      p:nth-child(1){
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+      p:nth-child(2) {
+        font-size: 10px;
+      }
+    }
+  }
+}
+.header__main{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  margin-top: 45px;
+  .logo{
+    color: #26acce;
+    font-size: 50px;
+  }
+  .search__form{
+    display: flex;
+    
+    flex-direction: row;
+    align-items:center;
+    margin-left: 88px;
+    select{
+      float: left;
+      color: #7e7e7e;
+      padding: 18px 70px 18px 10px; 
+      border: 2px solid #bebebe;
+    }
+    .search__text{
+      float: left;
+      padding: 19px 319px 19px 10px;
+      color: #7e7e7e;
+      border: 2px solid #bebebe;
+      border-left:1px;
+    }
+    .search__button{
+      text-align: center;
+      position: relative;
+      color: #ffff;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      padding: 10.5px 20px;
+      background-color: #26acce;
+      i{
+        position: absolute;
+      }
+    }
+    a{
+      margin-left: 10px;
+      background-color: #26acce;
+      padding: 18.5px 20px;
+      color: #fff;
+    }
+    .shopping__cart{
+      display: flex;
+      flex-direction: row;
+      .cart__text{
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 5px;
+        color: #7e7e7e;
+        p:nth-child(1){
+          text-transform: uppercase;
+        }
+        b{
+          color: red;
+        }
+      }
+    }
+  }
+}
+}
