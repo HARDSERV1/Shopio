@@ -18,25 +18,54 @@
 		}
 	}
 
-	function addMenu(){
+	function addMenus(){
 		let firstListItem = document.querySelector('.first-list-item');
-		let firstBlockMenu = document.querySelector('.first-item');
+		let secondListItem = document.querySelector('.second-list-item');
+		let thirdListItem = document.querySelector('.third-list-item');
+
+		let firstBlockMenu = document.querySelector('.first');
+		let secondBlockMenu = document.querySelector('.second');
+		let thirdBlockMenu = document.querySelector('.third');
+
 		let categoriesBlock = document.querySelector('.categories');
 
-		let listItemCoords = firstListItem.getBoundingClientRect();
-		firstBlockMenu.style.top = listItemCoords.top + 'px';
-		firstBlockMenu.style.left = listItemCoords.right + 'px';
+		let firstlistItemCoords = firstListItem.getBoundingClientRect();
+		firstBlockMenu.style.top = firstlistItemCoords.top + 'px';
+		firstBlockMenu.style.left = firstlistItemCoords.right + 'px';
+
+		let secondlistItemCoords = secondListItem.getBoundingClientRect();
+		secondBlockMenu.style.top = secondlistItemCoords.top + 'px';
+		secondBlockMenu.style.left = secondlistItemCoords.right + 'px';
+
+		let thirdlistItemCoords = thirdListItem.getBoundingClientRect();
+		thirdBlockMenu.style.top = thirdlistItemCoords.top + 'px';
+		thirdBlockMenu.style.left = thirdlistItemCoords.right + 'px';
 
 		firstListItem.onmouseenter = function (event) {
 			firstBlockMenu.classList.remove('unvisible');
 		}
+
+		secondListItem.onmouseenter = function (event) {
+			secondBlockMenu.classList.remove('unvisible');
+		}
+
+		thirdListItem.onmouseenter = function (event) {
+			thirdBlockMenu.classList.remove('unvisible');
+		}
+
 		categoriesBlock.onmouseout = function (event) {
-			if(event.relatedTarget.closest('.first-item') != firstBlockMenu){
+			if(event.relatedTarget.closest('.first') != firstBlockMenu){
 				firstBlockMenu.classList.add('unvisible');
 			}
+			if(event.relatedTarget.closest('.second') != secondBlockMenu){
+				secondBlockMenu.classList.add('unvisible');
+			}
+			if(event.relatedTarget.closest('.third') != thirdBlockMenu){
+				thirdBlockMenu.classList.add('unvisible');
+			}	
 		}
 	}
 
 	plusOptions();
-	addMenu();
+	addMenus();
 })();

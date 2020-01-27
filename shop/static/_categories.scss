@@ -48,13 +48,20 @@
 		display: none;
 	}
 }
-.first-item{
+.hide-menu{
 	position: absolute;
 	display: flex;
 	background-color: white;
 	z-index: 10;
 	box-shadow: 0 0 5px grey;
 	padding:30px;
+	&.third{
+		padding-bottom: 0;
+		.headphones{
+			max-width: 260px;
+			height: auto;
+		}
+	}
 	.section{
 		&:not(:last-child){
 			margin-right: 15px;
@@ -66,6 +73,7 @@
 	}
 	h2{
 		padding-bottom: 10px;
+		padding-right: 70px;
 		border-bottom: 1px solid #cccccc;
 		transition: color 0.2s;
 		cursor: pointer;
