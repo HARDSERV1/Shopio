@@ -1,14 +1,15 @@
 
 .header{
   margin-top: 38px;
-.advantages{
-  margin: 0 auto;
-  width: 95%;
+.advantages{ 
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   color: #7e7e7e;
+  .advantages__block:nth-child(4){
+    margin-right: 54px;
+  }
   .advantages__block{
     display: flex;
     flex-direction: row;
@@ -40,35 +41,35 @@
   .search__form{
     display: flex;
     flex-direction: row;
-    align-items:center;
-    margin-left: 88px;
+    margin-left: 120px;
     select{
-      float: left;
       color: #7e7e7e;
-      padding: 18px 70px 18px 10px; 
-      border: 2px solid #bebebe;
+          padding: 18px  18px 10px;
+          width: 7vw;
+          border: 2px solid #bebebe;
     }
+    form{
+      display: flex;
     .search__text{
-      float: left;
-      padding: 19px 250px 19px 10px;
+      padding: 19px  19px 10px;
+      width: 17vw;
       color: #7e7e7e;
       border: 2px solid #bebebe;
       border-left:1px;
     }
     .search__button{
-      float: left;
-      text-align: center;
-      color: #ffff;
       display: flex;
       justify-content: center;
-      align-items:center;
-      padding: 10.5px 13px;
+      align-items:center; 
+      text-align: center;
+      color: #ffff;
+      padding: 10.5px 15px;
       background-color: #26acce;
-      
       i{
         position: absolute;
       }
     }
+  }
   }
   .shopping__cart {
     float: left;
@@ -82,7 +83,8 @@
       color: #fff;
     }
     .cart__text {
-      font-size: 16px;
+      height: 100%;
+      font-size: 12px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -90,6 +92,7 @@
       color: #7e7e7e;
       p:nth-child(1) {
         text-transform: uppercase;
+        padding-bottom: 20px;
       }
       b {
         color: red;
@@ -97,5 +100,9 @@
     }
   }
   
+}
+nav{
+  margin-top: 40px;
+  background-color: #474747;
 }
 }
