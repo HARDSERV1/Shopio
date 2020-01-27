@@ -1,6 +1,6 @@
 .categories_btn{
 	display: flex;
-	background-color: #26acce;
+	background-color: $blueColor;
 	align-items: center;
 	flex-flow:row nowrap;
 	color:white;
@@ -29,7 +29,7 @@
 			border-bottom: 1px solid #eeeeee;
 		}
 		&:hover{
-			color:#26acce;
+			color:$blueColor;
 		}
 	}
 	.arrow{
@@ -70,7 +70,7 @@
 		transition: color 0.2s;
 		cursor: pointer;
 		&:hover{
-			color:#26acce;
+			color:$blueColor;
 		}
 	}
 	li{
@@ -82,7 +82,7 @@
 			font-size:0.9rem;
 			transition: color 0.2s;
 			&:hover{
-				color:#26acce;
+				color:$blueColor;
 			}
 		}
 	}
