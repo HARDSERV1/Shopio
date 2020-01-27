@@ -1,4 +1,4 @@
-.wrap{
+.slider-wrapper{
 	position: relative;
 	height: 430px;
 	ul, ul li{
@@ -24,11 +24,12 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 	}
-	.buy{
+	.buy_btn{
 		color:white;
 		padding: 8px 15px;
-		font-size:0.9rem;
+		font-size:0.95rem;
 		font-weight: bold;
+		font-family: "MaliasRegular";
 		text-transform: uppercase;
 		background-color: rgba(38, 172, 206, 0.8);
 		cursor: pointer;
@@ -54,7 +55,6 @@
 	}
 }
 .post-1{
-	font-family: 'Arial';
 	align-self:flex-end;
 	margin-right: 85px;
 	h2{
@@ -76,7 +76,6 @@
 	}
 }
 .post-2{
-	font-family:'Arial';
 	text-align: center;
 	color:rgba(255, 255, 255, 0.85);
 	h2{
@@ -88,7 +87,6 @@
 	}
 }
 .post-3{
-	font-family: 'Arial';
 	align-self:flex-end;
 	margin-right: 10px;
 	margin-bottom: 60px;

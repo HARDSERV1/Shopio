@@ -8,7 +8,6 @@
 	cursor: pointer;
 	p{
 		text-transform: uppercase;
-		font-family: 'Arial';
 	}
 	i.fa-sort-down{
 		margin-left: auto;
@@ -17,9 +16,8 @@
 		margin-right: 10px;
 	}
 }
-.list{
+.list-category{
 	border:1px solid #eeeeee;
-	font-family: 'Arial';
 	font-size:0.9rem;
 	li{
 		color:grey;
@@ -34,8 +32,61 @@
 			color:#26acce;
 		}
 	}
-	.more-categories{
+	.arrow{
+		position: relative;
+		&::after{
+			content: '>';
+			position:absolute;
+			right:20px;
+		}
+	}
+	.more-btn{
 		display: flex;
 		justify-content: space-between;
 	}
+	.unvisible{
+		display: none;
+	}
+}
+.first-item{
+	position: absolute;
+	display: flex;
+	background-color: white;
+	z-index: 10;
+	box-shadow: 0 0 5px grey;
+	padding:30px;
+	.section{
+		&:not(:last-child){
+			margin-right: 15px;
+		}
+	}
+	i{
+		color: silver;
+		margin-right: 5px;
+	}
+	h2{
+		padding-bottom: 10px;
+		border-bottom: 1px solid #cccccc;
+		transition: color 0.2s;
+		cursor: pointer;
+		&:hover{
+			color:#26acce;
+		}
+	}
+	li{
+		a{
+			padding:12px 0;
+			display: block;
+			color:#333333;
+			text-decoration:none;
+			font-size:0.9rem;
+			transition: color 0.2s;
+			&:hover{
+				color:#26acce;
+			}
+		}
+	}
+}
+.unvisible{
+	display: none;
 }
