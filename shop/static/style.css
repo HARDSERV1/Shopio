@@ -219,6 +219,7 @@ table {
         .header .header__main .shopping__cart .cart__text b {
           color: red; }
   .header nav {
+    height: 10vh;
     margin-top: 40px;
     background-color: #474747; }
 
@@ -283,53 +284,36 @@ table {
   z-index: 10;
   -webkit-box-shadow: 0 0 5px grey;
           box-shadow: 0 0 5px grey;
-  padding: 30px;
-}
-
-.hide-menu.third {
-  padding-bottom: 0;
-}
-
-.hide-menu.third .headphones {
-  max-width: 260px;
-  height: auto;
-}
-
-.hide-menu .section:not(:last-child) {
-  margin-right: 15px;
-}
-
-.hide-menu i {
-  color: silver;
-  margin-right: 5px;
-}
-
-.hide-menu h2 {
-  padding-bottom: 10px;
-  padding-right: 70px;
-  border-bottom: 1px solid #cccccc;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  cursor: pointer;
-}
-
-.hide-menu h2:hover {
-  color: #26acce;
-}
-
-.hide-menu li a {
-  padding: 12px 0;
-  display: block;
-  color: #333333;
-  text-decoration: none;
-  font-size: 0.9rem;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.hide-menu li a:hover {
-  color: #26acce;
-}
+  padding: 30px; }
+  .hide-menu.third {
+    padding-bottom: 0; }
+    .hide-menu.third .headphones {
+      max-width: 260px;
+      height: auto; }
+  .hide-menu .section:not(:last-child) {
+    margin-right: 15px; }
+  .hide-menu i {
+    color: silver;
+    margin-right: 5px; }
+  .hide-menu h2 {
+    padding-bottom: 10px;
+    padding-right: 70px;
+    border-bottom: 1px solid #cccccc;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    cursor: pointer; }
+    .hide-menu h2:hover {
+      color: #26acce; }
+  .hide-menu li a {
+    padding: 12px 0;
+    display: block;
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
+    .hide-menu li a:hover {
+      color: #26acce; }
 
 .unvisible {
   display: none; }
