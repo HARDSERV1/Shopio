@@ -99,11 +99,23 @@
       }
     }
   }
-  
 }
 nav{
-  height: 10vh;
   margin-top: 40px;
   background-color: #474747;
+  .nav__inner{
+    
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    height: 6vh;
+    a{
+      padding: 0 14px;
+      font-size: 15px;
+      color: white;
+      text-decoration: none;
+      border-right: 1px solid #606060;
+    }
+  }
 }
 }

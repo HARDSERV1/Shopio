@@ -28,28 +28,31 @@
 		let thirdBlockMenu = document.querySelector('.third');
 
 		let categoriesBlock = document.querySelector('.categories');
-
-		let firstlistItemCoords = firstListItem.getBoundingClientRect();
-		firstBlockMenu.style.top = firstlistItemCoords.top + 'px';
-		firstBlockMenu.style.left = firstlistItemCoords.right + 'px';
-
-		let secondlistItemCoords = secondListItem.getBoundingClientRect();
-		secondBlockMenu.style.top = secondlistItemCoords.top + 'px';
-		secondBlockMenu.style.left = secondlistItemCoords.right + 'px';
-
-		let thirdlistItemCoords = thirdListItem.getBoundingClientRect();
-		thirdBlockMenu.style.top = thirdlistItemCoords.top + 'px';
-		thirdBlockMenu.style.left = thirdlistItemCoords.right + 'px';
-
+		
 		firstListItem.onmouseenter = function (event) {
+
+			let firstlistItemCoords = firstListItem.getBoundingClientRect();
+			firstBlockMenu.style.top = firstlistItemCoords.top + 'px';
+			firstBlockMenu.style.left = firstlistItemCoords.right + 'px';
+
 			firstBlockMenu.classList.remove('unvisible');
 		}
 
 		secondListItem.onmouseenter = function (event) {
+
+			let secondlistItemCoords = secondListItem.getBoundingClientRect();
+			secondBlockMenu.style.top = secondlistItemCoords.top + 'px';
+			secondBlockMenu.style.left = secondlistItemCoords.right + 'px';
+
 			secondBlockMenu.classList.remove('unvisible');
 		}
 
 		thirdListItem.onmouseenter = function (event) {
+
+			let thirdlistItemCoords = thirdListItem.getBoundingClientRect();
+			thirdBlockMenu.style.top = thirdlistItemCoords.top + 'px';
+			thirdBlockMenu.style.left = thirdlistItemCoords.right + 'px';
+
 			thirdBlockMenu.classList.remove('unvisible');
 		}
 
