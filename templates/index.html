@@ -1,3 +1,4 @@
+{% load static  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <link rel="stylesheet" href="../shop/static/style.css">
+  <link rel="stylesheet" href="{% static 'style.css'%}">
   <title>Malias</title>
   
 </head>
@@ -17,7 +18,7 @@
           <div class="preline__inner">
           <div class="preline__section">
             <div class="block">
-            <img src="../shop/static/img/flags/gb.png" alt="">
+            <img src="{% static 'img/flags/gb.png' %}" alt="">
             <p>English</p>
             <i class="fa fa-sort-down"></i>
             </div>
@@ -203,7 +204,7 @@
         </div>
       </main>
     </div>
-    <script src="../shop/static/js/slider.js"></script>
-    <script src="../shop/static/js/categories.js"></script>
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/categories.js' %}"></script>
 </body>
 </html>
