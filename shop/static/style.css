@@ -268,7 +268,7 @@ table {
   .list-category .unvisible {
     display: none; }
 
-.first-item {
+.hide-menu {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,20 +278,26 @@ table {
   -webkit-box-shadow: 0 0 5px grey;
           box-shadow: 0 0 5px grey;
   padding: 30px; }
-  .first-item .section:not(:last-child) {
+  .hide-menu.third {
+    padding-bottom: 0; }
+    .hide-menu.third .headphones {
+      max-width: 260px;
+      height: auto; }
+  .hide-menu .section:not(:last-child) {
     margin-right: 15px; }
-  .first-item i {
+  .hide-menu i {
     color: silver;
     margin-right: 5px; }
-  .first-item h2 {
+  .hide-menu h2 {
     padding-bottom: 10px;
+    padding-right: 70px;
     border-bottom: 1px solid #cccccc;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
     cursor: pointer; }
-    .first-item h2:hover {
+    .hide-menu h2:hover {
       color: #26acce; }
-  .first-item li a {
+  .hide-menu li a {
     padding: 12px 0;
     display: block;
     color: #333333;
@@ -299,7 +305,7 @@ table {
     font-size: 0.9rem;
     -webkit-transition: color 0.2s;
     transition: color 0.2s; }
-    .first-item li a:hover {
+    .hide-menu li a:hover {
       color: #26acce; }
 
 .unvisible {
