@@ -1,0 +1,29 @@
+@mixin goodsStyle{
+	padding:0 15px 15px 15px;
+	h2{
+		font-family: 'Raleway', sans-serif;
+		font-weight: 600;
+		color:#595959;
+	}
+	.price{
+		margin-top: 15px;
+		font-family: 'Roboto', sans-serif;
+		span{
+			display: inline-block;
+		}
+	}
+	.current-price{
+		color:$redColor;
+		font-size:1.3rem;
+		font-weight: 700;
+		margin-right: 10px;
+	}
+	.old-price{
+		text-decoration: line-through;
+		color:#e8e8e8;
+	}
+	.stars{
+		margin-top: 15px;
+		color:#f9af51;
+	}
+}

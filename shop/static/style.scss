@@ -1,10 +1,13 @@
 @import 'reset';
+@import 'mixins';
 @import 'variables';
 @import 'preline';
 @import 'header';
 @import 'categories';
 @import 'slider';
+@import 'goodsContainer';
 @import 'footer';
+
 *,*::after,*::before{
   padding: 0;
   margin: 0;
@@ -46,9 +49,11 @@ main{
   display: flex;
   justify-content: space-between;
   .l-side{
-    flex-basis: 262px;
+    max-width: 262px;
+    flex:1;
   }
   .r-side{
-    flex-basis:850px;
+    max-width: 850px;
+    flex:1;
   }
 }

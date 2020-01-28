@@ -32,7 +32,8 @@
 		firstListItem.onmouseenter = function (event) {
 
 			let firstlistItemCoords = firstListItem.getBoundingClientRect();
-			firstBlockMenu.style.top = firstlistItemCoords.top + 'px';
+			firstBlockMenu.style.top = firstlistItemCoords.top +
+			window.pageYOffset + 'px';
 			firstBlockMenu.style.left = firstlistItemCoords.right + 'px';
 
 			firstBlockMenu.classList.remove('unvisible');
@@ -41,7 +42,8 @@
 		secondListItem.onmouseenter = function (event) {
 
 			let secondlistItemCoords = secondListItem.getBoundingClientRect();
-			secondBlockMenu.style.top = secondlistItemCoords.top + 'px';
+			secondBlockMenu.style.top = secondlistItemCoords.top +
+			window.pageYOffset + 'px';
 			secondBlockMenu.style.left = secondlistItemCoords.right + 'px';
 
 			secondBlockMenu.classList.remove('unvisible');
@@ -50,7 +52,8 @@
 		thirdListItem.onmouseenter = function (event) {
 
 			let thirdlistItemCoords = thirdListItem.getBoundingClientRect();
-			thirdBlockMenu.style.top = thirdlistItemCoords.top + 'px';
+			thirdBlockMenu.style.top = thirdlistItemCoords.top +
+			window.pageYOffset + 'px';
 			thirdBlockMenu.style.left = thirdlistItemCoords.right + 'px';
 
 			thirdBlockMenu.classList.remove('unvisible');
