@@ -1,27 +1,28 @@
 (function () {
 
-	function goodsElectronic(selector) {
-		let goodsList = document.querySelector(`.${selector} .goods-list ul`);
+	let menuSelectors = ['first', 'second', 'third'];
+
+	function goodsElectronic(selector, atrSelector) {
+		let goodsList = document.querySelector(`.${selector} .goods-list div[data-item="${atrSelector}"] ul`);
 		let count = 0, position = 0;
 
-		document.querySelector('.goods-list .arrow-right').addEventListener('click', clickRight);
-		document.querySelector('.goods-list .arrow-left').addEventListener('click', clickLeft);
+		document.querySelector(`.${selector} .goods-list div[data-item="${atrSelector}"] .arrow-right`).addEventListener('click', clickRight);
+		document.querySelector(`.${selector} .goods-list div[data-item="${atrSelector}"] .arrow-left`).addEventListener('click', clickLeft);
 
 		function clickRight(){
 			if(count < 2){
-				position += -222;
+				position += -220;
 				goodsList.style.marginLeft = position + 'px';
 				count++;
 			}
 		}
 		function clickLeft() {
 			if(count > 0){
-				position += 222;
+				position += 220;
 				goodsList.style.marginLeft = position + 'px';
 				count--;
 			}
 		}
 	}
-	goodsElectronic('section-electronic');
-	goodsElectronic('section-f');
+	menuSelectors.forEach(item => goodsElectronic('section-electronic', item));
 })();

@@ -57,9 +57,8 @@
 			}
 		}
 	}
-
 	.arrow{
-		z-index: 2;
+		z-index: 100;
 		opacity: 0;
 		font-size:0.9rem;
 		color:white;
@@ -71,41 +70,55 @@
 		cursor:pointer;
 		transition: background-color 0.2s, opacity 0.4s;
 		&:hover{
-			background-color: rgba(38, 172, 206, 0.8)
-		}
+			background-color: $blueColor;
+		}	
 	}
 	.arrow-left{
 		left:0;	
 	}
 	.arrow-right{
-		right:0px;
+		right:0;
 	}
 	.goods-list{
 		width:100%;
-		overflow: hidden;
 		margin-top: 20px;
 		height: 290px;
 		position: relative;
-		ul{
-			z-index: 1;
-			display: flex;
+		z-index: 0;
+		.menu-wrapper{
 			width:100%;
+			height: 100%;
 			position: absolute;
 			top:0;
-			left: 0;
+			left:0;
 			opacity: 0;
-			transition: margin-left 0.8s ,opacity 0.6s;
-		}
-		&:hover .arrow{
-			opacity: 1;
+			transition: opacity 0.4s;
 		}
 		.visibleGoods{
 			opacity: 1;
 		}
+		.list-wrapper{
+			z-index: 10;
+			width:100%;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			&:hover .arrow{
+				opacity: 1;
+			}
+		}
+		ul{
+			display: flex;
+			width:100%;
+			position: absolute;
+			top:0;
+			left:0;
+			transition: margin-left 0.8s;
+		}
 	}
 	
 
-	.goods-list li{
+	.list-wrapper li{
 		border:1px solid #dddddd;
 		margin:0 15px;
 		max-width:190px;

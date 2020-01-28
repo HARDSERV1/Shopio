@@ -3,7 +3,7 @@
 		let nav = document.querySelector(`.${selector} .navigation`);
 		let options = nav.querySelectorAll('a');
 
-		let lists = document.querySelectorAll(`.${selector} .list`);
+		let lists = document.querySelectorAll(`.${selector} .menu-wrapper`);
 		nav.onclick = function (event) {
 			let tg = event.target;
 			if(tg.tagName == 'A'){
