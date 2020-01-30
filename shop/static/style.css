@@ -638,8 +638,7 @@ table {
         display: flex;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between;
-        cursor: pointer; }
+                justify-content: space-between; }
         .goods-container .goods-info .option-block .option i {
           background-color: #666666;
           padding: 12px 14px;
@@ -828,8 +827,9 @@ table {
   height: 100%;
   background-color: rgba(177, 177, 177, 0.8);
   position: absolute;
-  z-index: 9000;
-  display: none; }
+  top: 0;
+  left: 0;
+  z-index: 9000; }
 
 .modal-window {
   width: 830px;
