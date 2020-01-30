@@ -47,8 +47,10 @@ main{
   max-width: 1140px;
   margin: 0 auto;
   margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+  .column-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
   .l-side{
     max-width: 262px;
     flex:1;

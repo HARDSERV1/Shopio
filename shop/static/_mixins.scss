@@ -1,9 +1,14 @@
 @mixin goodsStyle{
 	padding:0 15px 15px 15px;
-	h2{
+	h2 a{
+		text-decoration: none;
 		font-family: 'Raleway', sans-serif;
 		font-weight: 600;
 		color:#595959;
+		transition: color 0.3s;
+		&:hover{
+			color:$redColor;
+		}
 	}
 	.price{
 		margin-top: 15px;

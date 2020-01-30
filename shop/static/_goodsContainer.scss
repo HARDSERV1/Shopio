@@ -92,7 +92,7 @@
 			top:0;
 			left:0;
 			opacity: 0;
-			transition: opacity 0.4s;
+			transition: opacity 0.6s;
 		}
 		.visibleGoods{
 			opacity: 1;
@@ -136,6 +136,11 @@
 			height:auto;
 		}
 	}
+	.goods{
+		&:hover .option-block{
+			opacity: 1;
+		}
+	}
 	.goods-info{
 		@include goodsStyle;
 		position: relative;
@@ -147,10 +152,41 @@
 			width:100%;
 			height: 100%;
 			text-align:center;
+			padding: 0 25px 30px 25px;
+			opacity: 0;
+			transition: opacity 0.4s;
 			.option{
+				margin-top: 5px;
 				display: flex;
 				justify-content: space-between;
-
+				i{
+					background-color: #666666;
+					padding:12px 14px;
+					color:white;
+					transition: background-color 0.3s;
+					&:hover{
+						background-color: $blueColor;
+					}
+				}
+			}
+		}
+		.add-btn{
+			text-transform:uppercase;
+			background-color: $blueColor;
+			display: block;
+			color:white;
+			text-align: none;
+			width:100%;
+			padding: 10px 0;
+			transition: background-color 0.3s;
+			span{
+				display: inline-block;
+				margin-left: 5px;
+				font-weight: 500;
+				font-size:0.8rem;
+			}
+			&:hover{
+				background-color: $redColor;
 			}
 		}
 	}
