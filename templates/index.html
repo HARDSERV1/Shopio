@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,19 +10,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{% static 'style.css' %}"><!--"../shop/static/style.css"-->
+  <link rel="stylesheet" href="../shop/static/style.css">
   <title>Malias</title>
   
 </head>
 <body>
-{% block content %}
       <a id="up__bttn" class="upper__bttn"></a>
       <div class="preline">
         <div class="container">
           <div class="preline__inner">
           <div class="preline__section">
             <div class="block">
-            <img src="{% static 'img/flags/gb.png' %}" alt=""><!--"../shop/static/img/flags/gb.png"-->
+            <img src="../shop/static/img/flags/gb.png" alt="">
             <p>English</p>
             <i class="fa fa-sort-down"></i>
             </div>
@@ -250,7 +248,7 @@
                   </ul>
                 </div>
                 <div class="section">
-                  <img src="{% static 'img/product/quickview-photo.jpg' %}" alt=""><!--"../shop/static/img/product/quickview-photo.jpg"-->
+                  <img src="../shop/static/img/product/quickview-photo.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -316,15 +314,14 @@
                       <div class="arrow arrow-right">></div>
 
                       <ul class="list">
-                          {% for g in goods %}
                         <li>
                           <div class="goods">
-                          <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                          <a href="#"><img src="../shop/static/img/product/mediam/12.jpg" alt=""></a>
                           <div class="goods-info">
-                            <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                            <h2><a href="#">Various Versions</a></h2>
                             <div class="price">
-                              <span class="current-price">${{ g.current_price }}</span>
-                              <span class="old-price">${{ g.old_price }}</span>
+                              <span class="current-price">$99.00</span>
+                              <span class="old-price">$120.00</span>
                             </div>
                             <div class="stars">
                               <i class="fa fa-star"></i>
@@ -338,15 +335,152 @@
                               <div class="option">
                                 <a href="#"><i class="fa fa-heart-o"></i></a>
                                 <a href="#"><i class="fa fa-signal"></i></a>
-                                <a href="{% url 'about_tovar' g.pk %}" ><i class="fa fa-search-plus"></i></a>
+                                <a href="#"><i class="fa fa-search-plus"></i></a>
                               </div>
                             </div>
                           </div>
                         </div>
                         </li>
 
-                            {% endfor %}
+                        <li>
+                          <div class="goods">
+                          <a href="#"><img src="../shop/static/img/product/mediam/12bg.jpg" alt=""></a>
+                          <div class="goods-info">
+                            <h2>Established Fact</h2>
+                            <div class="price">
+                              <span class="current-price">$85.00</span>
+                              <span class="old-price">$110.00</span>
+                            </div>
+                            <div class="stars">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="option-block">
+                              <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                              <div class="option">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-signal"></i></a>
+                                <a href="#"><i class="fa fa-search-plus"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </li>
 
+                        <li>
+                          <div class="goods">
+                          <a href="#"><img src="../shop/static/img/product/mediam/2.jpg" alt=""></a>
+                          <div class="goods-info">
+                            <h2>Trid Palm</h2>
+                            <div class="price">
+                              <span class="current-price">$90.00</span>
+                              <span class="old-price">$120.00</span>
+                            </div>
+                            <div class="stars">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="option-block">
+                              <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                              <div class="option">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-signal"></i></a>
+                                <a href="#"><i class="fa fa-search-plus"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </li>
+
+                        <li>
+                          <div class="goods">
+                          <a href="#"><img src="../shop/static/img/product/mediam/2bg.jpg" alt=""></a>
+                          <div class="goods-info">
+                            <h2>Established Fact</h2>
+                            <div class="price">
+                              <span class="current-price">$85.00</span>
+                              <span class="old-price">$105.00</span>
+                            </div>
+                            <div class="stars">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="option-block">
+                              <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                              <div class="option">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-signal"></i></a>
+                                <a href="#"><i class="fa fa-search-plus"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </li>
+
+                        <li>
+                          <div class="goods">
+                          <a href="#"><img src="../shop/static/img/product/mediam/5.jpg" alt=""></a>
+                          <div class="goods-info">
+                            <h2>Various Versions</h2>
+                            <div class="price">
+                              <span class="current-price">$99.00</span>
+                              <span class="old-price">$120.00</span>
+                            </div>
+                            <div class="stars">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="option-block">
+                              <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                              <div class="option">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-signal"></i></a>
+                                <a href="#"><i class="fa fa-search-plus"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </li>
+
+                        <li>
+                          <div class="goods">
+                          <a href="#"><img src="../shop/static/img/product/mediam/6.jpg" alt=""></a>
+                          <div class="goods-info">
+                            <h2>Established Fact</h2>
+                            <div class="price">
+                              <span class="current-price">$85.00</span>
+                              <span class="old-price">$110.00</span>
+                            </div>
+                            <div class="stars">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="option-block">
+                              <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                              <div class="option">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-signal"></i></a>
+                                <a href="#"><i class="fa fa-search-plus"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -624,19 +758,19 @@
               <p>BRAND LOGO</p>
               <hr>
               <div class="companies__logos">
-                <img src="{% static 'img/brand/1.png' %}" alt=""><!--"../shop/static/img/brand/1.png"-->
-                <img src="{% static 'img/brand/2.png' %}" alt=""><!--"../shop/static/img/brand/2.png"-->
-                <img src="{% static 'img/brand/3.png' %}" alt=""><!--"../shop/static/img/brand/3.png"-->
-                <img src="{% static 'img/brand/4.png' %}" alt=""><!--"../shop/static/img/brand/4.png"-->
-                <img src="{% static 'img/brand/5.png' %}" alt=""><!--"../shop/static/img/brand/5.png"-->
-                <img src="{% static 'img/brand/5.png' %}" alt=""><!--"../shop/static/img/brand/6.png"-->
+                <img src="../shop/static/img/brand/1.png" alt="">
+                <img src="../shop/static/img/brand/2.png" alt="">
+                <img src="../shop/static/img/brand/3.png" alt="">
+                <img src="../shop/static/img/brand/4.png" alt="">
+                <img src="../shop/static/img/brand/5.png" alt="">
+                <img src="../shop/static/img/brand/6.png" alt="">
               </div>
             </div>
           </div>
         </div>
       </main>
-{% endblock content %}
-    {% block footer %}
+
+
       <footer class="footer">
         <div class="footer__social">
           <div class="container">
@@ -721,25 +855,38 @@
           </div>
         </div>
       </footer>
-      {% endblock footer %}
-    {% block modal %}
 
-    {% endblock modal %}
-    <script src="{% static 'js/slider.js' %}"></script><!--"../shop/static/js/slider.js"-->
-    <script src="{% static 'js/categories.js' %}"></script><!--"../shop/static/js/categories.js"-->
-    <script src="{% static 'js/goodsSlider.js' %}"></script><!--"../shop/static/js/goodsSlider.js"-->
-    <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
+    <div class="modal-window-wrapper">
+      <div class="modal-window">
+        <img src="../shop/static/img/product/quickview-photo.jpg" alt="">
+        <div class="goods-info">
+          <h1>Aenean eu tristique</h1>
+          <div class="price">
+            <span class="current-price">$160.00</span>
+            <span class="old-price">$190.00</span>
+          </div>
+          <a href="#" class="more-info">See all features</a>
+          <form action="#">
+            <input type="number" value="3">
+            <button type="submit">Add to card</button>
+          </form>
+          <p class="about-goods">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero.</p>
+          <div class="shares">
+            <p>Share this product</p>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../shop/static/js/slider.js"></script>
+    <script src="../shop/static/js/categories.js"></script>
+    <script src="../shop/static/js/goodsSlider.js"></script>
+    <script src="../shop/static/js/switchMenus.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-      let modalWindow = document.querySelector('.modal-window-wrapper');
-  document.querySelector('.goods-container').onclick = function (event) {
-    let target = event.target;
-    if(target.matches('.fa-search-plus')){
-      document.body.style.overflow = 'hidden';
-      modalWindow.style.top = window.pageYOffset + 'px'
-      modalWindow.style.display = 'block';
-    }
-  }
-    </script>
 </body>
 </html>
