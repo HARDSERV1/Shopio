@@ -16,6 +16,7 @@
   
 </head>
 <body>
+{% block content %}
       <a id="up__bttn" class="upper__bttn"></a>
       <div class="preline">
         <div class="container">
@@ -337,7 +338,7 @@
                               <div class="option">
                                 <a href="#"><i class="fa fa-heart-o"></i></a>
                                 <a href="#"><i class="fa fa-signal"></i></a>
-                                <a href="#"><i class="fa fa-search-plus"></i></a>
+                                <a href="{% url 'about_tovar' g.pk %}" ><i class="fa fa-search-plus"></i></a>
                               </div>
                             </div>
                           </div>
@@ -634,8 +635,8 @@
           </div>
         </div>
       </main>
-
-
+{% endblock content %}
+    {% block footer %}
       <footer class="footer">
         <div class="footer__social">
           <div class="container">
@@ -720,43 +721,14 @@
           </div>
         </div>
       </footer>
+      {% endblock footer %}
+    {% block modal %}
 
-    <div class="modal-window-wrapper">
-      <div class="modal-window">
-        <img src="{{ MEDIA_URL }}{{ g.image.url }}" alt="">
-        <div class="goods-info">
-          <h1>{{ g.name }}</h1>
-          <div class="price">
-            <span class="current-price">${{ g.current_price }}</span>
-            <span class="old-price">${{ g.old_price }}</span>
-          </div>
-          <a href="#" class="more-info">See all features</a>
-          <form action="#">
-            <input type="number" value="3">
-            <button type="submit">Add to card</button>
-          </form>
-          <p class="about-goods">{{ g.info }}</p>
-          <div class="shares">
-            <p>Share this product</p>
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    {% endblock modal %}
     <script src="{% static 'js/slider.js' %}"></script><!--"../shop/static/js/slider.js"-->
     <script src="{% static 'js/categories.js' %}"></script><!--"../shop/static/js/categories.js"-->
     <script src="{% static 'js/goodsSlider.js' %}"></script><!--"../shop/static/js/goodsSlider.js"-->
     <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-        let price = document.getElementById('g-name').value();
-
-
-    </script>
 </body>
 </html>

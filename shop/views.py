@@ -21,3 +21,8 @@ def new_goods(request):
                                         )
             return redirect('index')
     return render(request,'new_goods.html',context)
+
+def about_tovar(request,pk):
+    goods = Goods.objects.all()
+    tovar = Goods.objects.get(pk=pk)
+    return render(request,'about_tovar.html',{'tovar':tovar,'goods':goods})
