@@ -829,7 +829,8 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9000; }
+  z-index: 9000;
+  display: none; }
 
 .modal-window {
   width: 830px;
