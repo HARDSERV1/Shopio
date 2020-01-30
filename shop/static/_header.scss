@@ -119,3 +119,29 @@ nav{
   }
 }
 }
+#up__bttn{
+  display: inline-block;
+  background-color: #e95668;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  margin: 30px;
+  position: fixed;
+  bottom: 5px;
+  right: -10px;
+  transition: background-color .3s;
+  z-index: 1000;
+}
+#up__bttn:hover {
+  cursor: pointer;
+  background-color: #26acce;
+}
+#up__bttn::after {
+  margin: 0 auto;
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: lighter;
+  font-size: 1.01rem;
+  line-height: 52px;
+  color: #fff;
+}
