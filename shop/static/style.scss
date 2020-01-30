@@ -8,6 +8,7 @@
 @import 'goodsContainer';
 @import 'footer';
 @import 'brands';
+@import 'mainGoods';
 
 *,*::after,*::before{
   padding: 0;
@@ -16,6 +17,7 @@
   box-sizing: border-box;
 }
 html,body{
+  width:100%;
   height: 100%;
   font-size:100%;
 }
