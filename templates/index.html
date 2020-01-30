@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="../shop/static/style.css">
+  <link rel="stylesheet" href="{% static 'style.css' %}"><!--"../shop/static/style.css"-->
   <title>Malias</title>
   
 </head>
@@ -21,7 +22,7 @@
           <div class="preline__inner">
           <div class="preline__section">
             <div class="block">
-            <img src="../shop/static/img/flags/gb.png" alt="">
+            <img src="{% static 'img/flags/gb.png' %}" alt=""><!--"../shop/static/img/flags/gb.png"-->
             <p>English</p>
             <i class="fa fa-sort-down"></i>
             </div>
@@ -248,7 +249,7 @@
                   </ul>
                 </div>
                 <div class="section">
-                  <img src="../shop/static/img/product/quickview-photo.jpg" alt="">
+                  <img src="{% static 'img/product/quickview-photo.jpg' %}" alt=""><!--"../shop/static/img/product/quickview-photo.jpg"-->
                 </div>
               </div>
             </div>
@@ -316,7 +317,7 @@
                       <ul class="list">
                         <li>
                           <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/12.jpg" alt=""></a>
+                          <a href="#"><img src="{% static 'img/product/mediam/12.jpg' %}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
                           <div class="goods-info">
                             <h2><a href="#">Various Versions</a></h2>
                             <div class="price">
@@ -344,7 +345,7 @@
 
                         <li>
                           <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/12bg.jpg" alt=""></a>
+                          <a href="#"><img src="{% static 'img/product/mediam/12bg.jpg' %}" alt=""></a><!--"../shop/static/img/product/mediam/12bg.jpg"-->
                           <div class="goods-info">
                             <h2>Established Fact</h2>
                             <div class="price">
@@ -372,7 +373,7 @@
 
                         <li>
                           <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/2.jpg" alt=""></a>
+                          <a href="#"><img src="{% static 'img/product/mediam/2.jpg' %}" alt=""></a><!--"../shop/static/img/product/mediam/2.jpg"-->
                           <div class="goods-info">
                             <h2>Trid Palm</h2>
                             <div class="price">
@@ -400,7 +401,7 @@
 
                         <li>
                           <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/2bg.jpg" alt=""></a>
+                          <a href="#"><img src="{% static 'img/product/mediam/2bg.jpg' %}" alt=""></a><!--"../shop/static/img/product/mediam/2bg.jpg"-->
                           <div class="goods-info">
                             <h2>Established Fact</h2>
                             <div class="price">
@@ -428,7 +429,7 @@
 
                         <li>
                           <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/5.jpg" alt=""></a>
+                          <a href="#"><img src="{% static 'img/product/mediam/5.jpg' %}" alt=""></a><!--"../shop/static/img/product/mediam/5.jpg" -->
                           <div class="goods-info">
                             <h2>Various Versions</h2>
                             <div class="price">
@@ -456,7 +457,7 @@
 
                         <li>
                           <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/6.jpg" alt=""></a>
+                          <a href="#"><img src="{% static 'img/product/mediam/6.jpg' %}" alt=""></a><!--"../shop/static/img/product/mediam/6.jpg"-->
                           <div class="goods-info">
                             <h2>Established Fact</h2>
                             <div class="price">
@@ -758,12 +759,12 @@
               <p>BRAND LOGO</p>
               <hr>
               <div class="companies__logos">
-                <img src="../shop/static/img/brand/1.png" alt="">
-                <img src="../shop/static/img/brand/2.png" alt="">
-                <img src="../shop/static/img/brand/3.png" alt="">
-                <img src="../shop/static/img/brand/4.png" alt="">
-                <img src="../shop/static/img/brand/5.png" alt="">
-                <img src="../shop/static/img/brand/6.png" alt="">
+                <img src="{% static 'img/brand/1.png' %}" alt=""><!--"../shop/static/img/brand/1.png"-->
+                <img src="{% static 'img/brand/2.png' %}" alt=""><!--"../shop/static/img/brand/2.png"-->
+                <img src="{% static 'img/brand/3.png' %}" alt=""><!--"../shop/static/img/brand/3.png"-->
+                <img src="{% static 'img/brand/4.png' %}" alt=""><!--"../shop/static/img/brand/4.png"-->
+                <img src="{% static 'img/brand/5.png' %}" alt=""><!--"../shop/static/img/brand/5.png"-->
+                <img src="{% static 'img/brand/5.png' %}" alt=""><!--"../shop/static/img/brand/6.png"-->
               </div>
             </div>
           </div>
@@ -883,10 +884,10 @@
       </div>
     </div>
     
-    <script src="../shop/static/js/slider.js"></script>
-    <script src="../shop/static/js/categories.js"></script>
-    <script src="../shop/static/js/goodsSlider.js"></script>
-    <script src="../shop/static/js/switchMenus.js"></script>
+    <script src="{% static 'js/slider.js' %}"></script><!--"../shop/static/js/slider.js"-->
+    <script src="{% static 'js/categories.js' %}"></script><!--"../shop/static/js/categories.js"-->
+    <script src="{% static 'js/goodsSlider.js' %}"></script><!--"../shop/static/js/goodsSlider.js"-->
+    <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 </html>
