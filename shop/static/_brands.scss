@@ -1,0 +1,16 @@
+.brands{
+  margin-top: 1.9rem;
+  font-size: 0.75rem;
+  p{
+    line-height: 18px;
+  }
+  hr{
+    width: 100%;
+    background-color: #ed7987;
+    height: 3px;
+  }
+  .companies__logos{
+    display: flex;
+    justify-content: space-around;
+  }
+}
