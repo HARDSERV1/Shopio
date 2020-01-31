@@ -8,6 +8,23 @@
 	z-index: 9000;
 	display: none;
 }
+.goods-info{
+	position: relative;
+	.close-btn{
+		display: inline-block;
+		position:absolute;
+		top:0;
+		right: 0;
+		padding: 8px 11px;
+		border: 1px solid silver;
+		color:silver;
+		border-radius: 50%;
+		font-size: 0.8rem;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+		cursor:pointer;
+	}
+}
 .modal-window{
 	width:830px;
 	background-color: white;

@@ -322,167 +322,73 @@
                       <ul class="list">
                           {% for g in goods %}
                         <li>
-
                           <div class="goods" >
-                          <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
-                          <div class="goods-info">
-                            <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
-                            <div class="price">
-                              <span class="current-price">${{ g.current_price }}</span>
-                              <span class="old-price">${{ g.old_price }}</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="option-block">
-                              <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
-                              <div class="option">
-                                <a href="#"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-signal"></i></a>
-                                <a  onclick="func('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>
+                                  <a  onclick="getInfo('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
                         </li>
-
-
                             {% endfor %}
-
                       </ul>
                     </div>
                   </div>
                   
-                  <!-- <div class="menu-wrapper" data-item="second">
+                  <div class="menu-wrapper" data-item="second">
                     <div class="list-wrapper">
                   
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
                   
                       <ul class="list">
+                          {% for g in goods %}
                         <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/3.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Various Versions</h2>
-                            <div class="price">
-                              <span class="current-price">$99.00</span>
-                              <span class="old-price">$120.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
+                          <div class="goods" >
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>
+                                  <a  onclick="getInfo('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
                         </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/2.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Established Fact</h2>
-                            <div class="price">
-                              <span class="current-price">$85.00</span>
-                              <span class="old-price">$110.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/1.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Trid Palm</h2>
-                            <div class="price">
-                              <span class="current-price">$90.00</span>
-                              <span class="old-price">$120.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/4.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Established Fact</h2>
-                            <div class="price">
-                              <span class="current-price">$85.00</span>
-                              <span class="old-price">$105.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/5.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Various Versions</h2>
-                            <div class="price">
-                              <span class="current-price">$99.00</span>
-                              <span class="old-price">$120.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/6.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Established Fact</h2>
-                            <div class="price">
-                              <span class="current-price">$85.00</span>
-                              <span class="old-price">$110.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
+                            {% endfor %}
                       </ul>
                     </div>
                   </div>
@@ -494,127 +400,38 @@
                       <div class="arrow arrow-right">></div>
                   
                       <ul class="list">
+                          {% for g in goods %}
                         <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/1.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Various Versions</h2>
-                            <div class="price">
-                              <span class="current-price">$99.00</span>
-                              <span class="old-price">$120.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
+                          <div class="goods" >
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>
+                                  <a  onclick="getInfo('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
                         </li>
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/2.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Established Fact</h2>
-                            <div class="price">
-                              <span class="current-price">$85.00</span>
-                              <span class="old-price">$110.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/3.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Trid Palm</h2>
-                            <div class="price">
-                              <span class="current-price">$90.00</span>
-                              <span class="old-price">$120.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/4.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Established Fact</h2>
-                            <div class="price">
-                              <span class="current-price">$85.00</span>
-                              <span class="old-price">$105.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/5.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Various Versions</h2>
-                            <div class="price">
-                              <span class="current-price">$99.00</span>
-                              <span class="old-price">$120.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
-                  
-                        <li>
-                          <div class="goods">
-                          <a href="#"><img src="../shop/static/img/product/mediam/6.jpg" alt=""></a>
-                          <div class="goods-info">
-                            <h2>Established Fact</h2>
-                            <div class="price">
-                              <span class="current-price">$85.00</span>
-                              <span class="old-price">$110.00</span>
-                            </div>
-                            <div class="stars">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star-o"></i>
-                            </div>
-                          </div>
-                        </div>
-                        </li>
+                            {% endfor %}
                       </ul>
                     </div>
-                  </div> -->
+                  </div> 
 
                 </div>
               </div>
@@ -666,7 +483,7 @@
             </div>
           </div>
         </div>
-        
+  
         <div class="container">
           <div class="footer__inner">
            <div class="footer__column">
@@ -732,58 +549,69 @@
 
     {% block modal %}
          <div class="modal-window-wrapper">
-      <div class="modal-window">
-        <img src="" id="mg-image" alt="">
-        <div class="goods-info">
-          <h1 id="mg-name">{{ g.name }}</h1>
-          <div class="price">
-            <span class="current-price" id="mg-current_price"></span>
-            <span class="old-price" id="mg-old_price"></span>
-          </div>
-          <a href="#" class="more-info">See all features</a>
-          <form action="#">
-            <input type="number" value="3">
-            <button type="submit">Add to card</button>
-          </form>
-          <p class="about-goods" id="mg-info">{{ g.info }}</p>
-          <div class="shares">
-            <p>Share this product</p>
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <div class="modal-window">
+            <img src="" id="mg-image" alt="">
+            <div class="goods-info">
+              <span class="close-btn">x</span>
+              <h1 id="mg-name">{{ g.name }}</h1>
+              <div class="price">
+                <span class="current-price" id="mg-current_price"></span>
+                <span class="old-price" id="mg-old_price"></span>
+              </div>
+              <a href="#" class="more-info">See all features</a>
+              <form action="#">
+                <input type="number" value="3">
+                <button type="submit">Add to card</button>
+              </form>
+              <p class="about-goods" id="mg-info">{{ g.info }}</p>
+              <div class="shares">
+                <p>Share this product</p>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
     {% endblock modal %}
-
+    
     <script src="{% static 'js/slider.js' %}"></script><!--"../shop/static/js/slider.js"-->
     <script src="{% static 'js/categories.js' %}"></script><!--"../shop/static/js/categories.js"-->
     <script src="{% static 'js/goodsSlider.js' %}"></script><!--"../shop/static/js/goodsSlider.js"-->
     <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
+
+    <!-- <script src="{% static 'js/showModal.js' %}"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        (function () {
-  let modalWindow = document.querySelector('.modal-window-wrapper');
-  document.querySelector('.goods-container').onclick = function (event) {
-    let target = event.target;
-    if(target.matches('.fa-search-plus')){
-      document.body.style.overflow = 'hidden';
-      modalWindow.style.top = window.pageYOffset + 'px'
-      modalWindow.style.display = 'block';
-    }
-  }
-})();
-        function func(name,info,cur_price,old_price,image){
+        let modalWindow = document.querySelector('.modal-window-wrapper');
+        document.querySelector('.goods-container').onclick = function (event) {
+          let target = event.target;
+          if(target.matches('.fa-search-plus')){
+            document.body.style.overflow = 'hidden';
+            modalWindow.style.top = window.pageYOffset + 'px'
+            modalWindow.style.display = 'block';
+          }
+        }
+        modalWindow.onclick = function (event) {
+          if(event.target == this){
+            this.style.display = '';
+            document.body.style.overflow = '';
+          }
+        }
+        document.querySelector('.close-btn').onclick = function () {
+          modalWindow.style.display = '';
+          document.body.style.overflow = '';
+        };
+        
+        function getInfo(name,info,cur_price,old_price,image){
             document.getElementById('mg-name').innerText = name;
             document.getElementById('mg-info').innerText = info;
             document.getElementById('mg-current_price').innerText = "$"+cur_price;
             document.getElementById('mg-old_price').innerText = "$"+old_price;
             document.getElementById('mg-image').src = image;
-
-        }
+        } 
     </script>
 </body>
 </html>
