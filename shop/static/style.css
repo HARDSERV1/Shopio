@@ -647,6 +647,8 @@ table {
           transition: background-color 0.3s; }
           .goods-container .goods-info .option-block .option i:hover {
             background-color: #26acce; }
+        .goods-container .goods-info .option-block .option a:last-child {
+          cursor: pointer; }
     .goods-container .goods-info .add-btn {
       text-transform: uppercase;
       background-color: #26acce;
@@ -831,138 +833,153 @@ table {
   left: 0;
   z-index: 9000;
   display: none; }
-
-.goods-info {
-  position: relative; }
-  .goods-info .close-btn {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 8px 11px;
-    border: 1px solid silver;
-    color: silver;
-    border-radius: 50%;
-    font-size: 0.8rem;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    cursor: pointer; }
-
-.modal-window {
-  width: 830px;
-  background-color: white;
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px;
-  padding-bottom: 15px; }
-  .modal-window img {
-    margin-right: 55px;
-    height: 433px;
-    width: auto; }
-  .modal-window h1 {
-    margin-top: 20px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
-    border-bottom: 1px solid silver;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-    color: #7e7e7e; }
-  .modal-window .price {
-    font-family: 'Roboto';
-    border-bottom: 1px solid silver;
-    padding-bottom: 20px;
-    margin-bottom: 20px; }
-    .modal-window .price span {
-      display: inline-block; }
-    .modal-window .price .current-price {
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: #7e7e7e; }
-    .modal-window .price .old-price {
-      text-decoration: line-through;
-      color: #e8e8e8; }
-  .modal-window .more-info {
-    display: inline-block;
-    font-size: 0.8rem;
-    color: #7e7e7e;
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 40px; }
-    .modal-window .more-info:hover {
-      color: red; }
-  .modal-window form {
-    padding-bottom: 35px;
-    border-bottom: 1px solid silver;
-    margin-bottom: 20px; }
-    .modal-window form input[type="number"] {
-      width: 60px;
-      height: 40px;
-      text-align: center;
-      border: 1px solid #e8e8e8;
-      color: #7e7e7e;
-      margin-right: 15px; }
-    .modal-window form button {
-      width: 225px;
-      color: white;
-      padding: 8px 0;
-      font-size: 0.9rem;
-      font-weight: bold;
-      font-family: 'Raleway', sans-serif;
-      text-transform: uppercase;
-      background-color: #26acce;
-      cursor: pointer; }
-  .modal-window .about-goods {
-    color: #7e7e7e;
-    font-size: 0.9rem;
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.5;
-    padding-bottom: 20px;
-    border-bottom: 1px solid silver; }
-  .modal-window .shares {
-    margin-top: 30px; }
-    .modal-window .shares p {
-      font-family: 'Raleway', sans-serif;
-      color: #7e7e7e;
-      font-weight: 700;
-      margin-bottom: 15px; }
-    .modal-window .shares i {
-      padding: 8px 0;
-      width: 40px;
-      text-align: center; }
-    .modal-window .shares a {
-      color: #7e7e7e;
-      border: 1px solid silver;
-      border-radius: 5px;
+  .modal-window-wrapper .goods-info {
+    position: relative;
+    width: 460px; }
+    .modal-window-wrapper .goods-info .close-btn {
       display: inline-block;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s; }
-      .modal-window .shares a:not(:last-child) {
-        margin-right: 7px; }
-      .modal-window .shares a.facebook:hover {
-        background: #3B579D;
-        border: 1px solid #3B579D;
-        color: white; }
-      .modal-window .shares a.twitter:hover {
-        background: #3ACAFF;
-        border: 1px solid #3ACAFF;
-        color: white; }
-      .modal-window .shares a.pinterest:hover {
-        background: #CB2027;
-        border: 1px solid #CB2027;
-        color: white; }
-      .modal-window .shares a.google-plus:hover {
-        background: #D11717;
-        border: 1px solid #D11717;
-        color: white; }
-      .modal-window .shares a.linkedin:hover {
-        background: #0097BD;
-        border: 1px solid #0097BD;
-        color: white; }
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 8px 11px;
+      border: 1px solid silver;
+      color: silver;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      cursor: pointer; }
+  .modal-window-wrapper .modal-window {
+    background-color: white;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 8px;
+    padding-bottom: 15px; }
+    .modal-window-wrapper .modal-window .goodsImage {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap; }
+      .modal-window-wrapper .modal-window .goodsImage img {
+        display: block;
+        width: 150px;
+        height: auto;
+        margin: 0; }
+        .modal-window-wrapper .modal-window .goodsImage img:not(:last-child) {
+          margin-bottom: 5px; }
+      .modal-window-wrapper .modal-window .goodsImage .active {
+        border: 2px solid #e8e8e8; }
+    .modal-window-wrapper .modal-window img {
+      margin: 0 50px;
+      height: 433px;
+      width: auto; }
+    .modal-window-wrapper .modal-window h1 {
+      margin-top: 20px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.5rem;
+      border-bottom: 1px solid silver;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      color: #7e7e7e; }
+    .modal-window-wrapper .modal-window .price {
+      font-family: 'Roboto';
+      border-bottom: 1px solid silver;
+      padding-bottom: 20px;
+      margin-bottom: 20px; }
+      .modal-window-wrapper .modal-window .price span {
+        display: inline-block; }
+      .modal-window-wrapper .modal-window .price .current-price {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #7e7e7e; }
+      .modal-window-wrapper .modal-window .price .old-price {
+        text-decoration: line-through;
+        color: #e8e8e8; }
+    .modal-window-wrapper .modal-window .more-info {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: #7e7e7e;
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 40px; }
+      .modal-window-wrapper .modal-window .more-info:hover {
+        color: red; }
+    .modal-window-wrapper .modal-window form {
+      padding-bottom: 35px;
+      border-bottom: 1px solid silver;
+      margin-bottom: 20px; }
+      .modal-window-wrapper .modal-window form input[type="number"] {
+        width: 60px;
+        height: 40px;
+        text-align: center;
+        border: 1px solid #e8e8e8;
+        color: #7e7e7e;
+        margin-right: 15px; }
+      .modal-window-wrapper .modal-window form button {
+        width: 225px;
+        color: white;
+        padding: 8px 0;
+        font-size: 0.9rem;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        background-color: #26acce;
+        cursor: pointer; }
+    .modal-window-wrapper .modal-window .about-goods {
+      color: #7e7e7e;
+      font-size: 0.9rem;
+      font-family: 'Raleway', sans-serif;
+      line-height: 1.5;
+      padding-bottom: 20px;
+      border-bottom: 1px solid silver; }
+    .modal-window-wrapper .modal-window .shares {
+      margin-top: 30px; }
+      .modal-window-wrapper .modal-window .shares p {
+        font-family: 'Raleway', sans-serif;
+        color: #7e7e7e;
+        font-weight: 700;
+        margin-bottom: 15px; }
+      .modal-window-wrapper .modal-window .shares i {
+        padding: 8px 0;
+        width: 40px;
+        text-align: center; }
+      .modal-window-wrapper .modal-window .shares a {
+        color: #7e7e7e;
+        border: 1px solid silver;
+        border-radius: 5px;
+        display: inline-block;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s; }
+        .modal-window-wrapper .modal-window .shares a:not(:last-child) {
+          margin-right: 7px; }
+        .modal-window-wrapper .modal-window .shares a.facebook:hover {
+          background: #3B579D;
+          border: 1px solid #3B579D;
+          color: white; }
+        .modal-window-wrapper .modal-window .shares a.twitter:hover {
+          background: #3ACAFF;
+          border: 1px solid #3ACAFF;
+          color: white; }
+        .modal-window-wrapper .modal-window .shares a.pinterest:hover {
+          background: #CB2027;
+          border: 1px solid #CB2027;
+          color: white; }
+        .modal-window-wrapper .modal-window .shares a.google-plus:hover {
+          background: #D11717;
+          border: 1px solid #D11717;
+          color: white; }
+        .modal-window-wrapper .modal-window .shares a.linkedin:hover {
+          background: #0097BD;
+          border: 1px solid #0097BD;
+          color: white; }
 
 *, *::after, *::before {
   padding: 0;

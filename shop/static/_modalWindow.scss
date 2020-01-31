@@ -7,158 +7,174 @@
 	left:0;
 	z-index: 9000;
 	display: none;
-}
-.goods-info{
-	position: relative;
-	.close-btn{
-		display: inline-block;
-		position:absolute;
-		top:0;
-		right: 0;
-		padding: 8px 11px;
-		border: 1px solid silver;
-		color:silver;
-		border-radius: 50%;
-		font-size: 0.8rem;
-		font-family: 'Raleway', sans-serif;
-		font-weight: 700;
-		cursor:pointer;
-	}
-}
-.modal-window{
-	width:830px;
-	background-color: white;
-	position:absolute;
-	top:120px;
-	left:50%;
-	transform: translate(-50%, 0%);
-	display: flex;
-	padding: 8px;
-	padding-bottom: 15px;
-	img{
-		margin-right: 55px;
-		height: 433px;
-		width:auto;
-	}
-	h1{
-		margin-top: 20px;
-		font-family: 'Raleway', sans-serif;
-		font-size:1.5rem;
-		border-bottom: 1px solid silver;
-		padding-bottom: 20px;
-		margin-bottom: 25px;
-		color: #7e7e7e;
-	}
-	.price{
-		font-family: 'Roboto';
-		border-bottom: 1px solid silver;
-		padding-bottom: 20px;
-		margin-bottom: 20px;
-		span{
+	.goods-info{
+		position: relative;
+		width:460px;
+		.close-btn{
 			display: inline-block;
-		}
-		.current-price{
-			font-size:1.4rem;
-			font-weight: 400;
-			color: #7e7e7e;
-		}
-		.old-price{
-			text-decoration: line-through;
-			color:#e8e8e8;
-		}
-	}
-	.more-info{
-		display: inline-block;
-		font-size: 0.8rem;
-		color: #7e7e7e;
-		font-family: 'Raleway', sans-serif;
-		&:hover{
-			color:red;
-		}
-		margin-bottom: 40px;
-	}
-	form{
-		padding-bottom: 35px;
-		border-bottom: 1px solid silver;
-		margin-bottom: 20px;
-		input[type="number"]{
-			width:60px;
-			height: 40px;
-			text-align: center;
-			border:1px solid #e8e8e8;
-			color: #7e7e7e;
-			margin-right: 15px;
-		}
-		button{
-			width:225px;
-			color:white;
-			padding: 8px 0;
-			font-size:0.9rem;
-			font-weight: bold;
+			position:absolute;
+			top:0;
+			right: 0;
+			padding: 8px 11px;
+			border: 1px solid silver;
+			color:silver;
+			border-radius: 50%;
+			font-size: 0.8rem;
 			font-family: 'Raleway', sans-serif;
-			text-transform: uppercase;
-			background-color: $blueColor;
-			cursor: pointer;
-		}
-	}
-	.about-goods{
-		color: #7e7e7e;
-		font-size:0.9rem;
-		font-family: 'Raleway', sans-serif;
-		line-height: 1.5;
-		padding-bottom: 20px;
-		border-bottom: 1px solid silver;
-	}
-	.shares{
-		margin-top: 30px;
-		p{
-			font-family: 'Raleway', sans-serif;
-			color: #7e7e7e;
 			font-weight: 700;
-			margin-bottom: 15px;
-		}
-		i{
-			padding: 8px 0;
-			width:40px;
-			text-align: center;
-		}
-		a{
-			color: #7e7e7e;
-			border: 1px solid silver; 
-			border-radius:5px;
-			display: inline-block;
-			transition: all 0.2s;
-			&:not(:last-child){
-				margin-right: 7px;
-			}
-			&.facebook:hover{
-				background: #3B579D;
-    			border: 1px solid #3B579D;
-    			color:white;
-			}
-			&.twitter:hover{
-				background: #3ACAFF;
-    			border: 1px solid #3ACAFF;
-    			color:white;
-			}
-			&.pinterest:hover{
-				background: #CB2027;
-    			border: 1px solid #CB2027;
-    			color:white;
-			}
-			&.google-plus:hover{
-				background: #D11717;
-    			border: 1px solid #D11717;
-    			color:white;
-			}
-			&.linkedin:hover{
-				background: #0097BD;
-    			border: 1px solid #0097BD;
-    			color:white;
-			}
+			cursor:pointer;
 		}
 	}
+	.modal-window{
+		background-color: white;
+		position:absolute;
+		top:120px;
+		left:50%;
+		transform: translate(-50%, 0%);
+		display: flex;
+		padding: 8px;
+		padding-bottom: 15px;
+		.goodsImage{
+			display: flex;
+			flex-flow: column nowrap;
+			img{
+				display: block;
+				width:150px;
+				height: auto;
+				margin:0;
+				&:not(:last-child){
+					margin-bottom: 5px;
+				}
+			}
+			.active{
+				border:2px solid #e8e8e8;
+			}
+		}
+		img{
+			margin:0 50px;
+			height: 433px;
+			width:auto;
+		}
+		h1{
+			margin-top: 20px;
+			font-family: 'Raleway', sans-serif;
+			font-size:1.5rem;
+			border-bottom: 1px solid silver;
+			padding-bottom: 20px;
+			margin-bottom: 25px;
+			color: #7e7e7e;
+		}
+		.price{
+			font-family: 'Roboto';
+			border-bottom: 1px solid silver;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			span{
+				display: inline-block;
+			}
+			.current-price{
+				font-size:1.4rem;
+				font-weight: 400;
+				color: #7e7e7e;
+			}
+			.old-price{
+				text-decoration: line-through;
+				color:#e8e8e8;
+			}
+		}
+		.more-info{
+			display: inline-block;
+			font-size: 0.8rem;
+			color: #7e7e7e;
+			font-family: 'Raleway', sans-serif;
+			&:hover{
+				color:red;
+			}
+			margin-bottom: 40px;
+		}
+		form{
+			padding-bottom: 35px;
+			border-bottom: 1px solid silver;
+			margin-bottom: 20px;
+			input[type="number"]{
+				width:60px;
+				height: 40px;
+				text-align: center;
+				border:1px solid #e8e8e8;
+				color: #7e7e7e;
+				margin-right: 15px;
+			}
+			button{
+				width:225px;
+				color:white;
+				padding: 8px 0;
+				font-size:0.9rem;
+				font-weight: bold;
+				font-family: 'Raleway', sans-serif;
+				text-transform: uppercase;
+				background-color: $blueColor;
+				cursor: pointer;
+			}
+		}
+		.about-goods{
+			color: #7e7e7e;
+			font-size:0.9rem;
+			font-family: 'Raleway', sans-serif;
+			line-height: 1.5;
+			padding-bottom: 20px;
+			border-bottom: 1px solid silver;
+		}
+		.shares{
+			margin-top: 30px;
+			p{
+				font-family: 'Raleway', sans-serif;
+				color: #7e7e7e;
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
+			i{
+				padding: 8px 0;
+				width:40px;
+				text-align: center;
+			}
+			a{
+				color: #7e7e7e;
+				border: 1px solid silver; 
+				border-radius:5px;
+				display: inline-block;
+				transition: all 0.2s;
+				&:not(:last-child){
+					margin-right: 7px;
+				}
+				&.facebook:hover{
+					background: #3B579D;
+	    			border: 1px solid #3B579D;
+	    			color:white;
+				}
+				&.twitter:hover{
+					background: #3ACAFF;
+	    			border: 1px solid #3ACAFF;
+	    			color:white;
+				}
+				&.pinterest:hover{
+					background: #CB2027;
+	    			border: 1px solid #CB2027;
+	    			color:white;
+				}
+				&.google-plus:hover{
+					background: #D11717;
+	    			border: 1px solid #D11717;
+	    			color:white;
+				}
+				&.linkedin:hover{
+					background: #0097BD;
+	    			border: 1px solid #0097BD;
+	    			color:white;
+				}
+			}
+		}
 
+	}
 }
 
 	

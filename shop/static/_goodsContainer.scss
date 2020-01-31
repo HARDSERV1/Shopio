@@ -168,6 +168,9 @@
 						background-color: $blueColor;
 					}
 				}
+				a:last-child{
+					cursor:pointer;
+				}
 			}
 		}
 		.add-btn{
