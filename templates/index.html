@@ -550,7 +550,14 @@
     {% block modal %}
          <div class="modal-window-wrapper">
           <div class="modal-window">
-            <img src="" id="mg-image" alt="">
+            <div class="goodsImage">
+              <div class="photos">
+                <img class="active" src="{% static 'img/product/mediam/2.jpg' %}" data-big-img="{% static 'img/product/quickview-photo.jpg' %}">
+                <img src="{% static 'img/product/mediam/3.jpg' %}" data-big-img="{% static 'img/product/quickview-photo.jpg' %}" alt="">
+                <img src="{% static 'img/product/mediam/4.jpg' %}" data-big-img="{% static 'img/product/quickview-photo.jpg' %}" alt="">
+              </div>
+            </div>
+            <img src="" id="mg-image" alt="" class="mainImage">
             <div class="goods-info">
               <span class="close-btn">x</span>
               <h1 id="mg-name">{{ g.name }}</h1>
@@ -605,6 +612,20 @@
           document.body.style.overflow = '';
         };
         
+        function switchPhotos() {
+          let photoBlock = modalWindow.querySelector('.photos');
+          let mainImage = modalWindow.querySelector('.mainImage');
+
+          photoBlock.onclick = function (event) {
+            let tg = event.target;
+            if(tg.tagName == "IMG"){
+              mainImage.src = tg.dataset.bigImg;
+              this.querySelectorAll('img').forEach(item => item.classList.remove('active'));
+              tg.classList.add('active');
+            }
+          }
+        }
+
         function getInfo(name,info,cur_price,old_price,image){
             document.getElementById('mg-name').innerText = name;
             document.getElementById('mg-info').innerText = info;
@@ -612,6 +633,7 @@
             document.getElementById('mg-old_price').innerText = "$"+old_price;
             document.getElementById('mg-image').src = image;
         } 
+        switchPhotos();
     </script>
 </body>
 </html>
