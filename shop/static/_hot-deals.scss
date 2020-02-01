@@ -1,0 +1,72 @@
+.deals-block{
+	margin-top: 30px;
+	width:100%;
+	.title{
+		text-transform:uppercase;
+		font-size: 1.1rem;
+		border-bottom: 3px solid $redColor;
+		padding-bottom: 8px;
+		margin-bottom: 20px;
+	}
+}
+.deals{
+	overflow: hidden;
+	position: relative;
+	width:100%;
+	border:1px solid #e3e3e3;
+	ul{
+		display: flex;
+		width:100%;
+		transition: margin-left 0.8s;
+		li{
+			min-width:260px;
+			text-align: center;
+		}
+	}
+	.hot-deals{
+		a{
+			display: block;
+		}
+	}
+	.dateTime{
+		display: flex;
+		justify-content: space-between;
+		font-family: 'Roboto', sans-serif;
+		padding: 0 3px;
+		div{
+			background-color: $redColor;
+			color:white;
+			text-align: center;
+			width:62px;
+			padding:7px 0;
+			span{
+				display: block;
+				&:first-child{
+					font-weight: bold;
+					font-size:1.2rem;
+					margin-bottom: 10px;
+				}
+				&:last-child{
+					font-size:0.95rem;
+				}
+			}
+		}
+	}
+	.goods-info{
+		@include goodsStyle(10px);
+		text-align: left;
+		padding-top: 20px;
+		font-size:0.95rem;
+		.stars{
+			margin-bottom: 10px;
+		}
+	}
+	.dots{
+		@include dots(10px, #aeabab, #d1d1d1);
+		transform: translate(0%, 0%);
+		left:auto;
+		right:15px;
+		bottom:10px;
+	}
+
+}

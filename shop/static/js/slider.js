@@ -1,7 +1,7 @@
 (function(){
 	function slider(){
-		let dots = document.querySelectorAll('.dot');
-		let slides = document.querySelectorAll('.slide');
+		let dots = document.querySelectorAll('.slider-wrapper .dot');
+		let slides = document.querySelectorAll('.slider-wrapper .slide');
 
 		for(let i = 0;i < dots.length;i++){
 
@@ -28,8 +28,8 @@
 	}
 
 	function switchSlide(n) {
-		let dots = document.querySelectorAll('.dot');
-		let slides = document.querySelectorAll('.slide');
+		let dots = document.querySelectorAll('.slider-wrapper .dot');
+		let slides = document.querySelectorAll('.slider-wrapper .slide');
 
 		for(let i = 0;i < dots.length;i++){
 			if(dots[i].classList.contains('active')){
@@ -43,7 +43,7 @@
 	}
 
 	function dotClick() {
-		let dotsBlock = document.querySelector('.dots');
+		let dotsBlock = document.querySelector('.slider-wrapper .dots');
 		dotsBlock.onclick = function(event){
 			let elem = event.target;
 			if(elem.tagName == 'SPAN'){

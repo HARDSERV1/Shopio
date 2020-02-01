@@ -142,7 +142,7 @@
 		}
 	}
 	.goods-info{
-		@include goodsStyle;
+		@include goodsStyle(15px);
 		position: relative;
 		.option-block{
 			position: absolute;
