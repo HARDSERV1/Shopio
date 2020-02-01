@@ -267,6 +267,13 @@ table {
   line-height: 52px;
   color: #fff; }
 
+.l-side .title {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  border-bottom: 3px solid #e87381;
+  padding-bottom: 8px;
+  margin-bottom: 20px; }
+
 .categories_btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,12 +372,6 @@ table {
 .deals-block {
   margin-top: 30px;
   width: 100%; }
-  .deals-block .title {
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    border-bottom: 3px solid #e87381;
-    padding-bottom: 8px;
-    margin-bottom: 20px; }
 
 .deals {
   overflow: hidden;
@@ -417,16 +418,17 @@ table {
     text-align: left;
     padding-top: 20px;
     font-size: 0.95rem; }
-    .deals .goods-info h2 a {
-      text-decoration: none;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
-      color: #595959;
-      -webkit-transition: color 0.3s;
-      transition: color 0.3s;
+    .deals .goods-info h2 {
       margin-bottom: 10px; }
-      .deals .goods-info h2 a:hover {
-        color: #e87381; }
+      .deals .goods-info h2 a {
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        color: #595959;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s; }
+        .deals .goods-info h2 a:hover {
+          color: #e87381; }
     .deals .goods-info .price {
       font-family: 'Roboto', sans-serif;
       margin-bottom: 10px; }
@@ -467,6 +469,85 @@ table {
       background-color: #d1d1d1;
       -webkit-transition: 1s;
       transition: 1s; }
+
+.bestseller-block {
+  margin-top: 40px; }
+  .bestseller-block:hover .arrow {
+    opacity: 1; }
+  .bestseller-block .bestsellers {
+    position: relative;
+    overflow: hidden; }
+    .bestseller-block .bestsellers ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-transition: margin-left 0.8s;
+      transition: margin-left 0.8s; }
+  .bestseller-block .title {
+    border-color: #26acce; }
+  .bestseller-block .post {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 262px; }
+    .bestseller-block .post a:first-child {
+      display: block; }
+    .bestseller-block .post img {
+      border: 1px solid #e3e3e3;
+      margin-right: 10px; }
+    .bestseller-block .post:not(:first-child) {
+      margin-top: 20px; }
+  .bestseller-block .goods-info {
+    padding: 0 15px 15px 15px;
+    padding: 0; }
+    .bestseller-block .goods-info h2 {
+      margin-bottom: 15px; }
+      .bestseller-block .goods-info h2 a {
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        color: #595959;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s; }
+        .bestseller-block .goods-info h2 a:hover {
+          color: #e87381; }
+    .bestseller-block .goods-info .price {
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 15px; }
+      .bestseller-block .goods-info .price span {
+        display: inline-block; }
+    .bestseller-block .goods-info .current-price {
+      color: #e87381;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-right: 10px; }
+    .bestseller-block .goods-info .old-price {
+      text-decoration: line-through;
+      color: #cccccc; }
+    .bestseller-block .goods-info .stars {
+      color: #f9af51; }
+    .bestseller-block .goods-info .stars {
+      margin-bottom: 15px; }
+  .bestseller-block .arrow {
+    z-index: 100;
+    opacity: 0;
+    font-size: 0.9rem;
+    color: white;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    position: absolute;
+    padding: 15px 18px;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s, opacity 0.4s;
+    transition: background-color 0.2s, opacity 0.4s; }
+    .bestseller-block .arrow:hover {
+      background-color: #26acce; }
+    .bestseller-block .arrow.arrow-left {
+      left: 0; }
+    .bestseller-block .arrow.arrow-right {
+      right: 0; }
 
 .slider-wrapper {
   position: relative;
@@ -642,10 +723,10 @@ table {
     transition: background-color 0.2s, opacity 0.4s; }
     .goods-container .arrow:hover {
       background-color: #26acce; }
-  .goods-container .arrow-left {
-    left: 0; }
-  .goods-container .arrow-right {
-    right: 0; }
+    .goods-container .arrow.arrow-left {
+      left: 0; }
+    .goods-container .arrow.arrow-right {
+      right: 0; }
   .goods-container .goods-list {
     width: 100%;
     margin-top: 20px;
@@ -699,16 +780,17 @@ table {
   .goods-container .goods-info {
     padding: 0 15px 15px 15px;
     position: relative; }
-    .goods-container .goods-info h2 a {
-      text-decoration: none;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
-      color: #595959;
-      -webkit-transition: color 0.3s;
-      transition: color 0.3s;
+    .goods-container .goods-info h2 {
       margin-bottom: 15px; }
-      .goods-container .goods-info h2 a:hover {
-        color: #e87381; }
+      .goods-container .goods-info h2 a {
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        color: #595959;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s; }
+        .goods-container .goods-info h2 a:hover {
+          color: #e87381; }
     .goods-container .goods-info .price {
       font-family: 'Roboto', sans-serif;
       margin-bottom: 15px; }
