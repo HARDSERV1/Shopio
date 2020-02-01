@@ -35,24 +35,8 @@
 		background-color: rgba(38, 172, 206, 0.8);
 		cursor: pointer;
 	}
-}
-.dots{
-	position: absolute;
-	cursor: pointer;
-	bottom: 15px;
-	left: 50%;
-    transform: translate(-50%, 0%);
-	.dot{
-		margin-right: 5px;
-		display: inline-block;
-		width:13px;
-		height: 13px;
-		background-color: rgba(134, 136, 138, 0.4);
-		border-radius: 50%;
-	}
-	.active{
-		background-color: rgba(255, 255, 255, 0.7);
-		transition: 1s;
+	.dots{
+		@include dots(13px, rgba(134, 136, 138, 0.4), rgba(255, 255, 255, 0.7));
 	}
 }
 .post-1{

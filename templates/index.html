@@ -259,7 +259,125 @@
                 </div>
               </div>
             </div>
+            <div class="deals-block">
+              <h2 class="title">HOT DEALS</h2>
+              <div class="deals">
+                <ul>
+                  <li class="hot-deals">
+                    <a href="#"><img src="{% static 'img/hot-deals/1.jpg' %}" alt=""></a>
+                    <div class="dateTime">
+                      <div class="days">
+                        <span class="num">0</span>
+                        <span>days</span>
+                      </div>
+                      <div class="hour">
+                        <span class="num">0</span>
+                        <span>hour</span>
+                      </div>
+                      <div class="min">
+                        <span class="num">00</span>
+                        <span>min</span>
+                      </div>
+                      <div class="sec">
+                        <span class="num">00</span>
+                        <span>sec</span>
+                      </div>
+                    </div>
+                    <div class="goods-info">
+                      <h2><a href="#">Various Versions</a></h2>
+                      <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>           
+                      <div class="price">
+                        <span class="current-price">$99.00</span>
+                        <span class="old-price">&110.00</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="hot-deals">
+                    <a href="#"><img src="{% static 'img/hot-deals/2.jpg' %}" alt=""></a>
+                    <div class="dateTime">
+                      <div class="days">
+                        <span class="num">0</span>
+                        <span>days</span>
+                      </div>
+                      <div class="hour">
+                        <span class="num">0</span>
+                        <span>hour</span>
+                      </div>
+                      <div class="min">
+                        <span class="num">00</span>
+                        <span>min</span>
+                      </div>
+                      <div class="sec">
+                        <span class="num">00</span>
+                        <span>sec</span>
+                      </div>
+                    </div>
+                    <div class="goods-info">
+                      <h2><a href="#">Trid Palm</a></h2>
+                      <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>           
+                      <div class="price">
+                        <span class="current-price">$85.00</span>
+                        <span class="old-price">&120.00</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="hot-deals">
+                    <a href="#"><img src="{% static 'img/hot-deals/3.jpg' %}" alt=""></a>
+                    <div class="dateTime">
+                      <div class="days">
+                        <span class="num">0</span>
+                        <span>days</span>
+                      </div>
+                      <div class="hour">
+                        <span class="num">0</span>
+                        <span>hour</span>
+                      </div>
+                      <div class="min">
+                        <span class="num">00</span>
+                        <span>min</span>
+                      </div>
+                      <div class="sec">
+                        <span class="num">00</span>
+                        <span>sec</span>
+                      </div>
+                    </div>
+                    <div class="goods-info">
+                      <h2><a href="#">Various Versions</a></h2>
+                      <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>           
+                      <div class="price">
+                        <span class="current-price">$90.00</span>
+                        <span class="old-price">&105.00</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="r-side">
             <div class="slider-wrapper">
               <ul>
@@ -345,7 +463,7 @@
                                   <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
-                                  <a  onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -387,7 +505,7 @@
                                   <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
-                                  <a  onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -427,14 +545,10 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>
-<<<<<<< HEAD
-                                  <a href="#" onclick="getInfo('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
-=======
+                                  <a href="#"><i class="fa fa-signal"></i></a>    
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
-                                  <a  onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
->>>>>>> 616bcb6ffb1cc029bfe46205e59f3041f8104526
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -601,44 +715,9 @@
     <script src="{% static 'js/categories.js' %}"></script><!--"../shop/static/js/categories.js"-->
     <script src="{% static 'js/goodsSlider.js' %}"></script><!--"../shop/static/js/goodsSlider.js"-->
     <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
-
-    <script src="{% static 'js/showModal.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{% static 'js/modalOptions.js' %}"></script>
+    <script src="{% static 'js/hotDealsSlider.js' %}"></script>
     <script>
-        let modalWindow = document.querySelector('.modal-window-wrapper');
-        document.querySelector('.goods-container').onclick = function (event) {
-          let target = event.target;
-          if(target.matches('.fa-search-plus')){
-            document.body.style.overflow = 'hidden';
-            modalWindow.style.top = window.pageYOffset + 'px'
-            modalWindow.style.display = 'block';
-          }
-        }
-        modalWindow.onclick = function (event) {
-          if(event.target == this){
-            this.style.display = '';
-            document.body.style.overflow = '';
-          }
-        }
-        document.querySelector('.close-btn').onclick = function () {
-          modalWindow.style.display = '';
-          document.body.style.overflow = '';
-        };
-        
-        function switchPhotos() {
-          let photoBlock = modalWindow.querySelector('.photos');
-          let mainImage = modalWindow.querySelector('.mainImage');
-
-          photoBlock.onclick = function (event) {
-            let tg = event.target;
-            if(tg.tagName == "IMG"){
-              mainImage.src = tg.dataset.bigImg;
-              this.querySelectorAll('img').forEach(item => item.classList.remove('active'));
-              tg.classList.add('active');
-            }
-          }
-        }
-
         function getInfo(img1,img2,img3,name,info,cur_price,old_price,image){
             document.getElementById('mg-name').innerText = name;
             document.getElementById('mg-info').innerText = info;
@@ -651,11 +730,8 @@
             document.getElementById('one-img').setAttribute('data-big-img',img1);
             document.getElementById('two-img').setAttribute('data-big-img',img2);
             document.getElementById('three-img').setAttribute('data-big-img',img3);
-
-
-
-        } 
-        switchPhotos();
+        }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@mixin goodsStyle{
+@mixin goodsStyle($mBottom){
 	padding:0 15px 15px 15px;
 	h2 a{
 		text-decoration: none;
@@ -9,10 +9,11 @@
 		&:hover{
 			color:$redColor;
 		}
+		margin-bottom: $mBottom;
 	}
 	.price{
-		margin-top: 15px;
 		font-family: 'Roboto', sans-serif;
+		margin-bottom: $mBottom;
 		span{
 			display: inline-block;
 		}
@@ -25,10 +26,29 @@
 	}
 	.old-price{
 		text-decoration: line-through;
-		color:#e8e8e8;
+		color:#cccccc;
 	}
 	.stars{
-		margin-top: 15px;
 		color:#f9af51;
+	}
+}
+
+@mixin dots($widthHeight, $bgColor, $activeColor){
+	position: absolute;
+	cursor: pointer;
+	bottom: 15px;
+	left: 50%;
+    transform: translate(-50%, 0%);
+	.dot{
+		margin-right: 5px;
+		display: inline-block;
+		width:$widthHeight;
+		height:$widthHeight;
+		background-color:$bgColor;
+		border-radius: 50%;
+	}
+	.active{
+		background-color: $activeColor;
+		transition: 1s;
 	}
 }
