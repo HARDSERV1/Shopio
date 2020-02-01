@@ -1,4 +1,5 @@
 {% load static %}
+{%  load filterandtags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -320,7 +321,7 @@
                       <div class="arrow arrow-right">></div>
 
                       <ul class="list">
-                          {% for g in goods %}
+                          {% for g in speaker_goods %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -342,7 +343,9 @@
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
                                   <a href="#"><i class="fa fa-signal"></i></a>
-                                  <a  onclick="getInfo('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a  onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -360,7 +363,7 @@
                       <div class="arrow arrow-right">></div>
                   
                       <ul class="list">
-                          {% for g in goods %}
+                          {% for g in TV_goods %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -382,7 +385,9 @@
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
                                   <a href="#"><i class="fa fa-signal"></i></a>
-                                  <a  onclick="getInfo('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a  onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
                                 </div>
                               </div>
                             </div>
@@ -400,9 +405,10 @@
                       <div class="arrow arrow-right">></div>
                   
                       <ul class="list">
-                          {% for g in goods %}
+                          {% for g in mobile_goods %}
                         <li>
                           <div class="goods" >
+
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
                             <div class="goods-info">
                               <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
@@ -422,7 +428,13 @@
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
                                   <a href="#"><i class="fa fa-signal"></i></a>
+<<<<<<< HEAD
                                   <a href="#" onclick="getInfo('{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+=======
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a  onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.image.url }}','{{ MEDIA_URL }}{{ sr.image.url }}','{{ MEDIA_URL }}{{ ph.last.image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+>>>>>>> 616bcb6ffb1cc029bfe46205e59f3041f8104526
                                 </div>
                               </div>
                             </div>
@@ -552,10 +564,11 @@
           <div class="modal-window">
             <div class="goodsImage">
               <div class="photos">
-                <img class="active" src="{% static 'img/product/mediam/2.jpg' %}" data-big-img="{% static 'img/product/quickview-photo.jpg' %}">
-                <img src="{% static 'img/product/mediam/3.jpg' %}" data-big-img="{% static 'img/product/quickview-photo.jpg' %}" alt="">
-                <img src="{% static 'img/product/mediam/4.jpg' %}" data-big-img="{% static 'img/product/quickview-photo.jpg' %}" alt="">
+                  <img  class="active" id="one-img" src="" data-big-img="" alt="">
+                  <img id="two-img" src="" data-big-img="" alt="">
+                  <img id="three-img" src="" data-big-img="" alt="">
               </div>
+
             </div>
             <img src="" id="mg-image" alt="" class="mainImage">
             <div class="goods-info">
@@ -589,7 +602,7 @@
     <script src="{% static 'js/goodsSlider.js' %}"></script><!--"../shop/static/js/goodsSlider.js"-->
     <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
 
-    <!-- <script src="{% static 'js/showModal.js' %}"></script> -->
+    <script src="{% static 'js/showModal.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
         let modalWindow = document.querySelector('.modal-window-wrapper');
@@ -626,12 +639,21 @@
           }
         }
 
-        function getInfo(name,info,cur_price,old_price,image){
+        function getInfo(img1,img2,img3,name,info,cur_price,old_price,image){
             document.getElementById('mg-name').innerText = name;
             document.getElementById('mg-info').innerText = info;
             document.getElementById('mg-current_price').innerText = "$"+cur_price;
             document.getElementById('mg-old_price').innerText = "$"+old_price;
             document.getElementById('mg-image').src = image;
+            document.getElementById('one-img').src=img1;
+            document.getElementById('two-img').src=img2;
+            document.getElementById('three-img').src=img3;
+            document.getElementById('one-img').setAttribute('data-big-img',img1);
+            document.getElementById('two-img').setAttribute('data-big-img',img2);
+            document.getElementById('three-img').setAttribute('data-big-img',img3);
+
+
+
         } 
         switchPhotos();
     </script>
