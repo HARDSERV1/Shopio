@@ -23,4 +23,5 @@
 		}
 	}
 	bestsellerSlider('bestsellers', 262, 2);
+	bestsellerSlider('companies__logos', 195, 4);
 })();

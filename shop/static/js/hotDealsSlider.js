@@ -1,5 +1,5 @@
 (function () {
-	function switchSlides(selector) {
+	function switchSlides(selector, width) {
 		let listBlock = document.querySelector(`.${selector} ul`);
 		let dotsBlock = document.querySelector(`.${selector} .dots`);
 
@@ -15,11 +15,11 @@
 
 				let diff =  tg.dataset.item - currentDot.dataset.item;
 				if(diff > 0){
-					position -= 260 * diff;
+					position -= width * diff;
 					listBlock.style.marginLeft = position + 'px';
 				}
 				if(diff < 0){
-					position += Math.abs(diff) * 260;
+					position += Math.abs(diff) * width;
 					listBlock.style.marginLeft = position + 'px';
 				}
 				currentDot.classList.remove('active');
@@ -28,5 +28,6 @@
 			}
 		}
 	}
-	switchSlides('deals');
+	switchSlides('deals', 260);
+	switchSlides('posts', 262);
 })();
