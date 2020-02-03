@@ -44,20 +44,7 @@
     select{
       font-family: 'Raleway', sans-serif;
       color: #7e7e7e;
-
-          padding: 18px  18px 10px;
-          width: 30%;
-          border: 2px solid #bebebe;
-    }
-    form{
-      display: flex;
-    .search__text{
-      padding: 19px  19px 10px;
-      width: 20vw;
-      color: #7e7e7e;
-
       padding: 18px 18px 18px 10px;
-
       border: 2px solid #bebebe;
       cursor: pointer;
       width:190px;
@@ -142,7 +129,6 @@ nav{
 }
 }
 #up__bttn{
-  transition: background-color 13s;
   display: inline-block;
   background-color: #e95668;
   width: 54px;
@@ -152,12 +138,12 @@ nav{
   position: fixed;
   bottom: 5px;
   right: -10px;
+  transition: background-color .3s;
   z-index: 1000;
 }
 #up__bttn:hover {
   cursor: pointer;
   background-color: #26acce;
-  
 }
 #up__bttn::after {
   margin: 0 auto;
@@ -167,5 +153,4 @@ nav{
   font-size: 1.01rem;
   line-height: 52px;
   color: #fff;
-}
 }

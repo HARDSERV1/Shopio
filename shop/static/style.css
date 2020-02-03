@@ -78,7 +78,6 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 14.5px 10px;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     font-size: 15px;
@@ -163,127 +162,119 @@ table {
       .header .header__main .search__form select {
         font-family: 'Raleway', sans-serif;
         color: #7e7e7e;
-        padding: 18px  18px 10px;
-        width: 30%;
-        border: 2px solid #bebebe; }
+        padding: 18px 18px 18px 10px;
+        border: 2px solid #bebebe;
+        cursor: pointer;
+        width: 190px; }
       .header .header__main .search__form form {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; }
         .header .header__main .search__form form .search__text {
-          padding: 19px  19px 10px;
-          width: 20vw;
+          font-family: 'Raleway', sans-serif;
+          padding: 20px;
+          width: 380px;
           color: #7e7e7e;
-          padding: 18px 18px 18px 10px;
           border: 2px solid #bebebe;
+          border-left: none;
+          border-right: none; }
+        .header .header__main .search__form form .search__button {
           cursor: pointer;
-          width: 190px; }
-        .header .header__main .search__form form form {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex; }
-          .header .header__main .search__form form form .search__text {
-            font-family: 'Raleway', sans-serif;
-            padding: 20px;
-            width: 380px;
-            color: #7e7e7e;
-            border: 2px solid #bebebe;
-            border-left: none;
-            border-right: none; }
-          .header .header__main .search__form form form .search__button {
-            cursor: pointer;
-            color: #ffff;
-            padding: 10.5px 25px;
-            background-color: #26acce;
-            -webkit-transition: background-color 0.4s;
-            transition: background-color 0.4s; }
-            .header .header__main .search__form form form .search__button:hover {
-              background-color: #e87381; }
-      .header .header__main .search__form .shopping__cart {
-        margin-left: 10px; }
-        .header .header__main .search__form .shopping__cart .bucket {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          text-decoration: none; }
-          .header .header__main .search__form .shopping__cart .bucket:hover .cart-icon {
+          color: #ffff;
+          padding: 10.5px 25px;
+          background-color: #26acce;
+          -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s; }
+          .header .header__main .search__form form .search__button:hover {
             background-color: #e87381; }
-          .header .header__main .search__form .shopping__cart .bucket .cart-icon {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            background-color: #26acce;
-            padding: 21.5px 21px; }
-            .header .header__main .search__form .shopping__cart .bucket .cart-icon i {
-              color: white; }
-        .header .header__main .search__form .shopping__cart .cart__text {
-          font-family: 'Roboto', sans-serif;
-          font-weight: bold;
-          height: 100%;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column;
-          -webkit-box-pack: justify;
-              -ms-flex-pack: justify;
-                  justify-content: space-between;
-          margin-left: 5px;
-          color: #7e7e7e; }
-          .header .header__main .search__form .shopping__cart .cart__text p:nth-child(1) {
-            text-transform: uppercase;
-            padding-bottom: 20px; }
-          .header .header__main .search__form .shopping__cart .cart__text b {
-            color: red; }
-    .header .header__main nav {
-      margin-top: 40px;
-      background-color: #474747; }
-      .header .header__main nav .nav__inner {
+    .header .header__main .shopping__cart {
+      margin-left: 10px; }
+      .header .header__main .shopping__cart .bucket {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
-        height: 6vh; }
-        .header .header__main nav .nav__inner a {
-          padding: 0 14px;
-          font-size: 15px;
-          color: white;
-          text-decoration: none;
-          border-right: 1px solid #606060; }
-  .header #up__bttn {
-    -webkit-transition: background-color 13s;
-    transition: background-color 13s;
-    display: inline-block;
-    background-color: #e95668;
-    width: 54px;
-    height: 54px;
-    text-align: center;
-    margin: 30px;
-    position: fixed;
-    bottom: 5px;
-    right: -10px;
-    z-index: 1000; }
-  .header #up__bttn:hover {
-    cursor: pointer;
-    background-color: #26acce; }
-  .header #up__bttn::after {
-    margin: 0 auto;
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: lighter;
-    font-size: 1.01rem;
-    line-height: 52px;
-    color: #fff; }
+        text-decoration: none; }
+        .header .header__main .shopping__cart .bucket:hover .cart-icon {
+          background-color: #e87381; }
+        .header .header__main .shopping__cart .bucket .cart-icon {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          background-color: #26acce;
+          padding: 21.5px 21px; }
+          .header .header__main .shopping__cart .bucket .cart-icon i {
+            color: white; }
+      .header .header__main .shopping__cart .cart__text {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin-left: 5px;
+        color: #7e7e7e; }
+        .header .header__main .shopping__cart .cart__text p:nth-child(1) {
+          text-transform: uppercase;
+          padding-bottom: 20px; }
+        .header .header__main .shopping__cart .cart__text b {
+          color: red; }
+  .header nav {
+    margin-top: 40px;
+    background-color: #474747; }
+    .header nav .nav__inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      height: 6vh; }
+      .header nav .nav__inner a {
+        padding: 0 14px;
+        font-size: 15px;
+        color: white;
+        text-decoration: none;
+        border-right: 1px solid #606060; }
+
+#up__bttn {
+  display: inline-block;
+  background-color: #e95668;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  margin: 30px;
+  position: fixed;
+  bottom: 5px;
+  right: -10px;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  z-index: 1000; }
+
+#up__bttn:hover {
+  cursor: pointer;
+  background-color: #26acce; }
+
+#up__bttn::after {
+  margin: 0 auto;
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: lighter;
+  font-size: 1.01rem;
+  line-height: 52px;
+  color: #fff; }
 
 .l-side .title {
   text-transform: uppercase;
