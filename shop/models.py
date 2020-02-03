@@ -36,5 +36,6 @@ class Goods(models.Model):
         return self.name
 
 class Photos(models.Model):
-    image = models.ImageField(upload_to='media/',blank=True,verbose_name='image')
+    small_image = models.ImageField(upload_to='media/',blank=True,verbose_name='small image')
+    big_image = models.ImageField(upload_to='media/',blank=True,verbose_name='big image')
     location = models.ForeignKey('Goods', related_name='photos',on_delete=models.CASCADE)

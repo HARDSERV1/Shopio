@@ -11,5 +11,5 @@ class NewGoodsForm(forms.ModelForm):
 class PhotosForm(forms.ModelForm):
     class Meta:
         model=Photos
-        fields=['location','image']
+        fields=['location','small_image','big_image']
 

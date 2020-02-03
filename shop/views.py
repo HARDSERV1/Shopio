@@ -46,7 +46,7 @@ def add_photos(request):
     if request.method=='POST':
         form =  PhotosForm(request.POST, request.FILES)
         if form.is_valid():
-            photo = Photos.objects.create(image=form.cleaned_data['image'],location=form.cleaned_data['location'])
+            photo = Photos.objects.create(small_image=form.cleaned_data['small_image'],big_image=form.cleaned_data['big_image'],location=form.cleaned_data['location'])
             return redirect('index')
     return render(request,'add_photos.html',context)
 
