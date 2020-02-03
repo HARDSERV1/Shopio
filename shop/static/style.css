@@ -58,10 +58,6 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -70,7 +66,31 @@ table {
     margin-left: 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 0.8rem; }
-  .preline__section .block a {
+  .preline__section .switch {
+    background-color: white;
+    position: absolute;
+    border-top: 3px solid #26acce;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 8px silver;
+            box-shadow: 0 0 8px silver; }
+    .preline__section .switch a {
+      display: block;
+      text-decoration: none;
+      color: #898a89;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.8rem;
+      padding: 8px 35px 8px 15px;
+      border-bottom: 1px solid #dddddd;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s; }
+      .preline__section .switch a:hover {
+        color: white;
+        background-color: #26acce; }
+    .preline__section .switch.switch-lg img {
+      margin-right: 5px; }
+    .preline__section .switch.switch-currency i {
+      margin-right: 5px; }
+  .preline__section .link-block {
     text-decoration: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -83,20 +103,62 @@ table {
     font-size: 15px;
     padding: 15px 10px;
     color: #898a89; }
-    .preline__section .block a p {
+    .preline__section .link-block p {
       margin-left: 5px;
       font-family: 'Raleway', sans-serif;
       font-size: 0.8rem; }
-    .preline__section .block a p + i:last-child {
+    .preline__section .link-block p + i:last-child {
       margin-left: 5px;
       margin-bottom: 5px; }
-  .preline__section .tool a {
-    display: block;
-    padding: 15px 19px;
-    color: #adadad;
+  .preline__section .tool {
+    background-color: #eeeeee;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
     border-right: 1px solid #dddddd; }
-    .preline__section .tool a:first-child {
+    .preline__section .tool:first-child {
       border-left: 1px solid #dddddd; }
+    .preline__section .tool:nth-child(1) {
+      z-index: 1; }
+      .preline__section .tool:nth-child(1) a {
+        margin-right: -90px; }
+    .preline__section .tool:nth-child(2) {
+      z-index: 2; }
+      .preline__section .tool:nth-child(2) a {
+        margin-right: -90px; }
+    .preline__section .tool:nth-child(3) {
+      z-index: 3; }
+      .preline__section .tool:nth-child(3) a {
+        margin-right: -75px; }
+    .preline__section .tool:nth-child(4) {
+      z-index: 4; }
+      .preline__section .tool:nth-child(4) a {
+        margin-right: -50px; }
+    .preline__section .tool:hover {
+      background-color: #26acce; }
+      .preline__section .tool:hover a {
+        margin-right: 0px;
+        color: white; }
+        .preline__section .tool:hover a .section-name {
+          -webkit-transform: scale(1, 1);
+                  transform: scale(1, 1);
+          color: white; }
+    .preline__section .tool a {
+      display: block;
+      padding: 18px 19px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: #adadad;
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s; }
+      .preline__section .tool a .section-name {
+        display: inline-block;
+        margin-left: 8px;
+        -webkit-transition: -webkit-transform 0.4s;
+        transition: -webkit-transform 0.4s;
+        transition: transform 0.4s;
+        transition: transform 0.4s, -webkit-transform 0.4s;
+        -webkit-transform: scale(0, 0);
+                transform: scale(0, 0); }
 
 .header {
   margin-top: 38px; }
@@ -105,10 +167,6 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -119,10 +177,6 @@ table {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
@@ -138,10 +192,6 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -154,10 +204,6 @@ table {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
       margin-left: 90px; }
       .header .header__main .search__form select {
         font-family: 'Raleway', sans-serif;

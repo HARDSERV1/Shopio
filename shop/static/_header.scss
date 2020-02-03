@@ -1,10 +1,8 @@
-
 .header{
   margin-top: 38px;
 .advantages{ 
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   color: #7e7e7e;
   .advantages__block:nth-child(4){
@@ -12,7 +10,6 @@
   }
   .advantages__block{
     display: flex;
-    flex-direction: row;
     align-items:center;
     .advantages__text{
       margin-left: 18px;
@@ -29,7 +26,6 @@
 }
 .header__main{
   display: flex;
-  flex-direction: row;
   align-items:center;
   margin-top: 45px;
   .logo{
@@ -39,7 +35,6 @@
   }
   .search__form{
     display: flex;
-    flex-direction: row;
     margin-left: 90px;
     select{
       font-family: 'Raleway', sans-serif;
