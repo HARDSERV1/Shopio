@@ -22,27 +22,37 @@
         <div class="container">
           <div class="preline__inner">
           <div class="preline__section">
-            <div class="block">
-              <a href="#">
+            <div class="lg-block">
+              <a href="#" class="link-block">
                 <img src="{% static 'img/flags/gb.png' %}" alt="">
                 <p>English</p>
                 <i class="fa fa-sort-down"></i>
               </a>
+              <ul class="switch switch-lg unvisible">
+                <li><a href="#"><img src="{% static 'img/flags/fr.png' %}" alt="">French</a></li>
+                <li><a href="#"><img src="{% static 'img/flags/gb.png' %}" alt="">English</a></li>
+                <li><a href="#"><img src="{% static 'img/flags/gb.png' %}" alt="">English</a></li>
+              </ul>
             </div>
-            <div class="block">
-              <a href="#">
+            <div class="currency-block">
+              <a href="#" class="link-block">
                 <i class="fa fa-usd"></i>
                 <p>USD</p>
                 <i class="fa fa-sort-down"></i>
               </a>
+              <ul class="switch switch-currency unvisible">
+                <li><a href="#"><i class="fa fa-usd"></i>EUR</a></li>
+                <li><a href="#"><i class="fa fa-usd"></i>GBP</a></li>
+                <li><a href="#"><i class="fa fa-usd"></i>USD</a></li>
+              </ul>
             </div>
             <p class="welcome_msg">Default welcome msg</p>
           </div>
           <div class="preline__section">
-            <div class="tool"><a href="#"><i class="fa fa-user"></i></a></div>
-            <div class="tool"><a href="#"><i class="fa fa-heart"></i></a></div>
-            <div class="tool"><a href="#"><i class="fa fa-share"></i></a></div>
-            <div class="tool"><a href="#"><i class="fa fa-unlock"></i></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-user"></i><span class="section-name">My account</span></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-heart"></i><span class="section-name">Wish List(<span>0</span>)</span></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-share"></i><span class="section-name">Checkout</span></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-unlock"></i><span class="section-name">Login</span></a></div>
           </div>
           </div>
         </div>
@@ -85,9 +95,22 @@
               <form action="#" >  
                 <select>
                   <option value="all" selected>All Categories</option>
-                  <option value="smartphones">Smartphon</option>
-                  <option value="TV">TV</option>
-                  <option value="PC">PC</option>
+                  <optgroup label="Camera & Photography">
+                    <option value="Handbags">Handbags</option>
+                    <option value="Blouses And Shirts">Blouses And Shirts</option>
+                    <option value="Clouthes">Clouthes</option>
+                  </optgroup>
+                  <optgroup label="Laptop & Computer">
+                    <option value="Apple">Apple</option>
+                    <option value="Dell">Dell</option>
+                    <option value="Hp">Hp</option>
+                    <option value="Sony">Sony</option>
+                  </optgroup>
+                  <optgroup label="Electronic">
+                    <option value="Mobile">Mobile</option>
+                    <option value="Speaker">Speaker</option>
+                    <option value="Headphone">Headphone</option>
+                  </optgroup>
                 </select>
                 <input type="text" class="search__text " placeholder="Search">
                   <button class="search__button" type="submit"><i class="fa fa-search"></i></button>       
@@ -935,13 +958,14 @@
         </div>
     {% endblock modal %}
     
-    <script src="{% static 'js/slider.js' %}"></script><!--"../shop/static/js/slider.js"-->
-    <script src="{% static 'js/categories.js' %}"></script><!--"../shop/static/js/categories.js"-->
-    <script src="{% static 'js/goodsSlider.js' %}"></script><!--"../shop/static/js/goodsSlider.js"-->
-    <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/categories.js' %}"></script>
+    <script src="{% static 'js/goodsSlider.js' %}"></script>
+    <script src="{% static 'js/switchMenus.js' %}"></script>
     <script src="{% static 'js/modalOptions.js' %}"></script>
     <script src="{% static 'js/hotDealsSlider.js' %}"></script>
     <script src="{% static 'js/bestsellerSlider.js' %}"></script>
+    <script src="{% static 'js/choseLgMoney.js' %}"></script>
     <script>
         function getInfo(img1,img2,img3,name,info,cur_price,old_price,image){
             document.getElementById('mg-name').innerText = name;
