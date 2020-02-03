@@ -9,6 +9,9 @@
             document.body.style.overflow = 'hidden';
             modalWindow.style.top = window.pageYOffset + 'px'
             modalWindow.style.display = 'block';
+
+            modalWindow.querySelector('.photos img:first-child').click();
+
           }
         }  
       }
