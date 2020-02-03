@@ -7,17 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{% static 'style.css' %}"><!--"../shop/static/style.css"-->
+  <link rel="stylesheet" href="{% static 'style.css' %}">
   <title>Malias</title>
-  
 </head>
 <body>
-
       <a id="up__bttn" class="upper__bttn"></a>
       {% block header %}
       <div class="preline">
@@ -25,22 +23,26 @@
           <div class="preline__inner">
           <div class="preline__section">
             <div class="block">
-            <img src="{% static 'img/flags/gb.png' %}" alt=""><!--"../shop/static/img/flags/gb.png"-->
-            <p>English</p>
-            <i class="fa fa-sort-down"></i>
+              <a href="#">
+                <img src="{% static 'img/flags/gb.png' %}" alt="">
+                <p>English</p>
+                <i class="fa fa-sort-down"></i>
+              </a>
             </div>
             <div class="block">
-              <i class="fas fa-dollar-sign"></i>
-              <p>USD</p>
-              <i class="fa fa-sort-down"></i>
+              <a href="#">
+                <i class="fa fa-usd"></i>
+                <p>USD</p>
+                <i class="fa fa-sort-down"></i>
+              </a>
             </div>
             <p class="welcome_msg">Default welcome msg</p>
           </div>
           <div class="preline__section">
-            <div class="block"><i class="fas fa-user"></i></div>
-            <div class="block"><i class="fas fa-heart"></i></div>
-            <div class="block"><i class="fas fa-share"></i></div>
-            <div class="block"><i class="fas fa-unlock"></i></div>
+            <div class="tool"><a href="#"><i class="fa fa-user"></i></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-heart"></i></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-share"></i></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-unlock"></i></a></div>
           </div>
           </div>
         </div>
@@ -49,28 +51,28 @@
         <div class="container">
           <div class="advantages">
             <div class="advantages__block">
-                <i class="far fa-clock"></i>
+                <i class="fa fa-clock-o fa-2x"></i>
                 <div class="advantages__text">
                   <p>Working time</p>
                   <p>Mon-Sun 8:00-18:00</p>
                 </div>
             </div>
             <div class="advantages__block">
-              <i class="fas fa-truck"></i>
+              <i class="fa fa-truck fa-2x"></i>
               <div class="advantages__text">
                 <p>Free shipping</p>
                 <p>On order over $199</p>
               </div>
             </div>
             <div class="advantages__block">
-              <i class="far fa-money-bill-alt"></i>
+              <i class="fa fa-money fa-2x"></i>
               <div class="advantages__text">
                 <p>Money back 100%</p>
                 <p>Within 30 Days after delivery</p>
               </div>
             </div>
             <div class="advantages__block">
-              <i class="fas fa-phone-alt"></i>
+              <i class="fa fa-phone-square fa-2x"></i>
               <div class="advantages__text">
                 <p>Phone:0123456789</p>
                 <p>Order online Now!</p>
@@ -78,29 +80,29 @@
             </div> 
           </div>
           <div class="header__main">
-            <b class="logo">Malias.</b>
-            <div class="search__form clearfix">
-            <form action="#" >  
-              <select name="#" id="selcet">
-                <option value="all">All Categories</option>
-                <option value="smartphones">Smartphon</option>
-                <option value="smartphones">TV</option>
-                <option value="smartphones">PC</option>
-              </select>
-              <input type="text" class="search__text " value="Search">
-                <div class="search__button">
-                  <input type="submit" class="search__button " value="">
-                 <i class="fas fa-search"></i></div>       
-            </form>
-            </div>
-           <div class="shopping__cart">
-            <a href="#" class="bucket">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-            <div class="cart__text">
-            <p>shopping-cart</p>
-            <p>2 ITEM(S)- <b>$365.00</b> </p>
-            </div>
+            <a href="#"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+            <div class="search__form">
+              <form action="#" >  
+                <select>
+                  <option value="all" selected>All Categories</option>
+                  <option value="smartphones">Smartphon</option>
+                  <option value="TV">TV</option>
+                  <option value="PC">PC</option>
+                </select>
+                <input type="text" class="search__text " placeholder="Search">
+                  <button class="search__button" type="submit"><i class="fa fa-search"></i></button>       
+              </form>
+              <div class="shopping__cart">
+                <a href="#" class="bucket">
+                  <div class="cart-icon">
+                    <i class="fa fa-shopping-cart"></i>
+                  </div>
+                  <div class="cart__text">
+                    <p>shopping-cart</p>
+                    <p>2 ITEM(S)- <b>$365.00</b> </p>
+                  </div>
+                </a>
+              </div>
             </div>
             
           </div>
@@ -376,6 +378,225 @@
                 </div>
               </div>
             </div>
+
+            <div class="bestseller-block">
+              <h2 class="title">bestseller</h2>
+              <div class="bestsellers">
+                <ul>
+                  <li>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/1.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/2.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/3.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/4.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/5.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/6.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/7.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/8.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>           
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="arrow arrow-left"><</div>
+                <div class="arrow arrow-right">></div>
+              </div>
+            </div>
+
+            <div class="posts">
+              <h2 class="title">resent posts</h2>
+              <ul>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/1.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/2.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/3.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/4.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/1.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+              </ul>
+              <div class="dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+            </div>
+
           </div>
 
           <div class="r-side">
@@ -558,11 +779,8 @@
                       </ul>
                     </div>
                   </div> 
-
                 </div>
-              </div>
-
-              
+              </div>  
             </div>
           </div>
         </div>
@@ -573,12 +791,19 @@
               <p>BRAND LOGO</p>
               <hr>
               <div class="companies__logos">
-                <img src="{% static 'img/brand/1.png' %}" alt=""><!--"../shop/static/img/brand/1.png"-->
-                <img src="{% static 'img/brand/2.png' %}" alt=""><!--"../shop/static/img/brand/2.png"-->
-                <img src="{% static 'img/brand/3.png' %}" alt=""><!--"../shop/static/img/brand/3.png"-->
-                <img src="{% static 'img/brand/4.png' %}" alt=""><!--"../shop/static/img/brand/4.png"-->
-                <img src="{% static 'img/brand/5.png' %}" alt=""><!--"../shop/static/img/brand/5.png"-->
-                <img src="{% static 'img/brand/5.png' %}" alt=""><!--"../shop/static/img/brand/6.png"-->
+                <ul>
+                  <li><a href="#"><img src="{% static 'img/brand/1.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/2.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/3.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/4.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/5.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/5.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/1.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/2.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/3.png' %}" alt=""></a></li>
+                </ul>
+                <div class="arrow arrow-left"><</div>
+                <div class="arrow arrow-right">></div>
               </div>
             </div>
           </div>
@@ -600,11 +825,11 @@
             </div>
             <div class="footer__social__side">
               <div class="ringed__social__icon"><i class="fa fa-facebook"></i></div>
-              <div class="ringed__social__icon"><i class="fab fa-google-plus-g"></i></div>
-              <div class="ringed__social__icon"><i class="fab fa-twitter"></i></div>
-              <div class="ringed__social__icon"><i class="fab fa-youtube"></i></div>
-              <div class="ringed__social__icon"><i class="fab fa-linkedin-in"></i></div>
-              <div class="ringed__social__icon"><i class="fas fa-rss"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-google-plus"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-twitter"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-youtube"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-linkedin"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-rss"></i></div>
             </div>
             </div>
           </div>
@@ -615,50 +840,50 @@
            <div class="footer__column">
              <p>MY ACCOUNT</p>
              <hr>
-             <ol>
+             <ul>
                <li><a href="#">My Account</a></li>
                <li><a href="#">Order History</a></li>
                <li><a href="#">Wish List</a></li>    
                <li><a href="#">Search Terms</a></li>
                <li><a href="#">Returns</a></li>
-             </ol>
+             </ul>
            </div>
            <div class="footer__column">
              <p>CUSTOME SERVICE</p>
              <hr>
-             <ol>
+             <ul>
                <li><a href="#">Contact us</a></li>
                <li><a href="#">About us</a></li>
                <li><a href="#">Delivery Information</a></li>
                <li><a href="#">Privacy policy</a></li>
                <li><a href="#">Terms & Conditions</a></li>
-             </ol>
+             </ul>
            </div>
            <div class="footer__column">
              <p>PAYMENT & SHIPPING</p>
              <hr>
-             <ol>
+             <ul>
                <li><a href="#">Brands</a></li>
                <li><a href="#">Git Vouchers</a></li>
                <li><a href="#">Affiliates</a></li>
                <li><a href="#">Specials</a></li>
                <li><a href="#">Search Terms</a></li>
-             </ol>
+             </ul>
            </div>
            <div class="footer__column">
              <p>PAYMENT & SHIPPING</p>
              <hr>
-             <ol>
-               <li><i class="fas fa-home"></i>
+             <ul>
+               <li><i class="fa fa-home"></i>
                  <p>Towethemes , 1234 Stret Lorem , LPA
                  States. Liberto</p>
                </li>
-               <li><i class="far fa-envelope"></i><a href="#">admin@booesperts.com</a></li>
-               <li><i class="fas fa-phone-alt"></i><a href="#">
+               <li><i class="fa fa-envelope"></i><a href="#">admin@booesperts.com</a></li>
+               <li><i class="fa fa-phone"></i>
                    <p>01234-56789 <br>
                  01234-56789</p>
-               </a></li>
-             </ol>
+               </li>
+             </ul>
            </div>
           </div>
         </div>
@@ -682,7 +907,6 @@
                   <img id="two-img" src="" data-big-img="" alt="">
                   <img id="three-img" src="" data-big-img="" alt="">
               </div>
-
             </div>
             <img src="" id="mg-image" alt="" class="mainImage">
             <div class="goods-info">
@@ -717,6 +941,7 @@
     <script src="{% static 'js/switchMenus.js' %}"></script><!--"../shop/static/js/switchMenus.js"-->
     <script src="{% static 'js/modalOptions.js' %}"></script>
     <script src="{% static 'js/hotDealsSlider.js' %}"></script>
+    <script src="{% static 'js/bestsellerSlider.js' %}"></script>
     <script>
         function getInfo(img1,img2,img3,name,info,cur_price,old_price,image){
             document.getElementById('mg-name').innerText = name;

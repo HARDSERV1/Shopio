@@ -1,15 +1,17 @@
 @mixin goodsStyle($mBottom){
 	padding:0 15px 15px 15px;
-	h2 a{
-		text-decoration: none;
-		font-family: 'Raleway', sans-serif;
-		font-weight: 600;
-		color:#595959;
-		transition: color 0.3s;
-		&:hover{
-			color:$redColor;
-		}
+	h2 {
 		margin-bottom: $mBottom;
+		a{
+			text-decoration: none;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 600;
+			color:#595959;
+			transition: color 0.3s;
+			&:hover{
+				color:$redColor;
+			}
+		}
 	}
 	.price{
 		font-family: 'Roboto', sans-serif;
@@ -50,5 +52,28 @@
 	.active{
 		background-color: $activeColor;
 		transition: 1s;
+	}
+}
+
+@mixin arrows{
+	z-index: 100;
+	opacity: 0;
+	font-size:0.9rem;
+	color:white;
+	top:50%;
+	transform: translate(0, -50%);
+	position:absolute;
+	padding: 15px 18px;
+	background-color: rgba(0, 0, 0, 0.8);
+	cursor:pointer;
+	transition: background-color 0.2s, opacity 0.4s;
+	&:hover{
+		background-color: $blueColor;
+	}	
+	&.arrow-left{
+		left:0;	
+	}
+	&.arrow-right{
+		right:0;
 	}
 }

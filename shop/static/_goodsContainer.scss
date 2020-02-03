@@ -58,27 +58,9 @@
 		}
 	}
 	.arrow{
-		z-index: 100;
-		opacity: 0;
-		font-size:0.9rem;
-		color:white;
-		top:50%;
-		transform: translate(0, -50%);
-		position:absolute;
-		padding: 15px 18px;
-		background-color: rgba(0, 0, 0, 0.8);
-		cursor:pointer;
-		transition: background-color 0.2s, opacity 0.4s;
-		&:hover{
-			background-color: $blueColor;
-		}	
+		@include arrows;
 	}
-	.arrow-left{
-		left:0;	
-	}
-	.arrow-right{
-		right:0;
-	}
+	
 	.goods-list{
 		width:100%;
 		margin-top: 20px;

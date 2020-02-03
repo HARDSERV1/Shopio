@@ -1,3 +1,13 @@
+.l-side{
+	.title{
+		text-transform:uppercase;
+		font-size: 1.1rem;
+		border-bottom: 3px solid $redColor;
+		padding-bottom: 8px;
+		margin-bottom: 20px;
+	}
+}
+
 .categories_btn{
 	display: flex;
 	background-color: $blueColor;

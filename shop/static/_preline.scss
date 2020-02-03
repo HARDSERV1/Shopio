@@ -15,21 +15,41 @@
   color: #7e7e7e;
   .welcome_msg{
     margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
   }
-  .block {
+  .block a{
+    text-decoration: none;
     display: flex;
-    flex-direction: row;
     align-items: center;
+<<<<<<< HEAD
     padding:14.5px 10px;
+=======
+>>>>>>> 6df4c2ebcbb56b307d3859517b684438c1ba202f
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     font-size: 15px;
+    padding: 15px 10px;
+    color:#898a89;
     p {
       margin-left: 5px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.8rem;
     }
-     p+ i:last-child{
+     p + i:last-child{
       margin-left: 5px;
       margin-bottom: 5px;
+    }
+  }
+  .tool{
+    a{
+      display: block;
+      padding: 15px 19px;
+      color:#adadad;
+      border-right: 1px solid #dddddd;
+      &:first-child{
+        border-left: 1px solid #dddddd;
+      }
     }
   }
 }
