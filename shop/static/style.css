@@ -887,10 +887,14 @@ table {
         margin-left: 15px; }
   .goods-container .section {
     margin-top: 38px; }
-  .goods-container .underline {
+  .goods-container .section-electronic .underline, .goods-container .section-smartphone .underline {
     display: inline-block;
     width: 100%;
     border: 2px solid #26acce; }
+  .goods-container .section-computer .underline {
+    display: inline-block;
+    width: 100%;
+    border: 2px solid #e87381; }
   .goods-container .header-section {
     display: -webkit-box;
     display: -ms-flexbox;

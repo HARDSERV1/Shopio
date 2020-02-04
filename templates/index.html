@@ -687,6 +687,7 @@
                 <span></span>
                 <span></span>
               </div>
+
               <div class="section section-electronic">
                 <div class="header-section">
                   <h2>Electronic</h2>
@@ -835,7 +836,402 @@
                     </div>
                   </div> 
                 </div>
-              </div>  
+              </div>
+
+              <div class="section section-computer">
+                <div class="header-section">
+                  <h2>Computer</h2>
+                  <nav class="navigation">
+                    <ul>
+                      <li><a href="#" class="active" data-item="first">Dell</a></li>
+                      <li><a href="#" data-item="second">Hp</a></li>
+                      <li><a href="#" data-item="third">Apple</a></li>
+                      <li><a href="#" data-item="forth">Sony</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <span class="underline"></span>
+                <div class="goods-list">
+
+                  <div class="menu-wrapper visibleGoods" data-item="first">
+
+                    <div class="list-wrapper">
+
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+
+                      <ul class="list">
+                          {% for g in catalog %}
+                              {% if g.category.name == "Electronic" and g.sub_category.name == "Speaker" %}
+                        <li>
+                          <div class="goods" >
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="menu-wrapper" data-item="second">
+                    <div class="list-wrapper">
+                  
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+                  
+                      <ul class="list">
+                          {% for g in catalog %}
+                              {% if g.category.name == "Electronic" and g.sub_category.name == "TV" %}
+                        <li>
+                          <div class="goods" >
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="menu-wrapper" data-item="third">
+                    <div class="list-wrapper" >
+                  
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+                  
+                      <ul class="list">
+                          {% for g in catalog %}
+                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                        <li>
+                          <div class="goods" >
+
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="menu-wrapper" data-item="forth">
+                    <div class="list-wrapper" >
+                  
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+                  
+                      <ul class="list">
+                          {% for g in catalog %}
+                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                        <li>
+                          <div class="goods" >
+
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div> 
+              
+              <div class="section section-smartphone">
+                <div class="header-section">
+                  <h2>smart phone</h2>
+                  <nav class="navigation">
+                    <ul>
+                      <li><a href="#" class="active" data-item="first">Sony</a></li>
+                      <li><a href="#" data-item="second">Apple</a></li>
+                      <li><a href="#" data-item="third">Samsung</a></li>
+                      <li><a href="#" data-item="forth">Nokia</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <span class="underline"></span>
+                <div class="goods-list">
+
+                  <div class="menu-wrapper visibleGoods" data-item="first">
+
+                    <div class="list-wrapper">
+
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+
+                      <ul class="list">
+                          {% for g in catalog %}
+                              {% if g.category.name == "Electronic" and g.sub_category.name == "Speaker" %}
+                        <li>
+                          <div class="goods" >
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="menu-wrapper" data-item="second">
+                    <div class="list-wrapper">
+                  
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+                  
+                      <ul class="list">
+                          {% for g in catalog %}
+                              {% if g.category.name == "Electronic" and g.sub_category.name == "TV" %}
+                        <li>
+                          <div class="goods" >
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}','{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="menu-wrapper" data-item="third">
+                    <div class="list-wrapper" >
+                  
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+                  
+                      <ul class="list">
+                          {% for g in catalog %}
+                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                        <li>
+                          <div class="goods" >
+
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="menu-wrapper" data-item="forth">
+                    <div class="list-wrapper" >
+                  
+                      <div class="arrow arrow-left"><</div>
+                      <div class="arrow arrow-right">></div>
+                  
+                      <ul class="list">
+                          {% for g in catalog %}
+                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                        <li>
+                          <div class="goods" >
+
+                            <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
+                            <div class="goods-info">
+                              <h2 id="g-name"><a href="#">{{ g.name }}</a></h2>
+                              <div class="price">
+                                <span class="current-price">${{ g.current_price }}</span>
+                                <span class="old-price">${{ g.old_price }}</span>
+                              </div>
+                              <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                              </div>
+                              <div class="option-block">
+                                <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
+                                <div class="option">
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                    {% get_l g as ph %}
+                                    {% get_n g ph.first ph.last as sr %}
+                                  <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                              {% endif %}
+                            {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
 
             <div class="goods-bottom-cotainer">

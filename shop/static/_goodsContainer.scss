@@ -22,11 +22,18 @@
 	.section{
 		margin-top: 38px;
 	}
-	.underline{
+	.section-electronic .underline, .section-smartphone .underline{
 		display: inline-block;
 		width:100%;
 		border:2px solid $blueColor;
 	}
+	
+	.section-computer .underline{
+		display: inline-block;
+		width:100%;
+		border:2px solid $redColor;
+	}
+
 	.header-section{
 		display: flex;
 		justify-content: space-between;

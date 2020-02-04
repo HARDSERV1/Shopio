@@ -1,6 +1,7 @@
 (function () {
 
 	let menuSelectors = ['first', 'second', 'third'];
+	let bigMenuSelector = ['first', 'second', 'third', 'forth'];
 
 	function goodsElectronic(selector, atrSelector, width) {
 		let goodsList = document.querySelector(`.${selector} .goods-list div[data-item="${atrSelector}"] ul`);
@@ -25,5 +26,7 @@
 		}
 	}
 	menuSelectors.forEach(item => goodsElectronic('section-electronic', item, 220));
+	bigMenuSelector.forEach(item => goodsElectronic('section-computer', item, 220));
+	bigMenuSelector.forEach(item => goodsElectronic('section-smartphone', item, 220));
 	menuSelectors.forEach(item => goodsElectronic('goods-bottom-cotainer', item, 283));
 })();
