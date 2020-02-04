@@ -18,6 +18,12 @@
 		}
 	}
 
+	function showHideMenu() {
+		$('.categories_btn').click(function (event) {
+			$(this).next().slideToggle('slow');
+		})
+	}
+
 	function addMenus(){
 		let firstListItem = document.querySelector('.first-list-item');
 		let secondListItem = document.querySelector('.second-list-item');
@@ -74,4 +80,5 @@
 
 	plusOptions();
 	addMenus();
+	showHideMenu();
 })();
