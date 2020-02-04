@@ -15,25 +15,7 @@
 		border-color:$blueColor;
 	}
 	.post{
-		display: flex;
-		width:262px;
-		a:first-child{
-			display: block;
-		}
-		img{
-			border:1px solid #e3e3e3;
-			margin-right: 10px;
-		}
-		&:not(:first-child){
-			margin-top: 20px;
-		}
-	}
-	.goods-info{
-		@include goodsStyle(15px);
-		.stars{
-			margin-bottom: 15px;
-		}
-		padding: 0;
+		@include post;
 	}
 	.arrow{
 		@include arrows;

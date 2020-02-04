@@ -1,8 +1,8 @@
 (function () {
 
-	let menuSelectors = ['first', 'second', 'third'];
+	let menuSelectors = ['first'];
 
-	function goodsElectronic(selector, atrSelector, width) {
+	function goodsElectronic(selector, atrSelector) {
 		let goodsList = document.querySelector(`.${selector} .goods-list div[data-item="${atrSelector}"] ul`);
 		let count = 0, position = 0;
 
@@ -11,19 +11,18 @@
 
 		function clickRight(){
 			if(count < 2){
-				position += -1 * width;
+				position += -283;
 				goodsList.style.marginLeft = position + 'px';
 				count++;
 			}
 		}
 		function clickLeft() {
 			if(count > 0){
-				position += width;
+				position += 283;
 				goodsList.style.marginLeft = position + 'px';
 				count--;
 			}
 		}
 	}
-	menuSelectors.forEach(item => goodsElectronic('section-electronic', item, 220));
-	goodsElectronic('goods-bottom-cotainer', 'first', 283);
+	menuSelectors.forEach(item => goodsElectronic('goods-bottom-cotainer', item));
 })();
