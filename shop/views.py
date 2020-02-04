@@ -2,20 +2,20 @@ from django.shortcuts import render,redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
 from django.core.files.base import ContentFile
-from .models import Goods,Photos
+from .models import Goods,Photos,Category,Subcategory
 from .forms import NewGoodsForm,PhotosForm
 # Create your views here.
 def index(request):
     value = ''
     all_goods = Goods.objects.all()
-    speaker_goods = Goods.objects.filter(category='Speaker')
-    TV_goods = Goods.objects.filter(category='Tv & Audio')
-    mobile_goods = Goods.objects.filter(category='Mobile')
+    catalog = {}
+    for i in Goods.objects.all():
+        catalog[i] = [{'good':i},{'category':i.category},{'sub_category':i.sub_category}]
+
+    print(catalog)
     photos = Photos.objects.all()
     context = {'all_goods':all_goods,
-               'speaker_goods':speaker_goods,
-               'TV_goods':TV_goods,
-               'mobile_goods':mobile_goods,
+               'catalog':catalog,
                'photos':photos,
                'value':value}
     return render(request,'index.html',context=context)
@@ -33,6 +33,7 @@ def new_goods(request):
                                         old_price = form.cleaned_data['old_price'],
                                         info = form.cleaned_data['info'],
                                         category=form.cleaned_data['category'],
+                                        sub_category=form.cleaned_data['sub_category']
                                         )
 
 

@@ -6,7 +6,7 @@ class NewGoodsForm(forms.ModelForm):
 
     class Meta:
         model = Goods
-        fields = ['image','name','info','current_price','old_price','category']
+        fields = ['image','name','info','current_price','old_price','category','sub_category']
 
 class PhotosForm(forms.ModelForm):
     class Meta:

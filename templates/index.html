@@ -709,7 +709,8 @@
                       <div class="arrow arrow-right">></div>
 
                       <ul class="list">
-                          {% for g in speaker_goods %}
+                          {% for g in catalog %}
+                              {% if g.category.name == "Electronic" and g.sub_category.name == "Speaker" %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -739,6 +740,7 @@
                             </div>
                           </div>
                         </li>
+                              {% endif %}
                             {% endfor %}
                       </ul>
                     </div>
@@ -751,7 +753,8 @@
                       <div class="arrow arrow-right">></div>
                   
                       <ul class="list">
-                          {% for g in TV_goods %}
+                          {% for g in catalog %}
+                              {% if g.category.name == "Electronic" and g.sub_category.name == "TV" %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -781,6 +784,7 @@
                             </div>
                           </div>
                         </li>
+                              {% endif %}
                             {% endfor %}
                       </ul>
                     </div>
@@ -793,7 +797,8 @@
                       <div class="arrow arrow-right">></div>
                   
                       <ul class="list">
-                          {% for g in mobile_goods %}
+                          {% for g in catalog %}
+                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
                         <li>
                           <div class="goods" >
 
@@ -824,6 +829,7 @@
                             </div>
                           </div>
                         </li>
+                              {% endif %}
                             {% endfor %}
                       </ul>
                     </div>
