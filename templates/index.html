@@ -124,6 +124,34 @@
                     <p>2 ITEM(S)- <b>$365.00</b> </p>
                   </div>
                 </a>
+                <div class="chosenGoods unvisible">
+                  <div class="goods">
+                    <div class="goods-item">
+                      <a href="#" class="link-img"><img src="{% static 'img/product/total-cart.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Lorem ipsum</a></h2>
+                        <p><span>1</span> x <span class="price">$180.00</span></p>
+                      </div>
+                      <div class="remove-btn"><i class="fa fa-times"></i></div>
+                    </div>
+                    <div class="goods-item">
+                      <a href="#" class="link-img"><img src="{% static 'img/product/total-cart2.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Lorem ipsum</a></h2>
+                        <p><span>1</span> x <span class="price">$180.00</span></p>
+                      </div>
+                      <div class="remove-btn"><i class="fa fa-times"></i></div>
+                    </div>
+                  </div>
+                  <div class="sum">
+                    <p>total:</p>
+                    <span class="price">$550.00</span>
+                  </div>
+                  <div class="btns">
+                    <a href="#">view cart</a>
+                    <a href="#">checkout</a>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -966,6 +994,7 @@
     <script src="{% static 'js/bestsellerSlider.js' %}"></script>
     <script src="{% static 'js/choseLgCurrency.js' %}"></script>
     <script src="{% static 'js/upButton.js' %}"></script>
+    <script src="{% static 'js/chosenGoods.js' %}"></script>    
     <script>
         function getInfo(big_img1,big_img2,big_img3,small_img1,small_img2,small_img3,name,info,cur_price,old_price,image){
             document.getElementById('mg-name').innerText = name;

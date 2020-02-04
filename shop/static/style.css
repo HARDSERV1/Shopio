@@ -275,6 +275,89 @@ table {
           padding-bottom: 20px; }
         .header .header__main .shopping__cart .cart__text b {
           color: red; }
+      .header .header__main .shopping__cart .chosenGoods {
+        width: 280px;
+        padding: 26px 13px;
+        background-color: white;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 100; }
+        .header .header__main .shopping__cart .chosenGoods .goods-item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-bottom: 24px; }
+          .header .header__main .shopping__cart .chosenGoods .goods-item .link-img {
+            display: block;
+            padding: 15px 10px;
+            border: 1px solid silver;
+            margin-right: 10px; }
+          .header .header__main .shopping__cart .chosenGoods .goods-item img {
+            width: 70px;
+            height: auto; }
+          .header .header__main .shopping__cart .chosenGoods .goods-item h2 {
+            margin-bottom: 8px; }
+          .header .header__main .shopping__cart .chosenGoods .goods-item a {
+            text-decoration: none;
+            font-family: 'Raleway', sans-serif;
+            color: gray;
+            font-size: 0.85rem;
+            -webkit-transition: color 0.3s;
+            transition: color 0.3s; }
+            .header .header__main .shopping__cart .chosenGoods .goods-item a:hover {
+              color: #26acce; }
+          .header .header__main .shopping__cart .chosenGoods .goods-item p {
+            font-size: 0.8rem;
+            color: #666666; }
+          .header .header__main .shopping__cart .chosenGoods .goods-item .price {
+            color: #26acce;
+            font-size: 1rem; }
+          .header .header__main .shopping__cart .chosenGoods .goods-item .remove-btn {
+            margin-left: auto; }
+            .header .header__main .shopping__cart .chosenGoods .goods-item .remove-btn i {
+              color: #666666;
+              cursor: pointer;
+              -webkit-transition: all 0.3s;
+              transition: all 0.3s; }
+              .header .header__main .shopping__cart .chosenGoods .goods-item .remove-btn i:hover {
+                color: white;
+                background-color: #e87381; }
+        .header .header__main .shopping__cart .chosenGoods .sum {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          border-top: 1px solid #cecdcd;
+          border-bottom: 1px solid #cecdcd;
+          padding: 12px 0;
+          margin-bottom: 20px; }
+          .header .header__main .shopping__cart .chosenGoods .sum p {
+            text-transform: uppercase; }
+          .header .header__main .shopping__cart .chosenGoods .sum .price {
+            color: #26acce;
+            font-size: 1.2rem; }
+        .header .header__main .shopping__cart .chosenGoods .btns {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          margin: 0 5px; }
+          .header .header__main .shopping__cart .chosenGoods .btns a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            padding: 15px 14px;
+            background-color: #666666;
+            -webkit-transition: background-color 0.3s;
+            transition: background-color 0.3s; }
+            .header .header__main .shopping__cart .chosenGoods .btns a:hover {
+              background-color: #26acce; }
   .header nav {
     margin-top: 40px;
     background-color: #474747; }

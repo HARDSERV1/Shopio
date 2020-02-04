@@ -103,6 +103,94 @@
         color: red;
       }
     }
+    .chosenGoods{
+      width:280px;
+      padding: 26px 13px;
+      background-color: white;
+      position: absolute;
+      top:100px;
+      left:0;
+      z-index: 100;
+      .goods-item{
+        display: flex;
+        margin-bottom: 24px;
+        .link-img{
+          display: block;
+          padding: 15px 10px;
+          border:1px solid silver;
+          margin-right: 10px;
+        }
+        img{
+          width:70px;
+          height: auto;
+        }
+        h2{
+          margin-bottom: 8px;
+        }
+        a{
+          text-decoration: none;
+          font-family: 'Raleway', sans-serif;
+          color:gray;
+          font-size: 0.85rem;
+          transition: color 0.3s;
+          &:hover{
+            color:$blueColor;
+          }
+        }
+        p{
+          font-size: 0.8rem;
+          color:#666666;
+        }
+        .price{
+          color:$blueColor;
+          font-size: 1rem;
+        }
+        .remove-btn{
+          margin-left: auto;
+          i{
+            color:#666666;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+              color:white;
+              background-color: $redColor;
+            }
+          }
+        }
+      }
+      .sum{
+        display: flex;
+        justify-content: space-between;
+        border-top:1px solid #cecdcd;
+        border-bottom:1px solid #cecdcd;
+        padding: 12px 0;
+        margin-bottom: 20px;
+        p{
+          text-transform: uppercase;
+        }
+        .price{
+          color:$blueColor;
+          font-size: 1.2rem;
+        }
+      }
+      .btns{
+        display: flex;
+        justify-content: space-between;
+        margin:0 5px;
+        a{
+          display: inline-block;
+          text-decoration:none;
+          text-transform: uppercase;
+          color:white;
+          padding: 15px 14px;
+          background-color: #666666;
+          transition: background-color 0.3s;
+          &:hover{
+            background-color:$blueColor;
+          }
+        }
+      }
+    }
   }
 }
 nav{
