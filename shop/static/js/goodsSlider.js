@@ -25,5 +25,5 @@
 		}
 	}
 	menuSelectors.forEach(item => goodsElectronic('section-electronic', item, 220));
-	goodsElectronic('goods-bottom-cotainer', 'first', 283);
+	menuSelectors.forEach(item => goodsElectronic('goods-bottom-cotainer', item, 283));
 })();

@@ -955,7 +955,8 @@ table {
       -webkit-transition: opacity 0.6s;
       transition: opacity 0.6s; }
     .goods-container .goods-list .visibleGoods {
-      opacity: 1; }
+      opacity: 1;
+      z-index: 10; }
     .goods-container .goods-list .list-wrapper {
       z-index: 10;
       width: 100%;
@@ -1423,6 +1424,63 @@ table {
     height: 100%;
     position: relative;
     height: 430px; }
+    .goods-bottom-cotainer .goods-list .menu-wrapper {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      -webkit-transition: opacity 0.8s;
+      transition: opacity 0.8s; }
+      .goods-bottom-cotainer .goods-list .menu-wrapper .post {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 262px; }
+        .goods-bottom-cotainer .goods-list .menu-wrapper .post a:first-child {
+          display: block; }
+        .goods-bottom-cotainer .goods-list .menu-wrapper .post img {
+          border: 1px solid #e3e3e3;
+          margin-right: 10px; }
+        .goods-bottom-cotainer .goods-list .menu-wrapper .post:not(:first-child) {
+          margin-top: 20px; }
+        .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info {
+          padding: 0 15px 15px 15px;
+          padding: 0; }
+          .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info h2 {
+            margin-bottom: 15px; }
+            .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info h2 a {
+              text-decoration: none;
+              font-family: 'Raleway', sans-serif;
+              font-weight: 600;
+              color: #595959;
+              -webkit-transition: color 0.3s;
+              transition: color 0.3s; }
+              .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info h2 a:hover {
+                color: #e87381; }
+          .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info .price {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 15px; }
+            .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info .price span {
+              display: inline-block; }
+          .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info .current-price {
+            color: #e87381;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-right: 10px; }
+          .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info .old-price {
+            text-decoration: line-through;
+            color: #cccccc; }
+          .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info .stars {
+            color: #f9af51; }
+          .goods-bottom-cotainer .goods-list .menu-wrapper .post .goods-info .stars {
+            margin-bottom: 15px; }
+        .goods-bottom-cotainer .goods-list .menu-wrapper .post img {
+          padding: 10px 0; }
+    .goods-bottom-cotainer .goods-list .visibleGoods {
+      opacity: 1;
+      z-index: 10; }
   .goods-bottom-cotainer .navigation {
     border-bottom: 4px solid #26acce; }
     .goods-bottom-cotainer .navigation ul {
@@ -1447,55 +1505,6 @@ table {
       .goods-bottom-cotainer .navigation a.active {
         background-color: #26acce;
         color: white; }
-  .goods-bottom-cotainer .menu-wrapper {
-    position: absolute;
-    height: 100%;
-    width: 100%; }
-    .goods-bottom-cotainer .menu-wrapper .post {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 262px; }
-      .goods-bottom-cotainer .menu-wrapper .post a:first-child {
-        display: block; }
-      .goods-bottom-cotainer .menu-wrapper .post img {
-        border: 1px solid #e3e3e3;
-        margin-right: 10px; }
-      .goods-bottom-cotainer .menu-wrapper .post:not(:first-child) {
-        margin-top: 20px; }
-      .goods-bottom-cotainer .menu-wrapper .post .goods-info {
-        padding: 0 15px 15px 15px;
-        padding: 0; }
-        .goods-bottom-cotainer .menu-wrapper .post .goods-info h2 {
-          margin-bottom: 15px; }
-          .goods-bottom-cotainer .menu-wrapper .post .goods-info h2 a {
-            text-decoration: none;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 600;
-            color: #595959;
-            -webkit-transition: color 0.3s;
-            transition: color 0.3s; }
-            .goods-bottom-cotainer .menu-wrapper .post .goods-info h2 a:hover {
-              color: #e87381; }
-        .goods-bottom-cotainer .menu-wrapper .post .goods-info .price {
-          font-family: 'Roboto', sans-serif;
-          margin-bottom: 15px; }
-          .goods-bottom-cotainer .menu-wrapper .post .goods-info .price span {
-            display: inline-block; }
-        .goods-bottom-cotainer .menu-wrapper .post .goods-info .current-price {
-          color: #e87381;
-          font-size: 1.3rem;
-          font-weight: 700;
-          margin-right: 10px; }
-        .goods-bottom-cotainer .menu-wrapper .post .goods-info .old-price {
-          text-decoration: line-through;
-          color: #cccccc; }
-        .goods-bottom-cotainer .menu-wrapper .post .goods-info .stars {
-          color: #f9af51; }
-        .goods-bottom-cotainer .menu-wrapper .post .goods-info .stars {
-          margin-bottom: 15px; }
-      .goods-bottom-cotainer .menu-wrapper .post img {
-        padding: 10px 0; }
   .goods-bottom-cotainer .list-wrapper {
     position: relative;
     width: 100%;

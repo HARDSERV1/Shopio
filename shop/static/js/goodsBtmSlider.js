@@ -1,6 +1,6 @@
 (function () {
 
-	let menuSelectors = ['first'];
+	let menuSelectors = ['first', 'second', 'third'];
 
 	function goodsElectronic(selector, atrSelector) {
 		let goodsList = document.querySelector(`.${selector} .goods-list div[data-item="${atrSelector}"] ul`);

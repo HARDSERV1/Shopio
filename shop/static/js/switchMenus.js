@@ -22,5 +22,6 @@
 			}
 		}
 	}	
-	switchMenus('section-electronic');			
+	switchMenus('section-electronic');	
+	switchMenus('goods-bottom-cotainer');		
 })();
