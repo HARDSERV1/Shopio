@@ -41,3 +41,33 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+//
+
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width:100%;
+  height: 100%;
+  font-size:100%;
+}
+@font-face {
+   font-family: "MaliasRegular";
+   src: url("../fonts/MaliasRegular.woff2") format("woff2"),
+}
+@font-face {
+  font-family: "MaliasThin";
+  src: url("../fonts/MaliasThin.woff2") format("woff2"),
+}
+body{
+  font-family: "MaliasRegular";
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
   <title>Malias</title>
 </head>
 <body>
-      <a id="up__bttn" class="upper__bttn"></a>
       {% block header %}
+      <a id="up__bttn" class="upper__bttn"></a>
       <div class="preline">
         <div class="container">
           <div class="preline__inner">
@@ -170,8 +170,7 @@
               <a href="#">Contact us</a>
             </div>
           </div>
-        </nav>
-        
+        </nav> 
       </header>
       {% endblock header %}
 
@@ -862,7 +861,7 @@
 
                       <ul class="list">
                           {% for g in catalog %}
-                              {% if g.category.name == "Electronic" and g.sub_category.name == "Speaker" %}
+                              {% if g.category.name == "Computer" and g.sub_category.name == "Dell" %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -906,7 +905,7 @@
                   
                       <ul class="list">
                           {% for g in catalog %}
-                              {% if g.category.name == "Electronic" and g.sub_category.name == "TV" %}
+                              {% if g.category.name == "Computer" and g.sub_category.name == "Hp" %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -950,7 +949,7 @@
                   
                       <ul class="list">
                           {% for g in catalog %}
-                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                          {% if g.category.name == "Computer" and g.sub_category.name == "Apple" %}
                         <li>
                           <div class="goods" >
 
@@ -995,7 +994,7 @@
                   
                       <ul class="list">
                           {% for g in catalog %}
-                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                          {% if g.category.name == "Computer" and g.sub_category.name == "Sony" %}
                         <li>
                           <div class="goods" >
 
@@ -1059,7 +1058,7 @@
 
                       <ul class="list">
                           {% for g in catalog %}
-                              {% if g.category.name == "Electronic" and g.sub_category.name == "Speaker" %}
+                              {% if g.category.name == "SmartPhone" and g.sub_category.name == "Sony" %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -1103,7 +1102,7 @@
                   
                       <ul class="list">
                           {% for g in catalog %}
-                              {% if g.category.name == "Electronic" and g.sub_category.name == "TV" %}
+                              {% if g.category.name == "SmartPhone" and g.sub_category.name == "Apple" %}
                         <li>
                           <div class="goods" >
                             <a href="#"><img src="{{ MEDIA_URL }}{{ g.image.url }}" alt=""></a><!--"../shop/static/img/product/mediam/12.jpg"-->
@@ -1147,7 +1146,7 @@
                   
                       <ul class="list">
                           {% for g in catalog %}
-                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                          {% if g.category.name == "SmartPhone" and g.sub_category.name == "Samsung" %}
                         <li>
                           <div class="goods" >
 
@@ -1192,7 +1191,7 @@
                   
                       <ul class="list">
                           {% for g in catalog %}
-                          {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
+                          {% if g.category.name == "SmartPhone" and g.sub_category.name == "Nokia" %}
                         <li>
                           <div class="goods" >
 

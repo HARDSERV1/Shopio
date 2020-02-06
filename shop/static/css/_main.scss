@@ -1,0 +1,17 @@
+main{
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 30px;
+  .column-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  .l-side{
+    max-width: 262px;
+    flex:1;
+  }
+  .r-side{
+    max-width: 850px;
+    flex:1;
+  }
+}
