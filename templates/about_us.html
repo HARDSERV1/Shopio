@@ -1,16 +1,27 @@
+{% extends 'basic.html' %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-
+{% block head %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../shop/static/style.css">
-  <title>About us</title>
-</head>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'pages/_about_us.css'%}">
+    <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
+  {% block title %}<title>About us</title>{% endblock title %}
+</head>
+{% endblock head %}
 <body>
+
+
   <main>
+    {% block content %}
     <div class="container">
       <div class="bottom__menu">
         <a href="#" class="previous__link">Home</a>
@@ -67,8 +78,11 @@
         </div>
       </div>
     </div>
-
+    {% endblock content %}
   </main>
+
+{% block modal %}
+{% endblock modal %}
 </body>
 
 </html>

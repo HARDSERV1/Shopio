@@ -1,7 +1,9 @@
+{% extends 'basic.html' %}
 {% load static %}
 {%  load filterandtags %}
 <!DOCTYPE html>
 <html lang="en">
+{% block head %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +14,13 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
-  <title>Malias</title>
+  {% block title %}<title>Malias</title>{% endblock title %}
 </head>
+{% endblock head %}
 <body>
-      {% block header %}
+
       <a id="up__bttn" class="upper__bttn"></a>
-      <div class="preline">
+     {% block header %} <div class="preline">
         <div class="container">
           <div class="preline__inner">
           <div class="preline__section">
@@ -172,10 +175,10 @@
           </div>
         </nav> 
       </header>
-      {% endblock header %}
-
-    {% block content %}
+        {% endblock header %}
+{% block content %}
       <main>
+
         <div class="column-wrapper">
           <div class="l-side">
             <div class="categories">
@@ -2091,9 +2094,10 @@
           </div>
         </div>
       </main>
-    {% endblock content %}
 
-    {% block footer %}
+{% endblock content %}
+
+{% block footer %}
       <footer class="footer">
         <div class="footer__social">
           <div class="container">
@@ -2178,10 +2182,9 @@
           </div>
         </div>
       </footer>
-      {% endblock footer %}
-
-    {% block modal %}
-         <div class="modal-window-wrapper">
+{% endblock footer %}
+{% block modal %}
+      <div class="modal-window-wrapper">
           <div class="modal-window">
             <div class="goodsImage">
               <div class="photos">
@@ -2215,8 +2218,8 @@
             </div>
           </div>
         </div>
-    {% endblock modal %}
-    
+{% endblock modal %}
+      {% block script %}
     <script src="{% static 'js/slider.js' %}"></script>
     <script src="{% static 'js/categories.js' %}"></script>
     <script src="{% static 'js/goodsSlider.js' %}"></script>
@@ -2243,5 +2246,6 @@
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{% endblock script %}
 </body>
 </html>

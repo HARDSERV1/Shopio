@@ -1,0 +1,844 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
+    {% block title %}<title>Basic</title>{% endblock title %}
+</head>
+{% endblock head %}
+<body>
+{% block header %}
+    <div class="preline">
+        <div class="container">
+          <div class="preline__inner">
+          <div class="preline__section">
+            <div class="lg-block">
+              <a href="#" class="link-block">
+                <img src="{% static 'img/flags/gb.png' %}" alt="">
+                <p>English</p>
+                <i class="fa fa-sort-down"></i>
+              </a>
+              <ul class="switch switch-lg unvisible">
+                <li><a href="#"><img src="{% static 'img/flags/fr.png' %}" alt="">French</a></li>
+                <li><a href="#"><img src="{% static 'img/flags/gb.png' %}" alt="">English</a></li>
+                <li><a href="#"><img src="{% static 'img/flags/gb.png' %}" alt="">English</a></li>
+              </ul>
+            </div>
+            <div class="currency-block">
+              <a href="#" class="link-block">
+                <i class="fa fa-usd"></i>
+                <p>USD</p>
+                <i class="fa fa-sort-down"></i>
+              </a>
+              <ul class="switch switch-currency unvisible">
+                <li><a href="#"><i class="fa fa-usd"></i>EUR</a></li>
+                <li><a href="#"><i class="fa fa-usd"></i>GBP</a></li>
+                <li><a href="#"><i class="fa fa-usd"></i>USD</a></li>
+              </ul>
+            </div>
+            <p class="welcome_msg">Default welcome msg</p>
+          </div>
+          <div class="preline__section">
+            <div class="tool"><a href="#"><i class="fa fa-user"></i><span class="section-name">My account</span></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-heart"></i><span class="section-name">Wish List(<span>0</span>)</span></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-share"></i><span class="section-name">Checkout</span></a></div>
+            <div class="tool"><a href="#"><i class="fa fa-unlock"></i><span class="section-name">Login</span></a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container">
+          <div class="advantages">
+            <div class="advantages__block">
+                <i class="fa fa-clock-o fa-2x"></i>
+                <div class="advantages__text">
+                  <p>Working time</p>
+                  <p>Mon-Sun 8:00-18:00</p>
+                </div>
+            </div>
+            <div class="advantages__block">
+              <i class="fa fa-truck fa-2x"></i>
+              <div class="advantages__text">
+                <p>Free shipping</p>
+                <p>On order over $199</p>
+              </div>
+            </div>
+            <div class="advantages__block">
+              <i class="fa fa-money fa-2x"></i>
+              <div class="advantages__text">
+                <p>Money back 100%</p>
+                <p>Within 30 Days after delivery</p>
+              </div>
+            </div>
+            <div class="advantages__block">
+              <i class="fa fa-phone-square fa-2x"></i>
+              <div class="advantages__text">
+                <p>Phone:0123456789</p>
+                <p>Order online Now!</p>
+              </div>
+            </div>
+          </div>
+          <div class="header__main">
+            <a href="#"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+            <div class="search__form">
+              <form action="#" >
+                <select>
+                  <option value="all" selected>All Categories</option>
+                  <optgroup label="Camera & Photography">
+                    <option value="Handbags">Handbags</option>
+                    <option value="Blouses And Shirts">Blouses And Shirts</option>
+                    <option value="Clouthes">Clouthes</option>
+                  </optgroup>
+                  <optgroup label="Laptop & Computer">
+                    <option value="Apple">Apple</option>
+                    <option value="Dell">Dell</option>
+                    <option value="Hp">Hp</option>
+                    <option value="Sony">Sony</option>
+                  </optgroup>
+                  <optgroup label="Electronic">
+                    <option value="Mobile">Mobile</option>
+                    <option value="Speaker">Speaker</option>
+                    <option value="Headphone">Headphone</option>
+                  </optgroup>
+                </select>
+                <input type="text" class="search__text " placeholder="Search">
+                  <button class="search__button" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+              <div class="shopping__cart">
+                <a href="#" class="bucket">
+                  <div class="cart-icon">
+                    <i class="fa fa-shopping-cart"></i>
+                  </div>
+                  <div class="cart__text">
+                    <p>shopping-cart</p>
+                    <p>2 ITEM(S)- <b>$365.00</b> </p>
+                  </div>
+                </a>
+                <div class="chosenGoods unvisible">
+                  <div class="goods">
+                    <div class="goods-item">
+                      <a href="#" class="link-img"><img src="{% static 'img/product/total-cart.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Lorem ipsum</a></h2>
+                        <p><span>1</span> x <span class="price">$180.00</span></p>
+                      </div>
+                      <div class="remove-btn"><i class="fa fa-times"></i></div>
+                    </div>
+                    <div class="goods-item">
+                      <a href="#" class="link-img"><img src="{% static 'img/product/total-cart2.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Lorem ipsum</a></h2>
+                        <p><span>1</span> x <span class="price">$180.00</span></p>
+                      </div>
+                      <div class="remove-btn"><i class="fa fa-times"></i></div>
+                    </div>
+                  </div>
+                  <div class="sum">
+                    <p>total:</p>
+                    <span class="price">$550.00</span>
+                  </div>
+                  <div class="btns">
+                    <a href="#">view cart</a>
+                    <a href="#">checkout</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <nav>
+          <div class="container">
+            <div class="nav__inner">
+              <a href="#">Home</a>
+              <a href="about_us.html">About us</a>
+              <a href="#">Bestsellers Products</a>
+              <a href="#">New Products</a>
+              <a href="#">Special Products</a>
+              <a href="#">Pages</a>
+              <a href="#">Contact us</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+{% endblock header %}
+
+        <main>
+        {% block content %}
+		<div class="column-wrapper">
+			<div class="l-side">
+                {% block categories %}
+                    <div class="categories">
+              <div class="categories_btn">
+                <i class="fa fa-bars"></i>
+                <p>Categories</p>
+                <i class="fa fa-sort-down"></i>
+              </div>
+              <div class="list-category">
+                <ul>
+                  <li class="arrow first-list-item">Cameras & Photography</li>
+                  <li class="arrow second-list-item">Tv & Audio</li>
+                  <li class="arrow third-list-item">SmartPhones & Tablets</li>
+                  <li>Laptop & Computer</li>
+                  <li>Sony</li>
+                  <li>Mobile</li>
+                  <li>Sports</li>
+                  <li class="hide-option unvisible">Books</li>
+                  <li class="more-btn">More Categories<i class="fa fa-plus"></i></li>
+                </ul>
+              </div>
+              <div class="hide-menu first unvisible">
+                <div class="section">
+                  <h2>Handbags</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blouses And Shirts</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Clutches</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Cross Body</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Satchels</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sholuder</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Toter</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <h2>Tops</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Evening</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Long Sleeved</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Short Sleeved</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sleeveless</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>T-Shirts</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Tanks And Camis</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <h2>Dresses</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Belts</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Cocktail</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Day</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Evening</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sundresses</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sweater</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <h2>Accessories</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bras</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Hair Accessories</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Hats And Gloves</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Lifestyle</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Scarves</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Small Leathers</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="hide-menu second unvisible">
+                <div class="section">
+                  <h2>BAGS</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <h2>CLOTHING</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <h2>LINGERIE</h2>
+                  <ul>
+                   <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <h2>Shoes</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="hide-menu third unvisible">
+                <div class="section">
+                  <h2>Women</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Belts</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jewelry</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Socks</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sunglasses</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <h2>CLOTHING</h2>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Boots</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Brands We Love</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Casuals</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Gifts And Tech</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Gifts And Tech</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Slippers</a></li>
+                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Speakers</a></li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <img src="{% static 'img/product/quickview-photo.jpg' %}" alt=""><!--"../shop/static/img/product/quickview-photo.jpg"-->
+                </div>
+              </div>
+            </div>
+                {% endblock categories %}
+                {% block deals %}
+                    <div class="deals-block">
+              <h2 class="title">HOT DEALS</h2>
+              <div class="deals">
+                <ul>
+                  <li class="hot-deals">
+                    <a href="#"><img src="{% static 'img/hot-deals/1.jpg' %}" alt=""></a>
+                    <div class="dateTime">
+                      <div class="days">
+                        <span class="num">0</span>
+                        <span>days</span>
+                      </div>
+                      <div class="hour">
+                        <span class="num">0</span>
+                        <span>hour</span>
+                      </div>
+                      <div class="min">
+                        <span class="num">00</span>
+                        <span>min</span>
+                      </div>
+                      <div class="sec">
+                        <span class="num">00</span>
+                        <span>sec</span>
+                      </div>
+                    </div>
+                    <div class="goods-info">
+                      <h2><a href="#">Various Versions</a></h2>
+                      <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                      <div class="price">
+                        <span class="current-price">$99.00</span>
+                        <span class="old-price">&110.00</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="hot-deals">
+                    <a href="#"><img src="{% static 'img/hot-deals/2.jpg' %}" alt=""></a>
+                    <div class="dateTime">
+                      <div class="days">
+                        <span class="num">0</span>
+                        <span>days</span>
+                      </div>
+                      <div class="hour">
+                        <span class="num">0</span>
+                        <span>hour</span>
+                      </div>
+                      <div class="min">
+                        <span class="num">00</span>
+                        <span>min</span>
+                      </div>
+                      <div class="sec">
+                        <span class="num">00</span>
+                        <span>sec</span>
+                      </div>
+                    </div>
+                    <div class="goods-info">
+                      <h2><a href="#">Trid Palm</a></h2>
+                      <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                      <div class="price">
+                        <span class="current-price">$85.00</span>
+                        <span class="old-price">&120.00</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="hot-deals">
+                    <a href="#"><img src="{% static 'img/hot-deals/3.jpg' %}" alt=""></a>
+                    <div class="dateTime">
+                      <div class="days">
+                        <span class="num">0</span>
+                        <span>days</span>
+                      </div>
+                      <div class="hour">
+                        <span class="num">0</span>
+                        <span>hour</span>
+                      </div>
+                      <div class="min">
+                        <span class="num">00</span>
+                        <span>min</span>
+                      </div>
+                      <div class="sec">
+                        <span class="num">00</span>
+                        <span>sec</span>
+                      </div>
+                    </div>
+                    <div class="goods-info">
+                      <h2><a href="#">Various Versions</a></h2>
+                      <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                      <div class="price">
+                        <span class="current-price">$90.00</span>
+                        <span class="old-price">&105.00</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+                {% endblock deals %}
+                {% block best_sellers %}
+                    <div class="bestseller-block">
+              <h2 class="title">bestseller</h2>
+              <div class="bestsellers">
+                <ul>
+                  <li>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/1.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/2.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/3.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/4.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/5.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/6.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/7.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post">
+                      <a href="#"><img src="{% static 'img/product/small/8.jpg' %}" alt=""></a>
+                      <div class="goods-info">
+                        <h2><a href="#">Various Versions</a></h2>
+                        <div class="price">
+                          <span class="current-price">$90.00</span>
+                          <span class="old-price">&105.00</span>
+                        </div>
+                        <div class="stars">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="arrow arrow-left"><</div>
+                <div class="arrow arrow-right">></div>
+              </div>
+            </div>
+                {% endblock best_sellers %}
+                {% block posts %}
+                    <div class="posts">
+              <h2 class="title">resent posts</h2>
+              <ul>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/1.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/2.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/3.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/4.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+                <li>
+                  <div class="img-block"><img src="{% static 'img/posts/1.jpg' %}" alt=""></div>
+                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
+                  <div class="block-span">
+                    <span class="date">23/12/2015</span>
+                    <span> | </span>
+                    <span>BootExpert Theme</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
+                  <a href="#" class="read-more">Read more...</a>
+                </li>
+              </ul>
+              <div class="dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+            </div>
+                {% endblock posts%}
+                {% block l-side %}
+                    {% endblock l-side %}
+
+            </div>
+			<div class="r-side"></div>
+            {% block r-side %}
+            {% endblock r-side %}
+
+
+		</div>
+        {% endblock content %}
+        {% block brands %}
+            <div class="brands">
+          <div class="container">
+            <div class="brands__inner">
+              <p>BRAND LOGO</p>
+              <hr>
+              <div class="companies__logos">
+                <ul>
+                  <li><a href="#"><img src="{% static 'img/brand/1.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/2.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/3.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/4.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/5.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/5.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/1.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/2.png' %}" alt=""></a></li>
+                  <li><a href="#"><img src="{% static 'img/brand/3.png' %}" alt=""></a></li>
+                </ul>
+                <div class="arrow arrow-left"><</div>
+                <div class="arrow arrow-right">></div>
+              </div>
+            </div>
+          </div>
+        </div>
+            {% endblock brands %}
+	    </main>
+
+{% block footer %}
+    <footer class="footer">
+        <div class="footer__social">
+          <div class="container">
+            <div class="footer__social__inner">
+            <div class="footer__social__side">
+              <p>SIGN UP FOR OUR NEWS LETTER:</p>
+              <form action="#">
+                <input type="text" class="user__email" placeholder="Enter your email">
+                <input type="submit" class="subscribe__btn" value="Subscribe">
+              </form>
+            </div>
+            <div class="footer__social__side">
+              <div class="ringed__social__icon"><i class="fa fa-facebook"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-google-plus"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-twitter"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-youtube"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-linkedin"></i></div>
+              <div class="ringed__social__icon"><i class="fa fa-rss"></i></div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="footer__inner">
+           <div class="footer__column">
+             <p>MY ACCOUNT</p>
+             <hr>
+             <ul>
+               <li><a href="#">My Account</a></li>
+               <li><a href="#">Order History</a></li>
+               <li><a href="#">Wish List</a></li>
+               <li><a href="#">Search Terms</a></li>
+               <li><a href="#">Returns</a></li>
+             </ul>
+           </div>
+           <div class="footer__column">
+             <p>CUSTOME SERVICE</p>
+             <hr>
+             <ul>
+               <li><a href="#">Contact us</a></li>
+               <li><a href="#">About us</a></li>
+               <li><a href="#">Delivery Information</a></li>
+               <li><a href="#">Privacy policy</a></li>
+               <li><a href="#">Terms & Conditions</a></li>
+             </ul>
+           </div>
+           <div class="footer__column">
+             <p>PAYMENT & SHIPPING</p>
+             <hr>
+             <ul>
+               <li><a href="#">Brands</a></li>
+               <li><a href="#">Git Vouchers</a></li>
+               <li><a href="#">Affiliates</a></li>
+               <li><a href="#">Specials</a></li>
+               <li><a href="#">Search Terms</a></li>
+             </ul>
+           </div>
+           <div class="footer__column">
+             <p>PAYMENT & SHIPPING</p>
+             <hr>
+             <ul>
+               <li><i class="fa fa-home"></i>
+                 <p>Towethemes , 1234 Stret Lorem , LPA
+                 States. Liberto</p>
+               </li>
+               <li><i class="fa fa-envelope"></i><a href="#">admin@booesperts.com</a></li>
+               <li><i class="fa fa-phone"></i>
+                   <p>01234-56789 <br>
+                 01234-56789</p>
+               </li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div class="footer__end">
+          <div class="container">
+            <div class="footer__end__inner">
+              <p>Copyright &copy; HARDSERV Edition All rights are not reserved</p>
+              <img src="../shop/static/img/payment.png" alt="">
+            </div>
+          </div>
+        </div>
+      </footer>
+{% endblock footer %}
+
+{% block modal %}
+    <div class="modal-window-wrapper">
+          <div class="modal-window">
+            <div class="goodsImage">
+              <div class="photos">
+                  <img  class="active" id="one-img" src="" data-big-img="" alt="">
+                  <img id="two-img" src="" data-big-img="" alt="">
+                  <img id="three-img" src="" data-big-img="" alt="">
+              </div>
+            </div>
+            <img src="" id="mg-image" alt="" class="mainImage">
+            <div class="goods-info">
+              <span class="close-btn">x</span>
+              <h1 id="mg-name"></h1>
+              <div class="price">
+                <span class="current-price" id="mg-current_price"></span>
+                <span class="old-price" id="mg-old_price"></span>
+              </div>
+              <a href="#" class="more-info">See all features</a>
+              <form action="#">
+                <input type="number" value="3">
+                <button type="submit">Add to card</button>
+              </form>
+              <p class="about-goods" id="mg-info"></p>
+              <div class="shares">
+                <p>Share this product</p>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock modal %}
+{% block script %}
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/categories.js' %}"></script>
+    <script src="{% static 'js/goodsSlider.js' %}"></script>
+    <script src="{% static 'js/switchMenus.js' %}"></script>
+    <script src="{% static 'js/modalOptions.js' %}"></script>
+    <script src="{% static 'js/hotDealsSlider.js' %}"></script>
+    <script src="{% static 'js/bestsellerSlider.js' %}"></script>
+    <script src="{% static 'js/choseLgCurrency.js' %}"></script>
+    <script src="{% static 'js/upButton.js' %}"></script>
+    <script src="{% static 'js/chosenGoods.js' %}"></script>
+    <script>
+        function getInfo(big_img1,big_img2,big_img3,small_img1,small_img2,small_img3,name,info,cur_price,old_price,image){
+            document.getElementById('mg-name').innerText = name;
+            document.getElementById('mg-info').innerText = info;
+            document.getElementById('mg-current_price').innerText = "$"+cur_price;
+            document.getElementById('mg-old_price').innerText = "$"+old_price;
+            document.getElementById('mg-image').src = image;
+            document.getElementById('one-img').src=small_img1;
+            document.getElementById('two-img').src=small_img2;
+            document.getElementById('three-img').src=small_img3;
+            document.getElementById('one-img').setAttribute('data-big-img',big_img1);
+            document.getElementById('two-img').setAttribute('data-big-img',big_img2);
+            document.getElementById('three-img').setAttribute('data-big-img',big_img3);
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{% endblock script %}
+</body>
+</html>

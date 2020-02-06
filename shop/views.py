@@ -53,5 +53,8 @@ def add_photos(request):
 
 
 
+def about_us(request):
+    return render(request,'about_us.html')
 
-
+def cart(request):
+    return render(request,'cart.html')
