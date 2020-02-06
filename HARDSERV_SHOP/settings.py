@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sass_processor',
 
     'shop.apps.ShopConfig',
 ]
@@ -126,7 +125,7 @@ USE_TZ = True
 
 STATIC_ROOT = 'shop/static/'
 STATIC_URL = '/static/'
-SASS_PROCESSOR_ROOT = STATIC_ROOT
+
 
 
 MEDIA_URL = '/media/'
