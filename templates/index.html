@@ -172,6 +172,7 @@
           </div>
         </nav> 
       </header>
+<<<<<<< HEAD
       {% endblock header %}
 
     {% block content %}
@@ -648,6 +649,11 @@
           </div>
 
           <div class="r-side">
+=======
+        {% endblock header %}
+
+            {% block r-side %}
+>>>>>>> 083cb84f3483b10daaa8a8b3b418e4fc06f6af02
             <div class="slider-wrapper">
               <ul>
                 <li class="slide first visible">
@@ -745,13 +751,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="second">
                     <div class="list-wrapper">
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                               {% if g.category.name == "Electronic" and g.sub_category.name == "TV" %}
@@ -789,13 +795,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="third">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
@@ -820,7 +826,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -833,7 +839,7 @@
                             {% endfor %}
                       </ul>
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </div>
 
@@ -896,13 +902,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="second">
                     <div class="list-wrapper">
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                               {% if g.category.name == "Computer" and g.sub_category.name == "Hp" %}
@@ -940,13 +946,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="third">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "Computer" and g.sub_category.name == "Apple" %}
@@ -971,7 +977,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -988,10 +994,10 @@
 
                   <div class="menu-wrapper" data-item="forth">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "Computer" and g.sub_category.name == "Sony" %}
@@ -1016,7 +1022,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -1032,8 +1038,8 @@
                   </div>
 
                 </div>
-              </div> 
-              
+              </div>
+
               <div class="section section-smartphone">
                 <div class="header-section">
                   <h2>smart phone</h2>
@@ -1093,13 +1099,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="second">
                     <div class="list-wrapper">
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                               {% if g.category.name == "SmartPhone" and g.sub_category.name == "Apple" %}
@@ -1137,13 +1143,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="third">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "SmartPhone" and g.sub_category.name == "Samsung" %}
@@ -1168,7 +1174,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -1185,10 +1191,10 @@
 
                   <div class="menu-wrapper" data-item="forth">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "SmartPhone" and g.sub_category.name == "Nokia" %}
@@ -1213,7 +1219,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -1262,7 +1268,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1279,7 +1285,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1296,7 +1302,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1315,7 +1321,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1332,7 +1338,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1349,7 +1355,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1368,7 +1374,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1385,7 +1391,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1402,7 +1408,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1421,7 +1427,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1438,7 +1444,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1455,7 +1461,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1474,7 +1480,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1491,7 +1497,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1508,7 +1514,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1535,7 +1541,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1552,7 +1558,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1569,7 +1575,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1588,7 +1594,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1605,7 +1611,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1622,7 +1628,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1641,7 +1647,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1658,7 +1664,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1675,7 +1681,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1694,7 +1700,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1711,7 +1717,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1728,7 +1734,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1747,7 +1753,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1764,7 +1770,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1781,7 +1787,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1808,7 +1814,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1825,7 +1831,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1842,7 +1848,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1861,7 +1867,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1878,7 +1884,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1895,7 +1901,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1914,7 +1920,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1931,7 +1937,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1948,7 +1954,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1967,7 +1973,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1984,7 +1990,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -2001,7 +2007,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -2020,7 +2026,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -2037,7 +2043,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -2054,7 +2060,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -2064,9 +2070,8 @@
               </div>
             </div>
 
-          </div>
-        </div>
 
+<<<<<<< HEAD
         <div class="brands">
           <div class="container">
             <div class="brands__inner">
@@ -2094,6 +2099,14 @@
     {% endblock content %}
 
     {% block footer %}
+=======
+        {% endblock r-side %}
+
+
+
+
+{% block footer %}
+>>>>>>> 083cb84f3483b10daaa8a8b3b418e4fc06f6af02
       <footer class="footer">
         <div class="footer__social">
           <div class="container">
