@@ -1,9 +1,9 @@
 .bottom__menu {
-  font-size: 0.56rem;
+  font-size: 0.8rem;
   width: 10.877vw;
   padding: 0 15px;
   color: #7b7b7b;
-  margin-top: 9px;
+  margin-top: 29px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,7 +71,7 @@
             justify-content: flex-start; }
     .about__us__info .info__text p {
       width: 95%;
-      font-size: 0.56rem;
+      font-size: 1rem;
       color: #899190;
       line-height: 15px;
       margin-top: 27px; }
@@ -81,7 +81,7 @@
     background: url("../img/about/about.jpg") no-repeat;
     background-size: cover; }
   .about__us__info cite {
-    font-size: 0.56rem;
+    font-size: 1rem;
     width: 95%;
     margin-top: 22px;
     color: #899190;
