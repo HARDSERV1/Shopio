@@ -115,8 +115,8 @@
         -ms-flex-pack: center;
             justify-content: center; }
     .team__block .member__info img {
-      border-radius: 10rem;
-      width: 19vw; }
+      border-radius: 50%;
+      width: 15vw; }
   .team__block h3 {
     font-size: 0.875rem;
     padding-top: 26px; }
