@@ -22,7 +22,6 @@
 			}
 		}
 	}
-
-	if($('.companies__logos')) bestsellerSlider('companies__logos', 195, 4);
+	if($('.companies__logos'))bestsellerSlider('companies__logos', 195, 4);	
 	if($('.bestsellers')) bestsellerSlider('bestsellers', 262, 2);
 })();

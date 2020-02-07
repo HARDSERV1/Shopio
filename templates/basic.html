@@ -17,6 +17,7 @@
 {% endblock head %}
 <body>
 {% block header %}
+    <a id="up__bttn" class="upper__bttn"></a>
     <div class="preline">
         <div class="container">
           <div class="preline__inner">
@@ -813,32 +814,7 @@
         </div>
 {% endblock modal %}
 {% block script %}
-    <script src="{% static 'js/slider.js' %}"></script>
-    <script src="{% static 'js/categories.js' %}"></script>
-    <script src="{% static 'js/goodsSlider.js' %}"></script>
-    <script src="{% static 'js/switchMenus.js' %}"></script>
-    <script src="{% static 'js/modalOptions.js' %}"></script>
-    <script src="{% static 'js/hotDealsSlider.js' %}"></script>
-    <script src="{% static 'js/bestsellerSlider.js' %}"></script>
-    <script src="{% static 'js/choseLgCurrency.js' %}"></script>
-    <script src="{% static 'js/upButton.js' %}"></script>
-    <script src="{% static 'js/chosenGoods.js' %}"></script>
-    <script>
-        function getInfo(big_img1,big_img2,big_img3,small_img1,small_img2,small_img3,name,info,cur_price,old_price,image){
-            document.getElementById('mg-name').innerText = name;
-            document.getElementById('mg-info').innerText = info;
-            document.getElementById('mg-current_price').innerText = "$"+cur_price;
-            document.getElementById('mg-old_price').innerText = "$"+old_price;
-            document.getElementById('mg-image').src = image;
-            document.getElementById('one-img').src=small_img1;
-            document.getElementById('two-img').src=small_img2;
-            document.getElementById('three-img').src=small_img3;
-            document.getElementById('one-img').setAttribute('data-big-img',big_img1);
-            document.getElementById('two-img').setAttribute('data-big-img',big_img2);
-            document.getElementById('three-img').setAttribute('data-big-img',big_img3);
-        }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
 {% endblock script %}
 </body>
 </html>
