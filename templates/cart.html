@@ -19,11 +19,91 @@
 {% endblock head %}
 <body>
 
-{% block modal %}
-{% endblock modal %}
+{% block r-side %}
+
+<div class="shop-cart">
+	<div class="goods-block">
+		<h2>shopping cart</h2>
+		<table>
+			<tr>
+				<th>Image</th>
+				<th class="left">Product Name</th>
+				<th class="left">Model</th>
+				<th class="left">Quantity</th>
+				<th class="right">Unit Price</th>
+				<th class="right">Total</th>
+			</tr>
+			<tr>
+				<td>
+					<a href="#"><img src="{% static 'img/product/cart/1.jpg'%}" alt=""></a>
+				</td>
+				<td><a href="#">More-Or-Less</a></td>
+				<td><p>Poduct 14</p></td>
+				<td class="quantity">
+					<input type="number" placeholder="1">
+					<div class="btn-group">
+						<button class="btn refresh">
+							<i class="fa fa-refresh" aria-hidden="true"></i>
+						</button>
+						<button class="btn times-circle">
+							<i class="fa fa-times-circle" aria-hidden="true"></i>
+						</button>
+					</div>
+				</td>
+				<td class="right"><span>$100.00</span></td>
+				<td class="right"><span>$100.00</span></td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#"><img src="{% static 'img/product/cart/2.jpg'%}" alt=""></a>
+				</td>
+				<td><a href="#">More-Or-Less</a></td>
+				<td><p>Poduct 14</p></td>
+				<td class="quantity">
+					<input type="number" placeholder="1">
+					<div class="btn-group">
+						<button class="btn refresh">
+							<i class="fa fa-refresh" aria-hidden="true"></i>
+						</button>
+						<button class="btn times-circle">
+							<i class="fa fa-times-circle" aria-hidden="true"></i>
+						</button>
+					</div>
+				</td>
+				<td class="right"><span>$100.00</span></td>
+				<td class="right"><span>$100.00</span></td>
+			</tr>
+		</table>
+	</div>
+	<div class="usadility-block">
+		<div class="head-block">
+			<h1></h1>
+			<p></p>
+		</div>
+		<div class="option-block">
+			<div class="option-first"></div>
+		</div>
+		<div class="footer-block">
+			<table></table>
+			<div class="btn-group"></div>
+		</div>
+	</div>
+</div>
+
+{% endblock r-side %}
+
 {% block deals %}
 {% endblock deals %}
 {% block posts %}
 {% endblock posts %}
+
+{% block script %}
+    <script src="{% static 'js/bestsellerSlider.js' %}"></script>
+    <script src="{% static 'js/choseLgCurrency.js' %}"></script>
+    <script src="{% static 'js/upButton.js' %}"></script>
+    <script src="{% static 'js/chosenGoods.js' %}"></script> 
+    <script src="{% static 'js/categories.js' %}"></script>
+{% endblock script %}
+
 </body>
 </html>

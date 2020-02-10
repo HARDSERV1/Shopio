@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{% static 'pages/_about_us.css'%}">
-    <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
+  <link rel="stylesheet" href="{% static 'css/about_us.css'%}">
+  <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
   {% block title %}<title>About us</title>{% endblock title %}
 </head>
 {% endblock head %}
@@ -81,8 +81,12 @@
     {% endblock content %}
   </main>
 
-{% block modal %}
-{% endblock modal %}
+{% block script %}
+    <script src="{% static 'js/bestsellerSlider.js' %}"></script>
+    <script src="{% static 'js/choseLgCurrency.js' %}"></script>
+    <script src="{% static 'js/upButton.js' %}"></script>
+    <script src="{% static 'js/chosenGoods.js' %}"></script> 
+{% endblock script %}
 </body>
 
 </html>

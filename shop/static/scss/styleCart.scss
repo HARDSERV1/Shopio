@@ -8,3 +8,85 @@
 @import 'categories';
 @import 'bestseller';
 @import 'brands';
+
+.shop-cart{
+	margin-top: 35px;
+	.goods-block{
+		h2{
+			text-transform: uppercase;
+			font-size: 1.28rem;
+			color:#444444;
+		}
+		table{
+			width:100%;
+			color:#979a9b;
+			font-size: 0.9rem;
+			font-family: 'Raleway', sans-serif;
+			margin-top: 35px;
+			.left{
+				text-align: left;
+			}
+			.right{
+				text-align: right;
+			}
+			th, td{
+				border:1px solid #dddddd;
+			}
+			th{
+				padding:10px;
+				&:first-child{
+					text-align: center;
+				}
+			}
+			td{
+				vertical-align: top;
+				padding:10px;
+				font-size: 0.84rem;
+				&:first-child{
+					text-align: center;
+					img{
+						border:1px solid #dddddd;
+					}
+				}
+				a{
+					text-decoration: none;
+					color:$blueColor;
+					transition: color 0.4s;
+					&:hover{
+						color:gray;
+					}
+				}
+				&.quantity{
+					input[type="number"]{
+						border:1px solid #dddddd;
+						padding:10px;
+					}
+				}
+				.btn-group{
+					margin-top: 10px;
+					.btn{
+						cursor: pointer;
+						color:white;
+						padding:10px 13px;
+						transition: background-color 0.3s;
+						margin:0;
+					}
+					.refresh{
+						background-color: $blueColor;
+						&:hover{
+							background-color: #ED7987;
+						}
+					}
+					.times-circle{
+						background-color: #d9534f;
+						margin-left: -3px;
+						&:hover{
+							background-color: #c9302c;
+						}
+					}
+				}
+			}
+			
+		} 
+	}
+}

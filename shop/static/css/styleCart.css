@@ -837,3 +837,62 @@ main {
         left: 0; }
       .brands .companies__logos .arrow.arrow-right {
         right: 0; }
+
+.shop-cart {
+  margin-top: 35px; }
+  .shop-cart .goods-block h2 {
+    text-transform: uppercase;
+    font-size: 1.28rem;
+    color: #444444; }
+  .shop-cart .goods-block table {
+    width: 100%;
+    color: #979a9b;
+    font-size: 0.9rem;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 35px; }
+    .shop-cart .goods-block table .left {
+      text-align: left; }
+    .shop-cart .goods-block table .right {
+      text-align: right; }
+    .shop-cart .goods-block table th, .shop-cart .goods-block table td {
+      border: 1px solid #dddddd; }
+    .shop-cart .goods-block table th {
+      padding: 10px; }
+      .shop-cart .goods-block table th:first-child {
+        text-align: center; }
+    .shop-cart .goods-block table td {
+      vertical-align: top;
+      padding: 10px;
+      font-size: 0.84rem; }
+      .shop-cart .goods-block table td:first-child {
+        text-align: center; }
+        .shop-cart .goods-block table td:first-child img {
+          border: 1px solid #dddddd; }
+      .shop-cart .goods-block table td a {
+        text-decoration: none;
+        color: #26acce;
+        -webkit-transition: color 0.4s;
+        transition: color 0.4s; }
+        .shop-cart .goods-block table td a:hover {
+          color: gray; }
+      .shop-cart .goods-block table td.quantity input[type="number"] {
+        border: 1px solid #dddddd;
+        padding: 10px; }
+      .shop-cart .goods-block table td .btn-group {
+        margin-top: 10px; }
+        .shop-cart .goods-block table td .btn-group .btn {
+          cursor: pointer;
+          color: white;
+          padding: 10px 13px;
+          -webkit-transition: background-color 0.3s;
+          transition: background-color 0.3s;
+          margin: 0; }
+        .shop-cart .goods-block table td .btn-group .refresh {
+          background-color: #26acce; }
+          .shop-cart .goods-block table td .btn-group .refresh:hover {
+            background-color: #ED7987; }
+        .shop-cart .goods-block table td .btn-group .times-circle {
+          background-color: #d9534f;
+          margin-left: -3px; }
+          .shop-cart .goods-block table td .btn-group .times-circle:hover {
+            background-color: #c9302c; }
