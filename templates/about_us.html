@@ -12,12 +12,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="{% static 'css/about_us.css'%}">
-  <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
+  <link rel="stylesheet" href="{% static 'pages/_about_us.css'%}">
+    <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
   {% block title %}<title>About us</title>{% endblock title %}
 </head>
 {% endblock head %}
 <body>
+
 
   <main>
     {% block content %}
@@ -61,19 +62,19 @@
       <hr>
       <div class="team__block">
         <div class="member__info">
-            <img src="{% static 'img/about/1.jpg' %}" alt="">
-            <h3>Taras Ilyashuk</h3>
-            <p>Gavno Back-end v studiyu</p>
+            <img src="{% static 'img/about/1.jpg'%}" alt="">
+            <h3>Taras Ilyashchuk</h3>
+            <p>TOP Back-End</p>
         </div>
         <div class="member__info">
             <img src="{% static 'img/about/2.jpg' %}" alt="">
             <h3>Michael Semkiv</h3>
-            <p>Team-lead,Front-end main developer,Front-end main director</p>
+            <p>TOP Front-End</p>
         </div>
         <div class="member__info">
             <img src="{% static 'img/about/3.jpg' %}" alt="">
-            <h3>Dmytro Konechnuy</h3>
-            <p>Assistent of MICHAEL SEMKIV</p>
+            <h3>Dmytro Nakonechnuy</h3>
+            <p>TOP Front-End</p>
         </div>
       </div>
     </div>
@@ -82,12 +83,6 @@
 
 {% block modal %}
 {% endblock modal %}
-{% block script %} 
-    <script src="{% static 'js/choseLgCurrency.js' %}"></script>
-    <script src="{% static 'js/bestsellerSlider.js' %}"></script>
-    <script src="{% static 'js/upButton.js' %}"></script>
-    <script src="{% static 'js/chosenGoods.js' %}"></script> 
-{% endblock script %}
 </body>
 
 </html>
