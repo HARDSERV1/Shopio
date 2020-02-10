@@ -149,7 +149,7 @@
                     <span class="price">$550.00</span>
                   </div>
                   <div class="btns">
-                    <a href="#">view cart</a>
+                    <a href="{% url 'cart' %}">view cart</a>
                     <a href="#">checkout</a>
                   </div>
                 </div>
@@ -162,8 +162,8 @@
         <nav>
           <div class="container">
             <div class="nav__inner">
-              <a href="#">Home</a>
-              <a href="about_us.html">About us</a>
+              <a href="{% url 'index' %}">Home</a>
+              <a href="{% url 'about_us' %}">About us</a>
               <a href="#">Bestsellers Products</a>
               <a href="#">New Products</a>
               <a href="#">Special Products</a>

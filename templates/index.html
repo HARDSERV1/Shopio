@@ -1,7 +1,9 @@
+{% extends 'basic.html' %}
 {% load static %}
 {%  load filterandtags %}
 <!DOCTYPE html>
 <html lang="en">
+{% block head %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +14,13 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
-  <title>Malias</title>
+  {% block title %}<title>Malias</title>{% endblock title %}
 </head>
+{% endblock head %}
 <body>
-      {% block header %}
+
       <a id="up__bttn" class="upper__bttn"></a>
-      <div class="preline">
+     {% block header %} <div class="preline">
         <div class="container">
           <div class="preline__inner">
           <div class="preline__section">
@@ -148,7 +151,7 @@
                     <span class="price">$550.00</span>
                   </div>
                   <div class="btns">
-                    <a href="#">view cart</a>
+                    <a href="{% url 'cart' %}">view cart</a>
                     <a href="#">checkout</a>
                   </div>
                 </div>
@@ -161,8 +164,8 @@
         <nav>
           <div class="container">
             <div class="nav__inner">
-              <a href="#">Home</a>
-              <a href="#">About us</a>
+              <a href="{% url 'index' %}">Home</a>
+              <a href="{% url 'about_us' %}">About us</a>
               <a href="#">Bestsellers Products</a>
               <a href="#">New Products</a>
               <a href="#">Special Products</a>
@@ -172,482 +175,9 @@
           </div>
         </nav> 
       </header>
-      {% endblock header %}
+        {% endblock header %}
 
-    {% block content %}
-      <main>
-        <div class="column-wrapper">
-          <div class="l-side">
-            <div class="categories">
-              <div class="categories_btn">
-                <i class="fa fa-bars"></i>
-                <p>Categories</p>
-                <i class="fa fa-sort-down"></i>
-              </div>
-              <div class="list-category">
-                <ul>
-                  <li class="arrow first-list-item">Cameras & Photography</li>
-                  <li class="arrow second-list-item">Tv & Audio</li>
-                  <li class="arrow third-list-item">SmartPhones & Tablets</li>
-                  <li>Laptop & Computer</li>
-                  <li>Sony</li>
-                  <li>Mobile</li>
-                  <li>Sports</li>
-                  <li class="hide-option unvisible">Books</li>
-                  <li class="more-btn">More Categories<i class="fa fa-plus"></i></li>
-                </ul>
-              </div>
-              <div class="hide-menu first unvisible">
-                <div class="section">
-                  <h2>Handbags</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blouses And Shirts</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Clutches</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Cross Body</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Satchels</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sholuder</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Toter</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <h2>Tops</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Evening</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Long Sleeved</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Short Sleeved</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sleeveless</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>T-Shirts</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Tanks And Camis</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <h2>Dresses</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Belts</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Cocktail</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Day</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Evening</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sundresses</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sweater</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <h2>Accessories</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bras</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Hair Accessories</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Hats And Gloves</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Lifestyle</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Scarves</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Small Leathers</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="hide-menu second unvisible">
-                <div class="section">
-                  <h2>BAGS</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <h2>CLOTHING</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <h2>LINGERIE</h2>
-                  <ul>
-                   <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <h2>Shoes</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Blazers</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Bootees Bags</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jackets</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Shoes</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="hide-menu third unvisible">
-                <div class="section">
-                  <h2>Women</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Belts</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Jewelry</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Socks</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Sunglasses</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <h2>CLOTHING</h2>
-                  <ul>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Boots</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Brands We Love</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Casuals</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Gifts And Tech</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Gifts And Tech</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Slippers</a></li>
-                    <li><a href="#"><i class="fa fa-xs fa-arrow-circle-right"></i>Speakers</a></li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <img src="{% static 'img/product/quickview-photo.jpg' %}" alt=""><!--"../shop/static/img/product/quickview-photo.jpg"-->
-                </div>
-              </div>
-            </div>
-            <div class="deals-block">
-              <h2 class="title">HOT DEALS</h2>
-              <div class="deals">
-                <ul>
-                  <li class="hot-deals">
-                    <a href="#"><img src="{% static 'img/hot-deals/1.jpg' %}" alt=""></a>
-                    <div class="dateTime">
-                      <div class="days">
-                        <span class="num">0</span>
-                        <span>days</span>
-                      </div>
-                      <div class="hour">
-                        <span class="num">0</span>
-                        <span>hour</span>
-                      </div>
-                      <div class="min">
-                        <span class="num">00</span>
-                        <span>min</span>
-                      </div>
-                      <div class="sec">
-                        <span class="num">00</span>
-                        <span>sec</span>
-                      </div>
-                    </div>
-                    <div class="goods-info">
-                      <h2><a href="#">Various Versions</a></h2>
-                      <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                      </div>           
-                      <div class="price">
-                        <span class="current-price">$99.00</span>
-                        <span class="old-price">&110.00</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="hot-deals">
-                    <a href="#"><img src="{% static 'img/hot-deals/2.jpg' %}" alt=""></a>
-                    <div class="dateTime">
-                      <div class="days">
-                        <span class="num">0</span>
-                        <span>days</span>
-                      </div>
-                      <div class="hour">
-                        <span class="num">0</span>
-                        <span>hour</span>
-                      </div>
-                      <div class="min">
-                        <span class="num">00</span>
-                        <span>min</span>
-                      </div>
-                      <div class="sec">
-                        <span class="num">00</span>
-                        <span>sec</span>
-                      </div>
-                    </div>
-                    <div class="goods-info">
-                      <h2><a href="#">Trid Palm</a></h2>
-                      <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                      </div>           
-                      <div class="price">
-                        <span class="current-price">$85.00</span>
-                        <span class="old-price">&120.00</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="hot-deals">
-                    <a href="#"><img src="{% static 'img/hot-deals/3.jpg' %}" alt=""></a>
-                    <div class="dateTime">
-                      <div class="days">
-                        <span class="num">0</span>
-                        <span>days</span>
-                      </div>
-                      <div class="hour">
-                        <span class="num">0</span>
-                        <span>hour</span>
-                      </div>
-                      <div class="min">
-                        <span class="num">00</span>
-                        <span>min</span>
-                      </div>
-                      <div class="sec">
-                        <span class="num">00</span>
-                        <span>sec</span>
-                      </div>
-                    </div>
-                    <div class="goods-info">
-                      <h2><a href="#">Various Versions</a></h2>
-                      <div class="stars">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                      </div>           
-                      <div class="price">
-                        <span class="current-price">$90.00</span>
-                        <span class="old-price">&105.00</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div class="dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="bestseller-block">
-              <h2 class="title">bestseller</h2>
-              <div class="bestsellers">
-                <ul>
-                  <li>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/1.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/2.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/3.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/4.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/5.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/6.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/7.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                    <div class="post">
-                      <a href="#"><img src="{% static 'img/product/small/8.jpg' %}" alt=""></a>
-                      <div class="goods-info">
-                        <h2><a href="#">Various Versions</a></h2>
-                        <div class="price">
-                          <span class="current-price">$90.00</span>
-                          <span class="old-price">&105.00</span>
-                        </div>
-                        <div class="stars">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star-o"></i>
-                        </div>           
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div class="arrow arrow-left"><</div>
-                <div class="arrow arrow-right">></div>
-              </div>
-            </div>
-
-            <div class="posts">
-              <h2 class="title">resent posts</h2>
-              <ul>
-                <li>
-                  <div class="img-block"><img src="{% static 'img/posts/1.jpg' %}" alt=""></div>
-                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
-                  <div class="block-span">
-                    <span class="date">23/12/2015</span>
-                    <span> | </span>
-                    <span>BootExpert Theme</span>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
-                  <a href="#" class="read-more">Read more...</a>
-                </li>
-                <li>
-                  <div class="img-block"><img src="{% static 'img/posts/2.jpg' %}" alt=""></div>
-                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
-                  <div class="block-span">
-                    <span class="date">23/12/2015</span>
-                    <span> | </span>
-                    <span>BootExpert Theme</span>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
-                  <a href="#" class="read-more">Read more...</a>
-                </li>
-                <li>
-                  <div class="img-block"><img src="{% static 'img/posts/3.jpg' %}" alt=""></div>
-                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
-                  <div class="block-span">
-                    <span class="date">23/12/2015</span>
-                    <span> | </span>
-                    <span>BootExpert Theme</span>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
-                  <a href="#" class="read-more">Read more...</a>
-                </li>
-                <li>
-                  <div class="img-block"><img src="{% static 'img/posts/4.jpg' %}" alt=""></div>
-                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
-                  <div class="block-span">
-                    <span class="date">23/12/2015</span>
-                    <span> | </span>
-                    <span>BootExpert Theme</span>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
-                  <a href="#" class="read-more">Read more...</a>
-                </li>
-                <li>
-                  <div class="img-block"><img src="{% static 'img/posts/1.jpg' %}" alt=""></div>
-                  <h2><a href="#">SWIMWEAR FOR WOMEN</a></h2>
-                  <div class="block-span">
-                    <span class="date">23/12/2015</span>
-                    <span> | </span>
-                    <span>BootExpert Theme</span>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi hic asperiores veniam qui, inventore nobis iure.</p>
-                  <a href="#" class="read-more">Read more...</a>
-                </li>
-              </ul>
-              <div class="dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
-            </div>
-          </div>
-
-          <div class="r-side">
+            {% block r-side %}
             <div class="slider-wrapper">
               <ul>
                 <li class="slide first visible">
@@ -745,13 +275,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="second">
                     <div class="list-wrapper">
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                               {% if g.category.name == "Electronic" and g.sub_category.name == "TV" %}
@@ -789,13 +319,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="third">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "Electronic" and g.sub_category.name == "Mobile" %}
@@ -820,7 +350,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -833,7 +363,7 @@
                             {% endfor %}
                       </ul>
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </div>
 
@@ -896,13 +426,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="second">
                     <div class="list-wrapper">
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                               {% if g.category.name == "Computer" and g.sub_category.name == "Hp" %}
@@ -940,13 +470,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="third">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "Computer" and g.sub_category.name == "Apple" %}
@@ -971,7 +501,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -988,10 +518,10 @@
 
                   <div class="menu-wrapper" data-item="forth">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "Computer" and g.sub_category.name == "Sony" %}
@@ -1016,7 +546,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -1032,8 +562,8 @@
                   </div>
 
                 </div>
-              </div> 
-              
+              </div>
+
               <div class="section section-smartphone">
                 <div class="header-section">
                   <h2>smart phone</h2>
@@ -1093,13 +623,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="second">
                     <div class="list-wrapper">
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                               {% if g.category.name == "SmartPhone" and g.sub_category.name == "Apple" %}
@@ -1137,13 +667,13 @@
                       </ul>
                     </div>
                   </div>
-                  
+
                   <div class="menu-wrapper" data-item="third">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "SmartPhone" and g.sub_category.name == "Samsung" %}
@@ -1168,7 +698,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -1185,10 +715,10 @@
 
                   <div class="menu-wrapper" data-item="forth">
                     <div class="list-wrapper" >
-                  
+
                       <div class="arrow arrow-left"><</div>
                       <div class="arrow arrow-right">></div>
-                  
+
                       <ul class="list">
                           {% for g in catalog %}
                           {% if g.category.name == "SmartPhone" and g.sub_category.name == "Nokia" %}
@@ -1213,7 +743,7 @@
                                 <a href="#" class="add-btn"><i class="fa fa-shopping-cart"></i><span>Add to cart</span></a>
                                 <div class="option">
                                   <a href="#"><i class="fa fa-heart-o"></i></a>
-                                  <a href="#"><i class="fa fa-signal"></i></a>    
+                                  <a href="#"><i class="fa fa-signal"></i></a>
                                     {% get_l g as ph %}
                                     {% get_n g ph.first ph.last as sr %}
                                   <a href="#" onclick="getInfo('{{ MEDIA_URL }}{{ ph.first.big_image.url }}','{{ MEDIA_URL }}{{ sr.big_image.url }}','{{ MEDIA_URL }}{{ ph.last.big_image.url }}','{{ MEDIA_URL }}{{ ph.first.small_image.url }}','{{ MEDIA_URL }}{{ sr.small_image.url }}','{{ MEDIA_URL }}{{ ph.last.small_image.url }}', '{{ g.name }}','{{ g.info }}','{{ g.current_price }}','{{ g.old_price }}','{{ MEDIA_URL }}{{ g.image.url }}')" ><i class="fa fa-search-plus"></i></a>
@@ -1262,7 +792,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1279,7 +809,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1296,7 +826,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1315,7 +845,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1332,7 +862,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1349,7 +879,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1368,7 +898,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1385,7 +915,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1402,7 +932,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1421,7 +951,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1438,7 +968,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1455,7 +985,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1474,7 +1004,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1491,7 +1021,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1508,7 +1038,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1535,7 +1065,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1552,7 +1082,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1569,7 +1099,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1588,7 +1118,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1605,7 +1135,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1622,7 +1152,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1641,7 +1171,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1658,7 +1188,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1675,7 +1205,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1694,7 +1224,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1711,7 +1241,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1728,7 +1258,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1747,7 +1277,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1764,7 +1294,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1781,7 +1311,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1808,7 +1338,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1825,7 +1355,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1842,7 +1372,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1861,7 +1391,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1878,7 +1408,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1895,7 +1425,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1914,7 +1444,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1931,7 +1461,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1948,7 +1478,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -1967,7 +1497,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -1984,7 +1514,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -2001,7 +1531,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -2020,7 +1550,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -2037,7 +1567,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       <div class="post">
@@ -2054,7 +1584,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-o"></i>
-                          </div>           
+                          </div>
                         </div>
                       </div>
                       </li>
@@ -2064,36 +1594,13 @@
               </div>
             </div>
 
-          </div>
-        </div>
 
-        <div class="brands">
-          <div class="container">
-            <div class="brands__inner">
-              <p>BRAND LOGO</p>
-              <hr>
-              <div class="companies__logos">
-                <ul>
-                  <li><a href="#"><img src="{% static 'img/brand/1.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/2.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/3.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/4.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/5.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/5.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/1.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/2.png' %}" alt=""></a></li>
-                  <li><a href="#"><img src="{% static 'img/brand/3.png' %}" alt=""></a></li>
-                </ul>
-                <div class="arrow arrow-left"><</div>
-                <div class="arrow arrow-right">></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    {% endblock content %}
+        {% endblock r-side %}
 
-    {% block footer %}
+
+
+
+{% block footer %}
       <footer class="footer">
         <div class="footer__social">
           <div class="container">
@@ -2178,10 +1685,9 @@
           </div>
         </div>
       </footer>
-      {% endblock footer %}
-
-    {% block modal %}
-         <div class="modal-window-wrapper">
+{% endblock footer %}
+{% block modal %}
+      <div class="modal-window-wrapper">
           <div class="modal-window">
             <div class="goodsImage">
               <div class="photos">
@@ -2215,8 +1721,8 @@
             </div>
           </div>
         </div>
-    {% endblock modal %}
-    
+{% endblock modal %}
+      {% block script %}
     <script src="{% static 'js/slider.js' %}"></script>
     <script src="{% static 'js/categories.js' %}"></script>
     <script src="{% static 'js/goodsSlider.js' %}"></script>
@@ -2243,5 +1749,6 @@
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{% endblock script %}
 </body>
 </html>
