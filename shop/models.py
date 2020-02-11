@@ -1,5 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
+class User(AbstractUser):
+    avatar = models.ImageField(upload_to='media/',default='media/default.png',blank=True,verbose_name='avatar')
+    class Meta:
+        pass
 
 class Category(models.Model):
     name = models.CharField(max_length=35)

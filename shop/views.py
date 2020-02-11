@@ -2,8 +2,13 @@ from django.shortcuts import render,redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
 from django.core.files.base import ContentFile
-from .models import Goods,Photos,Category,Subcategory
-from .forms import NewGoodsForm,PhotosForm
+from .models import Goods,Photos,Category,Subcategory,User
+from .forms import NewGoodsForm,PhotosForm,RegisterUserForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import LoginView,LogoutView,PasswordChangeView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import UpdateView,CreateView,DeleteView
+from django.views.generic.base import TemplateView
 # Create your views here.
 def index(request):
     value = ''
@@ -12,7 +17,7 @@ def index(request):
     for i in Goods.objects.all():
         catalog[i] = [{'good':i},{'category':i.category},{'sub_category':i.sub_category}]
 
-    print(catalog)
+
     photos = Photos.objects.all()
     context = {'all_goods':all_goods,
                'catalog':catalog,
@@ -58,3 +63,16 @@ def about_us(request):
 
 def cart(request):
     return render(request,'cart.html')
+
+class UserLogin(LoginView):
+    template_name = 'login.html'
+    success_url = reverse_lazy('index')
+
+class UserLogout(LoginRequiredMixin,LogoutView):
+    template_name = 'logout.html'
+
+class RegisterUserView(CreateView):
+    model=User
+    template_name = 'sign_up.html'
+    form_class=RegisterUserForm
+    success_url = reverse_lazy('index')
