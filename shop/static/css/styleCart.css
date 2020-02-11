@@ -896,3 +896,177 @@ main {
           margin-left: -3px; }
           .shop-cart .goods-block table td .btn-group .times-circle:hover {
             background-color: #c9302c; }
+  .shop-cart .usadility-block {
+    margin-top: 25px; }
+    .shop-cart .usadility-block .head-block {
+      margin-bottom: 20px; }
+      .shop-cart .usadility-block .head-block h2 {
+        font-size: 1.55rem;
+        font-weight: 500;
+        font-family: 'Raleway', sans-serif; }
+      .shop-cart .usadility-block .head-block p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.8rem;
+        color: #444444;
+        line-height: 1.5;
+        margin-top: 7px; }
+    .shop-cart .usadility-block .option-block a {
+      text-decoration: none;
+      display: block;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      color: #444444;
+      font-weight: 600;
+      font-family: 'Raleway', sans-serif;
+      border: 1px solid #26acce;
+      padding: 10px;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+    .shop-cart .usadility-block .option-block .option-first > .option-content, .shop-cart .usadility-block .option-block .option-second > .option-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 15px 20px;
+      border: 1px solid #dddddd; }
+      .shop-cart .usadility-block .option-block .option-first > .option-content .text, .shop-cart .usadility-block .option-block .option-second > .option-content .text {
+        color: #979a9b;
+        font-size: 0.8rem;
+        font-family: 'Raleway', sans-serif;
+        -ms-flex-preferred-size: 85px;
+            flex-basis: 85px;
+        margin-right: 40px;
+        line-height: 1.5; }
+      .shop-cart .usadility-block .option-block .option-first > .option-content form input[type="text"], .shop-cart .usadility-block .option-block .option-second > .option-content form input[type="text"] {
+        display: block;
+        border: 1px solid #dddddd;
+        padding: 10px;
+        width: 265px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s; }
+        .shop-cart .usadility-block .option-block .option-first > .option-content form input[type="text"]:focus, .shop-cart .usadility-block .option-block .option-second > .option-content form input[type="text"]:focus {
+          border-color: #66afe9;
+          outline: 0;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+      .shop-cart .usadility-block .option-block .option-first > .option-content form button, .shop-cart .usadility-block .option-block .option-second > .option-content form button {
+        background-color: #239ecd;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+        padding: 8px 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
+        .shop-cart .usadility-block .option-block .option-first > .option-content form button:hover, .shop-cart .usadility-block .option-block .option-second > .option-content form button:hover {
+          background-color: #e87381; }
+    .shop-cart .usadility-block .option-block .option-third > .option-content {
+      padding: 15px 10px 35px 20px;
+      border: 1px solid #dddddd; }
+      .shop-cart .usadility-block .option-block .option-third > .option-content .title {
+        color: #979a9b;
+        font-size: 0.8rem;
+        font-family: 'Raleway', sans-serif;
+        line-height: 1.5; }
+      .shop-cart .usadility-block .option-block .option-third > .option-content form {
+        margin-top: 12px; }
+        .shop-cart .usadility-block .option-block .option-third > .option-content form span {
+          margin-top: 7px;
+          color: #979a9b;
+          font-size: 0.8rem;
+          font-family: 'Raleway', sans-serif;
+          line-height: 1.5;
+          width: 105px;
+          text-align: right;
+          margin-right: 30px; }
+          .shop-cart .usadility-block .option-block .option-third > .option-content form span::before {
+            content: '*';
+            color: red;
+            font-size: 1.3rem; }
+        .shop-cart .usadility-block .option-block .option-third > .option-content form p {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-bottom: 15px; }
+          .shop-cart .usadility-block .option-block .option-third > .option-content form p input[type="text"] {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            width: 82%;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s; }
+            .shop-cart .usadility-block .option-block .option-third > .option-content form p input[type="text"]:focus {
+              border-color: #66afe9;
+              outline: 0;
+              -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+          .shop-cart .usadility-block .option-block .option-third > .option-content form p select {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            width: 82%;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s; }
+            .shop-cart .usadility-block .option-block .option-third > .option-content form p select:focus {
+              border-color: #66afe9;
+              outline: 0;
+              -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+    .shop-cart .usadility-block .option-block .option:not(:last-child) {
+      margin-bottom: 12px; }
+    .shop-cart .usadility-block .option-block .option .hide {
+      display: none; }
+    .shop-cart .usadility-block .option-block .option .active {
+      background-color: #26acce;
+      color: white; }
+    .shop-cart .usadility-block .footer-block table {
+      margin: 40px 0;
+      color: #979a9b;
+      font-family: 'Raleway', sans-serif;
+      float: right; }
+      .shop-cart .usadility-block .footer-block table td {
+        border: 1px solid #dddddd;
+        vertical-align: top;
+        padding: 10px;
+        font-size: 0.85rem;
+        width: 140px; }
+      .shop-cart .usadility-block .footer-block table .right {
+        text-align: right; }
+      .shop-cart .usadility-block .footer-block table .title {
+        font-weight: bold; }
+    .shop-cart .usadility-block .footer-block .btn-group {
+      clear: right;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .shop-cart .usadility-block .footer-block .btn-group a {
+        display: inline-block;
+        text-decoration: none; }
+      .shop-cart .usadility-block .footer-block .btn-group .checkout {
+        background-color: #239ecd;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+        padding: 10px 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
+        .shop-cart .usadility-block .footer-block .btn-group .checkout:hover {
+          background-color: #e87381; }
+      .shop-cart .usadility-block .footer-block .btn-group .continue {
+        color: #979a9b;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+        padding: 10px 15px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: 1px solid #dddddd;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
+        .shop-cart .usadility-block .footer-block .btn-group .continue:hover {
+          background-color: #e1e3e4; }

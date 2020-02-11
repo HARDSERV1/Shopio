@@ -77,15 +77,86 @@
 	</div>
 	<div class="usadility-block">
 		<div class="head-block">
-			<h1></h1>
-			<p></p>
+			<h2>What would you like to do next?</h2>
+			<p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
 		</div>
 		<div class="option-block">
-			<div class="option-first"></div>
+			<div class="option option-first">
+				<a href="#" class="hideShow active">use coupon code <i class="fa fa-sort-down"></i></a>
+				<div class="option-content hide">
+					<div class="text">
+						<p>Enter your coupon here</p>
+					</div>
+					<form action="#">
+						<input type="text" placeholder="Enter your coupon here">
+						<button type="submit">Apply Coupon</button>
+					</form>
+				</div>
+			</div>
+			<div class="option option-second">
+				<a href="#" class="hideShow">use gift voucher<i class="fa fa-sort-down"></i></a>
+				<div class="option-content hide">
+					<div class="text">
+						<p>Enter your gift voucher code here</p>
+					</div>
+					<form action="#">
+						<input type="text" placeholder="Enter your gift voucher code here">
+						<button type="submit">Apply Voucher</button>
+					</form>
+				</div>
+			</div>
+			<div class="option option-third">
+				<a href="#" class="hideShow">Estimate Shipping & Taxes <i class="fa fa-sort-down"></i></a>
+				<div class="option-content hide">
+					<p class="title">Enter your destination to get a shipping estimate.</p>
+					<form action="#">
+						<p>
+							<span>Country</span>
+							<select name="country">
+								<option> --- Please Select --- </option>
+								<option> Bangladesh </option>
+								<option> United States </option>
+								<option> United Kingdom </option>
+								<option> Canada </option>
+								<option> Malaysia </option>
+								<option> United Arab Emirates </option>
+							</select>
+						</p>
+						<p>
+							<span>Region / State</span>
+							<select name="country">
+								<option> --- Please Select --- </option>
+								<option> Aberdeen </option>
+								<option> Bedfordshire </option>
+								<option> Caerphilly </option>
+								<option> Denbighshire </option>
+								<option> East Ayrshire </option>
+								<option> Falkirk </option>
+							</select>
+						</p>
+						<p class="post-code">
+							<span>Post Code</span>
+							<input type="text" placeholder="Post Code">
+						</p>
+					</form>
+				</div>
+			</div>
 		</div>
 		<div class="footer-block">
-			<table></table>
-			<div class="btn-group"></div>
+			<table>
+				<tr>
+					<td class="title right">Sub-Total:</td>
+					<td class="right">$145.00</td>
+				</tr>
+				<tr>
+					<td class="title right">Total:</td>
+					<td class="right">$145.00</td>
+				</tr>
+			</table>
+			<div class="btn-group">
+				<a href="#" class="continue">Continue Shopping</a>
+				<a href="#" class="checkout">Checkout</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -103,6 +174,7 @@
     <script src="{% static 'js/upButton.js' %}"></script>
     <script src="{% static 'js/chosenGoods.js' %}"></script> 
     <script src="{% static 'js/categories.js' %}"></script>
+    <script src="{% static 'js/cartMenus.js' %}"></script>
 {% endblock script %}
 
 </body>
